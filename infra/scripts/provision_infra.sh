@@ -207,7 +207,9 @@ etapa_dns_local() {
   audit DNS "/etc/hosts: $ip -> $HS_HOSTNAME $HS_DNS_NAMES"
   local nome resolvido
   for nome in $HS_HOSTNAME $HS_DNS_NAMES; do
-    resolvido=$(getent hosts "$nome" | awk '{print $1; exit}')
+    # ahostsv4: o /etc/hosts tem o IPv4; "getent hosts" pergunta IPv6 primeiro e, logo depois de trocar o
+    # hostname, o systemd-resolved pode responder com o IPv6 link-local (fe80::...) antes de reler o arquivo
+    resolvido=$(getent ahostsv4 "$nome" | awk '{print $1; exit}')
     [[ $resolvido == "$ip" ]] || die "$nome resolve para '${resolvido:-nada}', esperado $ip"
     ok "$nome -> $resolvido"
   done

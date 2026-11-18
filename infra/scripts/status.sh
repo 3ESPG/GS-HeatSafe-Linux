@@ -35,7 +35,7 @@ linha "Uptime" "$(uptime -p)"
 if [[ $EUID -eq 0 ]]; then linha "Firewall" "$(ufw status 2>/dev/null | head -1)"; fi
 
 titulo "DNS local (/etc/hosts)"
-for n in $HS_DNS_NAMES; do linha "$n" "$(getent hosts "$n" | awk '{print $1; exit}')"; done
+for n in $HS_DNS_NAMES; do linha "$n" "$(getent ahostsv4 "$n" | awk '{print $1; exit}')"; done
 
 titulo "Serviços (systemd)"
 for svc in "${HS_SERVICOS[@]}" heatsafe-healthcheck.timer nginx mysql auditd; do
