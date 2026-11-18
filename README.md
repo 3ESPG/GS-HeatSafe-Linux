@@ -5,7 +5,7 @@
 | **Instituição** | FIAP · Engenharia de Software · 3ESPG |
 | **Disciplina** | Operating Systems |
 | **Atividade** | Global Solution 2026.2 — CitizenTech |
-| **Vídeo de demonstração** | _(link do YouTube, até 7 min)_ |
+| **Vídeo de demonstração** | https://youtu.be/vA0l51FNoeU (4min24) |
 
 ## Integrantes
 
