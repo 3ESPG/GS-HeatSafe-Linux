@@ -1,0 +1,187 @@
+2026-11-16T18:10:07+00:00 | host=heatsafe-srv | usuario=henrique | euid=0 | script=provision.sh | pid=1250 | INICIO | execução iniciada (args: infra)
+2026-11-16T18:10:07+00:00 | host=heatsafe-srv | usuario=henrique | euid=0 | script=provision.sh | pid=1250 | ETAPA | Executando provision_infra.sh
+2026-11-16T18:10:07+00:00 | host=heatsafe-srv | usuario=henrique | euid=0 | script=provision_infra.sh | pid=1282 | INICIO | execução iniciada (args: nenhum)
+2026-11-16T18:10:07+00:00 | host=heatsafe-srv | usuario=henrique | euid=0 | script=provision_infra.sh | pid=1282 | ETAPA | Checagens do sistema
+2026-11-16T18:10:07+00:00 | host=heatsafe-srv | usuario=henrique | euid=0 | script=provision_infra.sh | pid=1282 | ETAPA | Pacotes base
+2026-11-16T18:10:52+00:00 | host=heatsafe-srv | usuario=henrique | euid=0 | script=provision_infra.sh | pid=1282 | OK | Atualizando o índice de pacotes (apt-get update) :: apt-get -o DPkg::Lock::Timeout=600 update -q
+2026-11-16T18:28:15+00:00 | host=heatsafe-srv | usuario=henrique | euid=0 | script=provision_infra.sh | pid=1282 | OK | Instalando pacotes: curl ca-certificates git rsync jq ufw auditd dnsutils iproute2 iputils-ping logrotate openssl procps psmisc python3 :: apt-get install -y -q -o DPkg::Lock::Timeout=600 -o Dpkg::Options::=--force-confold curl ca-certificates git rsync jq ufw auditd dnsutils iproute2 iputils-ping logrotate openssl procps psmisc python3
+2026-11-16T18:28:27+00:00 | host=heatsafe-srv | usuario=henrique | euid=0 | script=provision_infra.sh | pid=1282 | ETAPA | Hostname, fuso horário e NTP
+2026-11-16T18:28:27+00:00 | host=heatsafe-srv | usuario=henrique | euid=0 | script=provision_infra.sh | pid=1282 | ARQUIVO | cloud-init: preserve_hostname=true, manage_etc_hosts=false
+2026-11-16T15:28:27-03:00 | host=heatsafe-srv | usuario=henrique | euid=0 | script=provision_infra.sh | pid=1282 | OK | Fuso horário: America/Sao_Paulo :: timedatectl set-timezone America/Sao_Paulo
+2026-11-16T15:28:27-03:00 | host=heatsafe-srv | usuario=henrique | euid=0 | script=provision_infra.sh | pid=1282 | ETAPA | Usuário de serviço e estrutura de pastas
+2026-11-16T15:28:27-03:00 | host=heatsafe-srv | usuario=henrique | euid=0 | script=provision_infra.sh | pid=1282 | OK | Criando grupo heatsafe :: groupadd --system heatsafe
+2026-11-16T15:28:27-03:00 | host=heatsafe-srv | usuario=henrique | euid=0 | script=provision_infra.sh | pid=1282 | OK | Criando usuário de serviço heatsafe (sem login, sem senha) :: useradd --system --gid heatsafe --home-dir /opt/heatsafe --no-create-home --shell /usr/sbin/nologin --comment HeatSafe service account heatsafe
+2026-11-16T15:28:27-03:00 | host=heatsafe-srv | usuario=henrique | euid=0 | script=provision_infra.sh | pid=1282 | OK | Adicionando henrique aos grupos heatsafe e adm (leitura dos logs) :: usermod -aG heatsafe,adm henrique
+2026-11-16T15:28:27-03:00 | host=heatsafe-srv | usuario=henrique | euid=0 | script=provision_infra.sh | pid=1282 | PERMISSOES | pastas criadas: /opt/heatsafe /etc/heatsafe /var/lib/heatsafe /var/log/heatsafe /var/www/heatsafe-status /var/backups/heatsafe
+2026-11-16T15:28:27-03:00 | host=heatsafe-srv | usuario=henrique | euid=0 | script=provision_infra.sh | pid=1282 | ETAPA | Instalando os scripts em /opt/heatsafe/infra
+2026-11-16T15:28:27-03:00 | host=heatsafe-srv | usuario=henrique | euid=0 | script=provision_infra.sh | pid=1282 | INSTALACAO | scripts copiados para /opt/heatsafe/infra
+2026-11-16T15:28:27-03:00 | host=heatsafe-srv | usuario=henrique | euid=0 | script=provision_infra.sh | pid=1282 | ETAPA | Rede: IP (static) e servidores DNS
+2026-11-16T15:28:27-03:00 | host=heatsafe-srv | usuario=henrique | euid=0 | script=provision_infra.sh | pid=1282 | BACKUP | /etc/netplan/50-cloud-init.yaml -> /var/backups/heatsafe/etc/netplan/
+2026-11-16T15:28:27-03:00 | host=heatsafe-srv | usuario=henrique | euid=0 | script=provision_infra.sh | pid=1282 | REDE | netplan escrito: modo=static iface=enp0s3 ip=10.0.2.15/24 gw=10.0.2.2 dns=1.1.1.1,8.8.8.8
+2026-11-16T15:28:28-03:00 | host=heatsafe-srv | usuario=henrique | euid=0 | script=provision_infra.sh | pid=1282 | OK | Validando a configuração (netplan generate) :: netplan generate
+2026-11-16T15:28:28-03:00 | host=heatsafe-srv | usuario=henrique | euid=0 | script=provision_infra.sh | pid=1282 | OK | Aplicando a rede (netplan apply) :: netplan apply
+2026-11-16T15:28:32-03:00 | host=heatsafe-srv | usuario=henrique | euid=0 | script=provision_infra.sh | pid=1282 | ETAPA | DNS local (/etc/hosts): heatsafe.local api.heatsafe.local previsao.heatsafe.local monitor.heatsafe.local
+2026-11-16T15:28:32-03:00 | host=heatsafe-srv | usuario=henrique | euid=0 | script=provision_infra.sh | pid=1282 | BACKUP | /etc/hosts -> /var/backups/heatsafe/etc/
+2026-11-16T15:28:32-03:00 | host=heatsafe-srv | usuario=henrique | euid=0 | script=provision_infra.sh | pid=1282 | DNS | /etc/hosts: 10.0.2.15 -> heatsafe-srv heatsafe.local api.heatsafe.local previsao.heatsafe.local monitor.heatsafe.local
+2026-11-16T15:28:32-03:00 | host=heatsafe-srv | usuario=henrique | euid=0 | script=provision_infra.sh | pid=1282 | ETAPA | Firewall (ufw): nega tudo, libera só SSH e HTTP
+2026-11-16T15:28:32-03:00 | host=heatsafe-srv | usuario=henrique | euid=0 | script=provision_infra.sh | pid=1282 | OK | Política padrão: bloquear entrada :: ufw default deny incoming
+2026-11-16T15:28:32-03:00 | host=heatsafe-srv | usuario=henrique | euid=0 | script=provision_infra.sh | pid=1282 | OK | Política padrão: liberar saída :: ufw default allow outgoing
+2026-11-16T15:28:32-03:00 | host=heatsafe-srv | usuario=henrique | euid=0 | script=provision_infra.sh | pid=1282 | OK | SSH (22) com limite anti-força-bruta :: ufw limit 22/tcp comment SSH administracao
+2026-11-16T15:28:33-03:00 | host=heatsafe-srv | usuario=henrique | euid=0 | script=provision_infra.sh | pid=1282 | OK | HTTP (80) para o nginx :: ufw allow 80/tcp comment HeatSafe nginx
+2026-11-16T15:28:33-03:00 | host=heatsafe-srv | usuario=henrique | euid=0 | script=provision_infra.sh | pid=1282 | OK | Porta interna da API bloqueada :: ufw deny 5000/tcp comment API so via nginx
+2026-11-16T15:28:33-03:00 | host=heatsafe-srv | usuario=henrique | euid=0 | script=provision_infra.sh | pid=1282 | OK | Porta interna da previsão bloqueada :: ufw deny 8000/tcp comment Previsao so via nginx
+2026-11-16T15:28:34-03:00 | host=heatsafe-srv | usuario=henrique | euid=0 | script=provision_infra.sh | pid=1282 | OK | Ativando o firewall :: ufw --force enable
+2026-11-16T15:28:34-03:00 | host=heatsafe-srv | usuario=henrique | euid=0 | script=provision_infra.sh | pid=1282 | ETAPA | SSH endurecido
+2026-11-16T15:28:34-03:00 | host=heatsafe-srv | usuario=henrique | euid=0 | script=provision_infra.sh | pid=1282 | ARQUIVO | /etc/ssh/sshd_config.d/60-heatsafe.conf
+2026-11-16T15:28:34-03:00 | host=heatsafe-srv | usuario=henrique | euid=0 | script=provision_infra.sh | pid=1282 | ETAPA | Auditoria do sistema (auditd) e rotação de logs
+2026-11-16T15:28:34-03:00 | host=heatsafe-srv | usuario=henrique | euid=0 | script=provision_infra.sh | pid=1282 | ARQUIVO | regras auditd em /etc/audit/rules.d/60-heatsafe.rules
+2026-11-16T15:28:35-03:00 | host=heatsafe-srv | usuario=henrique | euid=0 | script=provision_infra.sh | pid=1282 | ARQUIVO | /etc/logrotate.d/heatsafe
+2026-11-16T15:28:35-03:00 | host=heatsafe-srv | usuario=henrique | euid=0 | script=provision_infra.sh | pid=1282 | ETAPA | Resumo da infraestrutura
+2026-11-16T15:28:35-03:00 | host=heatsafe-srv | usuario=henrique | euid=0 | script=provision_infra.sh | pid=1282 | FIM | sucesso (duração 1108s)
+2026-11-16T15:28:35-03:00 | host=heatsafe-srv | usuario=henrique | euid=0 | script=provision.sh | pid=1250 | ETAPA | Estado final
+2026-11-16T15:28:36-03:00 | host=heatsafe-srv | usuario=henrique | euid=0 | script=provision.sh | pid=1250 | FIM | sucesso (duração 1109s)
+2026-11-16T15:38:28-03:00 | host=heatsafe-srv | usuario=henrique | euid=0 | script=provision.sh | pid=4109 | INICIO | execução iniciada (args: monitor)
+2026-11-16T15:38:28-03:00 | host=heatsafe-srv | usuario=henrique | euid=0 | script=provision.sh | pid=4109 | ETAPA | Executando provision_monitor.sh
+2026-11-16T15:38:28-03:00 | host=heatsafe-srv | usuario=henrique | euid=0 | script=provision_monitor.sh | pid=4139 | INICIO | execução iniciada (args: nenhum)
+2026-11-16T15:38:28-03:00 | host=heatsafe-srv | usuario=henrique | euid=0 | script=provision_monitor.sh | pid=4139 | ETAPA | Checagens
+2026-11-16T15:38:28-03:00 | host=heatsafe-srv | usuario=henrique | euid=0 | script=provision_monitor.sh | pid=4139 | INSTALACAO | scripts copiados para /opt/heatsafe/infra
+2026-11-16T15:38:28-03:00 | host=heatsafe-srv | usuario=henrique | euid=0 | script=provision_monitor.sh | pid=4139 | ETAPA | Teste rápido do monitor (uma leitura, como usuário heatsafe)
+2026-11-16T15:38:29-03:00 | host=heatsafe-srv | usuario=henrique | euid=0 | script=provision_monitor.sh | pid=4139 | ETAPA | Instalando as units do systemd
+2026-11-16T15:38:29-03:00 | host=heatsafe-srv | usuario=henrique | euid=0 | script=provision_monitor.sh | pid=4139 | ARQUIVO | gerado /etc/systemd/system/heatsafe-monitor.service a partir de heatsafe-monitor.service
+2026-11-16T15:38:29-03:00 | host=heatsafe-srv | usuario=henrique | euid=0 | script=provision_monitor.sh | pid=4139 | ARQUIVO | gerado /etc/systemd/system/heatsafe-healthcheck.service a partir de heatsafe-healthcheck.service
+2026-11-16T15:38:29-03:00 | host=heatsafe-srv | usuario=henrique | euid=0 | script=provision_monitor.sh | pid=4139 | ERRO | linha 160: tr -d '@'
+2026-11-16T15:38:29-03:00 | host=heatsafe-srv | usuario=henrique | euid=0 | script=provision_monitor.sh | pid=4139 | ARQUIVO | gerado /etc/systemd/system/heatsafe-healthcheck.timer a partir de heatsafe-healthcheck.timer
+2026-11-16T15:38:30-03:00 | host=heatsafe-srv | usuario=henrique | euid=0 | script=provision_monitor.sh | pid=4139 | OK | Recarregando o systemd :: systemctl daemon-reload
+2026-11-16T15:38:30-03:00 | host=heatsafe-srv | usuario=henrique | euid=0 | script=provision_monitor.sh | pid=4139 | ETAPA | Ligando o monitor e o timer de healthcheck
+2026-11-16T15:38:30-03:00 | host=heatsafe-srv | usuario=henrique | euid=0 | script=provision_monitor.sh | pid=4139 | OK | Habilitando no boot :: systemctl enable heatsafe-monitor.service heatsafe-healthcheck.timer
+2026-11-16T15:38:30-03:00 | host=heatsafe-srv | usuario=henrique | euid=0 | script=provision_monitor.sh | pid=4139 | OK | (Re)iniciando o monitor :: systemctl restart heatsafe-monitor.service
+2026-11-16T15:38:30-03:00 | host=heatsafe-srv | usuario=henrique | euid=0 | script=provision_monitor.sh | pid=4139 | OK | Iniciando o timer :: systemctl restart heatsafe-healthcheck.timer
+2026-11-16T15:38:30-03:00 | host=heatsafe-srv | usuario=henrique | euid=0 | script=provision_monitor.sh | pid=4139 | ETAPA | Verificando
+2026-11-16T15:38:30-03:00 | host=heatsafe-srv | usuario=henrique | euid=0 | script=provision_monitor.sh | pid=4139 | OK | Primeira execução do healthcheck :: systemctl start heatsafe-healthcheck.service
+2026-11-16T15:38:30-03:00 | host=heatsafe-srv | usuario=henrique | euid=0 | script=provision_monitor.sh | pid=4139 | ETAPA | Resumo do monitoramento
+2026-11-16T15:38:30-03:00 | host=heatsafe-srv | usuario=henrique | euid=0 | script=provision_monitor.sh | pid=4139 | FIM | sucesso (duração 2s)
+2026-11-16T15:38:30-03:00 | host=heatsafe-srv | usuario=henrique | euid=0 | script=provision.sh | pid=4109 | ETAPA | Estado final
+2026-11-16T15:38:31-03:00 | host=heatsafe-srv | usuario=henrique | euid=0 | script=provision.sh | pid=4109 | FIM | sucesso (duração 3s)
+2026-11-16T16:24:14-03:00 | host=heatsafe-srv | usuario=root | euid=0 | script=healthcheck.sh | pid=10493 | AUTOCORRECAO | heatsafe-monitor: processo travado (sem heartbeat há 482s)
+2026-11-16T16:53:20-03:00 | host=heatsafe-srv | usuario=root | euid=0 | script=healthcheck.sh | pid=12107 | AUTOCORRECAO | heatsafe-monitor: processo travado (sem heartbeat há 1156s)
+2026-11-16T17:44:37-03:00 | host=heatsafe-srv | usuario=root | euid=0 | script=healthcheck.sh | pid=17338 | AUTOCORRECAO | heatsafe-monitor: processo travado (sem heartbeat há 1071s)
+2026-11-16T18:40:55-03:00 | host=heatsafe-srv | usuario=root | euid=0 | script=healthcheck.sh | pid=20132 | AUTOCORRECAO | heatsafe-monitor: processo travado (sem heartbeat há 2336s)
+2026-11-16T19:06:55-03:00 | host=heatsafe-srv | usuario=root | euid=0 | script=healthcheck.sh | pid=21802 | AUTOCORRECAO | heatsafe-monitor: processo travado (sem heartbeat há 955s)
+2026-11-16T19:21:45-03:00 | host=heatsafe-srv | usuario=henrique | euid=0 | script=provision.sh | pid=24259 | INICIO | execução iniciada (args: app)
+2026-11-16T19:21:45-03:00 | host=heatsafe-srv | usuario=henrique | euid=0 | script=provision.sh | pid=24259 | ETAPA | Executando provision_app.sh
+2026-11-16T19:21:45-03:00 | host=heatsafe-srv | usuario=henrique | euid=0 | script=provision_app.sh | pid=24289 | INICIO | execução iniciada (args: nenhum)
+2026-11-16T19:21:45-03:00 | host=heatsafe-srv | usuario=henrique | euid=0 | script=provision_app.sh | pid=24289 | ETAPA | Checagens
+2026-11-16T19:21:45-03:00 | host=heatsafe-srv | usuario=henrique | euid=0 | script=provision_app.sh | pid=24289 | INSTALACAO | scripts copiados para /opt/heatsafe/infra
+2026-11-16T19:21:45-03:00 | host=heatsafe-srv | usuario=henrique | euid=0 | script=provision_app.sh | pid=24289 | ETAPA | Dependências do sistema (nginx, Java 21, MySQL, bibliotecas do .NET)
+2026-11-16T19:21:49-03:00 | host=heatsafe-srv | usuario=henrique | euid=0 | script=provision_app.sh | pid=24289 | OK | Atualizando o índice de pacotes (apt-get update) :: apt-get -o DPkg::Lock::Timeout=600 update -q
+2026-11-16T19:24:13-03:00 | host=heatsafe-srv | usuario=root | euid=0 | script=healthcheck.sh | pid=25537 | AUTOCORRECAO | heatsafe-monitor: processo travado (sem heartbeat há 131s)
+2026-11-16T19:30:57-03:00 | host=heatsafe-srv | usuario=root | euid=0 | script=healthcheck.sh | pid=25797 | AUTOCORRECAO | heatsafe-monitor: processo travado (sem heartbeat há 402s)
+2026-11-16T19:38:31-03:00 | host=heatsafe-srv | usuario=root | euid=0 | script=healthcheck.sh | pid=26071 | AUTOCORRECAO | heatsafe-monitor: processo travado (sem heartbeat há 452s)
+2026-11-16T19:38:37-03:00 | host=heatsafe-srv | usuario=henrique | euid=0 | script=provision_app.sh | pid=24289 | OK | Instalando pacotes: nginx git curl jq rsync unzip sqlite3 libicu-dev ca-certificates openjdk-21-jdk-headless mysql-server :: apt-get install -y -q -o DPkg::Lock::Timeout=600 -o Dpkg::Options::=--force-confold nginx git curl jq rsync unzip sqlite3 libicu-dev ca-certificates openjdk-21-jdk-headless mysql-server
+2026-11-16T19:38:37-03:00 | host=heatsafe-srv | usuario=henrique | euid=0 | script=provision_app.sh | pid=24289 | ETAPA | Código da aplicação (repositórios do grupo no GitHub)
+2026-11-16T19:38:38-03:00 | host=heatsafe-srv | usuario=henrique | euid=0 | script=provision_app.sh | pid=24289 | OK | Clonando https://github.com/3ESPG/GS-HeatSafe-SOA.git (branch main) :: git clone -q --depth 1 --branch main https://github.com/3ESPG/GS-HeatSafe-SOA.git /opt/heatsafe/app/previsao
+2026-11-16T19:38:38-03:00 | host=heatsafe-srv | usuario=henrique | euid=0 | script=provision_app.sh | pid=24289 | CODIGO | https://github.com/3ESPG/GS-HeatSafe-SOA.git@main -> /opt/heatsafe/app/previsao (9584300 2026-11-16 docs: completa a Ficha da CitizenTech (o que cada parte faz e links dos repositórios))
+2026-11-16T19:38:39-03:00 | host=heatsafe-srv | usuario=henrique | euid=0 | script=provision_app.sh | pid=24289 | OK | Clonando https://github.com/GustavooHM/HeatSafe-Backend.git (branch master) :: git clone -q --depth 1 --branch master https://github.com/GustavooHM/HeatSafe-Backend.git /opt/heatsafe/app/api
+2026-11-16T19:38:39-03:00 | host=heatsafe-srv | usuario=henrique | euid=0 | script=provision_app.sh | pid=24289 | CODIGO | https://github.com/GustavooHM/HeatSafe-Backend.git@master -> /opt/heatsafe/app/api (bafb98a 2026-11-16 docs: completa a Ficha da CitizenTech (o que cada parte faz e links dos repositórios))
+2026-11-16T19:38:39-03:00 | host=heatsafe-srv | usuario=henrique | euid=0 | script=provision_app.sh | pid=24289 | ETAPA | Bancos de dados: MySQL (previsão) e SQLite (API)
+2026-11-16T19:38:39-03:00 | host=heatsafe-srv | usuario=henrique | euid=0 | script=provision_app.sh | pid=24289 | OK | Ligando o MySQL :: systemctl enable --now mysql
+2026-11-16T19:38:40-03:00 | host=heatsafe-srv | usuario=henrique | euid=0 | script=provision_app.sh | pid=24289 | BANCO | MySQL: banco heatsafe e usuário heatsafe (só localhost)
+2026-11-16T19:38:40-03:00 | host=heatsafe-srv | usuario=henrique | euid=0 | script=provision_app.sh | pid=24289 | ETAPA | Variáveis de ambiente (um arquivo por serviço: cada um só vê os próprios segredos)
+2026-11-16T19:38:40-03:00 | host=heatsafe-srv | usuario=henrique | euid=0 | script=provision_app.sh | pid=24289 | CONFIG | /etc/heatsafe/previsao.env gerado (segredos preservados entre execuções)
+2026-11-16T19:38:40-03:00 | host=heatsafe-srv | usuario=henrique | euid=0 | script=provision_app.sh | pid=24289 | CONFIG | /etc/heatsafe/api.env gerado (segredos preservados entre execuções)
+2026-11-16T19:38:40-03:00 | host=heatsafe-srv | usuario=henrique | euid=0 | script=provision_app.sh | pid=24289 | ETAPA | Serviço de previsão (Java 21 / Spring Boot + MySQL)
+2026-11-16T19:51:33-03:00 | host=heatsafe-srv | usuario=root | euid=0 | script=healthcheck.sh | pid=27535 | AUTOCORRECAO | heatsafe-monitor: processo travado (sem heartbeat há 239s)
+2026-11-16T19:52:39-03:00 | host=heatsafe-srv | usuario=henrique | euid=0 | script=provision_app.sh | pid=24289 | OK | Gerando o .jar (mvnw package, sem testes: os testes usam H2 e rodam no CI do colega) :: bash -c cd '/opt/heatsafe/app/previsao' && sh ./mvnw -B -ntp -DskipTests package
+2026-11-16T19:52:39-03:00 | host=heatsafe-srv | usuario=henrique | euid=0 | script=provision_app.sh | pid=24289 | DEPLOY | /opt/heatsafe/previsao publicado (anterior em /opt/heatsafe/previsao.anterior)
+2026-11-16T19:52:39-03:00 | host=heatsafe-srv | usuario=henrique | euid=0 | script=provision_app.sh | pid=24289 | ARQUIVO | gerado /etc/systemd/system/heatsafe-previsao.service a partir de heatsafe-previsao.service
+2026-11-16T19:52:40-03:00 | host=heatsafe-srv | usuario=henrique | euid=0 | script=provision_app.sh | pid=24289 | OK | Habilitando no boot e (re)iniciando heatsafe-previsao :: bash -c systemctl enable heatsafe-previsao >/dev/null 2>&1 && systemctl restart heatsafe-previsao
+2026-11-16T19:52:47-03:00 | host=heatsafe-srv | usuario=henrique | euid=0 | script=provision_app.sh | pid=24289 | ETAPA | API central (C# / ASP.NET Core)
+2026-11-16T19:53:22-03:00 | host=heatsafe-srv | usuario=henrique | euid=0 | script=provision_app.sh | pid=24289 | OK | Instalando .NET SDK 10.0 (apt) :: apt-get install -y -q -o DPkg::Lock::Timeout=600 dotnet-sdk-10.0
+2026-11-16T19:53:40-03:00 | host=heatsafe-srv | usuario=henrique | euid=0 | script=provision_app.sh | pid=24289 | OK | Compilando e publicando (dotnet publish -c Release) :: bash -c cd '/opt/heatsafe/app/api' && dotnet publish '/opt/heatsafe/app/api/HeatSafe.Api/HeatSafe.Api.csproj' -c Release -o '/opt/heatsafe/api.novo' --nologo -v minimal
+2026-11-16T19:53:40-03:00 | host=heatsafe-srv | usuario=henrique | euid=0 | script=provision_app.sh | pid=24289 | DEPLOY | /opt/heatsafe/api publicado (anterior em /opt/heatsafe/api.anterior)
+2026-11-16T19:53:40-03:00 | host=heatsafe-srv | usuario=henrique | euid=0 | script=provision_app.sh | pid=24289 | ARQUIVO | gerado /etc/systemd/system/heatsafe-api.service a partir de heatsafe-api.service
+2026-11-16T19:53:40-03:00 | host=heatsafe-srv | usuario=henrique | euid=0 | script=provision_app.sh | pid=24289 | OK | Habilitando no boot e (re)iniciando heatsafe-api :: bash -c systemctl enable heatsafe-api >/dev/null 2>&1 && systemctl restart heatsafe-api
+2026-11-16T19:53:43-03:00 | host=heatsafe-srv | usuario=henrique | euid=0 | script=provision_app.sh | pid=24289 | ETAPA | nginx (proxy reverso na porta 80)
+2026-11-16T19:53:43-03:00 | host=heatsafe-srv | usuario=henrique | euid=0 | script=provision_app.sh | pid=24289 | ARQUIVO | gerado /etc/nginx/sites-available/heatsafe.conf a partir de heatsafe.conf
+2026-11-16T19:53:43-03:00 | host=heatsafe-srv | usuario=henrique | euid=0 | script=provision_app.sh | pid=24289 | OK | Validando a configuração (nginx -t) :: nginx -t
+2026-11-16T19:53:43-03:00 | host=heatsafe-srv | usuario=henrique | euid=0 | script=provision_app.sh | pid=24289 | OK | Ligando o nginx :: systemctl enable --now nginx
+2026-11-16T19:53:43-03:00 | host=heatsafe-srv | usuario=henrique | euid=0 | script=provision_app.sh | pid=24289 | OK | Recarregando o nginx :: systemctl reload nginx
+2026-11-16T19:53:43-03:00 | host=heatsafe-srv | usuario=henrique | euid=0 | script=provision_app.sh | pid=24289 | ARQUIVO | regras auditd em /etc/audit/rules.d/60-heatsafe.rules
+2026-11-16T19:53:44-03:00 | host=heatsafe-srv | usuario=henrique | euid=0 | script=provision_app.sh | pid=24289 | ETAPA | Testes de fumaça (pelo nome DNS, passando pelo nginx)
+2026-11-16T19:53:45-03:00 | host=heatsafe-srv | usuario=henrique | euid=0 | script=provision_app.sh | pid=24289 | ETAPA | Resumo da aplicação
+2026-11-16T19:53:45-03:00 | host=heatsafe-srv | usuario=henrique | euid=0 | script=provision_app.sh | pid=24289 | RESUMO | previsao=[no ar (PID 27967)] api=[no ar (PID 28726)]
+2026-11-16T19:53:45-03:00 | host=heatsafe-srv | usuario=henrique | euid=0 | script=provision_app.sh | pid=24289 | FIM | sucesso (duração 1920s)
+2026-11-16T19:53:45-03:00 | host=heatsafe-srv | usuario=henrique | euid=0 | script=provision.sh | pid=24259 | ETAPA | Estado final
+2026-11-16T19:53:45-03:00 | host=heatsafe-srv | usuario=henrique | euid=0 | script=provision.sh | pid=24259 | FIM | sucesso (duração 1920s)
+2026-11-17T01:08:32-03:00 | host=heatsafe-srv | usuario=root | euid=0 | script=healthcheck.sh | pid=33300 | AUTOCORRECAO | heatsafe-monitor: processo travado (sem heartbeat há 18032s)
+2026-11-17T07:00:35-03:00 | host=heatsafe-srv | usuario=root | euid=0 | script=healthcheck.sh | pid=42158 | AUTOCORRECAO | heatsafe-monitor: processo travado (sem heartbeat há 14209s)
+2026-11-17T12:30:02-03:00 | host=heatsafe-srv | usuario=root | euid=0 | script=healthcheck.sh | pid=50420 | AUTOCORRECAO | heatsafe-monitor: processo travado (sem heartbeat há 17978s)
+2026-11-17T12:41:14-03:00 | host=heatsafe-srv | usuario=root | euid=0 | script=healthcheck.sh | pid=51694 | AUTOCORRECAO | heatsafe-monitor: processo travado (sem heartbeat há 518s)
+2026-11-17T13:31:41-03:00 | host=heatsafe-srv | usuario=root | euid=0 | script=healthcheck.sh | pid=61067 | AUTOCORRECAO | heatsafe-monitor: processo travado (sem heartbeat há 951s)
+2026-11-17T13:59:37-03:00 | host=heatsafe-srv | usuario=henrique | euid=0 | script=provision.sh | pid=3211 | INICIO | execução iniciada (args: monitor)
+2026-11-17T13:59:37-03:00 | host=heatsafe-srv | usuario=henrique | euid=0 | script=provision.sh | pid=3211 | ETAPA | Executando provision_monitor.sh
+2026-11-17T13:59:37-03:00 | host=heatsafe-srv | usuario=henrique | euid=0 | script=provision_monitor.sh | pid=3241 | INICIO | execução iniciada (args: nenhum)
+2026-11-17T13:59:37-03:00 | host=heatsafe-srv | usuario=henrique | euid=0 | script=provision_monitor.sh | pid=3241 | ETAPA | Checagens
+2026-11-17T13:59:37-03:00 | host=heatsafe-srv | usuario=henrique | euid=0 | script=provision_monitor.sh | pid=3241 | INSTALACAO | scripts copiados para /opt/heatsafe/infra
+2026-11-17T13:59:37-03:00 | host=heatsafe-srv | usuario=henrique | euid=0 | script=provision_monitor.sh | pid=3241 | ETAPA | Teste rápido do monitor (uma leitura, como usuário heatsafe)
+2026-11-17T13:59:38-03:00 | host=heatsafe-srv | usuario=henrique | euid=0 | script=provision_monitor.sh | pid=3241 | ETAPA | Instalando as units do systemd
+2026-11-17T13:59:38-03:00 | host=heatsafe-srv | usuario=henrique | euid=0 | script=provision_monitor.sh | pid=3241 | ARQUIVO | gerado /etc/systemd/system/heatsafe-monitor.service a partir de heatsafe-monitor.service
+2026-11-17T13:59:38-03:00 | host=heatsafe-srv | usuario=henrique | euid=0 | script=provision_monitor.sh | pid=3241 | ARQUIVO | gerado /etc/systemd/system/heatsafe-healthcheck.service a partir de heatsafe-healthcheck.service
+2026-11-17T13:59:38-03:00 | host=heatsafe-srv | usuario=henrique | euid=0 | script=provision_monitor.sh | pid=3241 | ERRO | linha 160: tr -d '@'
+2026-11-17T13:59:38-03:00 | host=heatsafe-srv | usuario=henrique | euid=0 | script=provision_monitor.sh | pid=3241 | ARQUIVO | gerado /etc/systemd/system/heatsafe-healthcheck.timer a partir de heatsafe-healthcheck.timer
+2026-11-17T13:59:38-03:00 | host=heatsafe-srv | usuario=henrique | euid=0 | script=provision_monitor.sh | pid=3241 | OK | Recarregando o systemd :: systemctl daemon-reload
+2026-11-17T13:59:38-03:00 | host=heatsafe-srv | usuario=henrique | euid=0 | script=provision_monitor.sh | pid=3241 | ETAPA | Ligando o monitor e o timer de healthcheck
+2026-11-17T13:59:39-03:00 | host=heatsafe-srv | usuario=henrique | euid=0 | script=provision_monitor.sh | pid=3241 | OK | Habilitando no boot :: systemctl enable heatsafe-monitor.service heatsafe-healthcheck.timer
+2026-11-17T13:59:39-03:00 | host=heatsafe-srv | usuario=henrique | euid=0 | script=provision_monitor.sh | pid=3241 | OK | (Re)iniciando o monitor :: systemctl restart heatsafe-monitor.service
+2026-11-17T13:59:39-03:00 | host=heatsafe-srv | usuario=henrique | euid=0 | script=provision_monitor.sh | pid=3241 | OK | Iniciando o timer :: systemctl restart heatsafe-healthcheck.timer
+2026-11-17T13:59:39-03:00 | host=heatsafe-srv | usuario=henrique | euid=0 | script=provision_monitor.sh | pid=3241 | ETAPA | Verificando
+2026-11-17T13:59:39-03:00 | host=heatsafe-srv | usuario=henrique | euid=0 | script=provision_monitor.sh | pid=3241 | OK | Primeira execução do healthcheck :: systemctl start heatsafe-healthcheck.service
+2026-11-17T13:59:39-03:00 | host=heatsafe-srv | usuario=henrique | euid=0 | script=provision_monitor.sh | pid=3241 | ETAPA | Resumo do monitoramento
+2026-11-17T13:59:39-03:00 | host=heatsafe-srv | usuario=henrique | euid=0 | script=provision_monitor.sh | pid=3241 | FIM | sucesso (duração 2s)
+2026-11-17T13:59:39-03:00 | host=heatsafe-srv | usuario=henrique | euid=0 | script=provision.sh | pid=3211 | ETAPA | Estado final
+2026-11-17T13:59:40-03:00 | host=heatsafe-srv | usuario=henrique | euid=0 | script=provision.sh | pid=3211 | FIM | sucesso (duração 3s)
+2026-11-17T14:04:09-03:00 | host=heatsafe-srv | usuario=henrique | euid=1000 | script=teste_ponta_a_ponta.sh | pid=5115 | INICIO | execução iniciada (args: nenhum)
+2026-11-17T14:04:09-03:00 | host=heatsafe-srv | usuario=henrique | euid=1000 | script=teste_ponta_a_ponta.sh | pid=5115 | ETAPA | 1. Serviço de previsão (Java/Spring Boot) em http://previsao.heatsafe.local
+2026-11-17T14:04:09-03:00 | host=heatsafe-srv | usuario=henrique | euid=1000 | script=teste_ponta_a_ponta.sh | pid=5115 | ETAPA | 2. API central (C#/.NET) em http://api.heatsafe.local
+2026-11-17T14:04:09-03:00 | host=heatsafe-srv | usuario=henrique | euid=1000 | script=teste_ponta_a_ponta.sh | pid=5115 | ETAPA | 3. ESP32: token de dispositivo e leitura de calor perigoso
+2026-11-17T14:04:10-03:00 | host=heatsafe-srv | usuario=henrique | euid=1000 | script=teste_ponta_a_ponta.sh | pid=5115 | ETAPA | 4. Família / administrador: status da residência 1
+2026-11-17T14:04:10-03:00 | host=heatsafe-srv | usuario=henrique | euid=1000 | script=teste_ponta_a_ponta.sh | pid=5115 | ETAPA | 5. Agente da UBS: visitas prioritárias
+2026-11-17T14:04:10-03:00 | host=heatsafe-srv | usuario=henrique | euid=1000 | script=teste_ponta_a_ponta.sh | pid=5115 | ETAPA | Resultado
+2026-11-17T14:04:10-03:00 | host=heatsafe-srv | usuario=henrique | euid=1000 | script=teste_ponta_a_ponta.sh | pid=5115 | TESTE_E2E | sucesso
+2026-11-17T14:04:10-03:00 | host=heatsafe-srv | usuario=henrique | euid=1000 | script=teste_ponta_a_ponta.sh | pid=5115 | FIM | sucesso (duração 1s)
+2026-11-17T14:05:41-03:00 | host=heatsafe-srv | usuario=henrique | euid=0 | script=teste_falha.sh | pid=5673 | INICIO | execução iniciada (args: api)
+2026-11-17T14:05:41-03:00 | host=heatsafe-srv | usuario=henrique | euid=0 | script=teste_falha.sh | pid=5673 | ETAPA | Teste de falha: kill -9 em heatsafe-api
+2026-11-17T14:05:41-03:00 | host=heatsafe-srv | usuario=henrique | euid=0 | script=teste_falha.sh | pid=5673 | OK | Simulando um crash: kill -9 1221 (SIGKILL não pode ser tratado pelo processo) :: kill -9 1221
+2026-11-17T14:05:47-03:00 | host=heatsafe-srv | usuario=henrique | euid=0 | script=teste_falha.sh | pid=5673 | TESTE_FALHA | kill -9 heatsafe-api: recuperado em 5588ms (PID 1221->5856, NRestarts 0->1)
+2026-11-17T14:05:48-03:00 | host=heatsafe-srv | usuario=henrique | euid=0 | script=teste_falha.sh | pid=5673 | FIM | sucesso (duração 7s)
+2026-11-17T14:07:25-03:00 | host=heatsafe-srv | usuario=henrique | euid=0 | script=teste_falha.sh | pid=6424 | INICIO | execução iniciada (args: travar)
+2026-11-17T14:07:25-03:00 | host=heatsafe-srv | usuario=henrique | euid=0 | script=teste_falha.sh | pid=6424 | ETAPA | Teste de falha: monitor TRAVADO (processo vivo, mas parado)
+2026-11-17T14:07:25-03:00 | host=heatsafe-srv | usuario=henrique | euid=0 | script=teste_falha.sh | pid=6424 | OK | Congelando o monitor: kill -STOP 3547 :: kill -STOP 3547
+2026-11-17T14:08:02-03:00 | host=heatsafe-srv | usuario=root | euid=0 | script=healthcheck.sh | pid=6659 | AUTOCORRECAO | heatsafe-monitor: processo travado (sem heartbeat há 46s)
+2026-11-17T14:08:07-03:00 | host=heatsafe-srv | usuario=henrique | euid=0 | script=teste_falha.sh | pid=6424 | TESTE_FALHA | monitor travado (SIGSTOP) -> healthcheck reiniciou
+2026-11-17T14:08:07-03:00 | host=heatsafe-srv | usuario=henrique | euid=0 | script=teste_falha.sh | pid=6424 | FIM | sucesso (duração 42s)
+2026-11-17T14:08:51-03:00 | host=heatsafe-srv | usuario=henrique | euid=0 | script=teste_falha.sh | pid=7010 | INICIO | execução iniciada (args: cpu)
+2026-11-17T14:08:51-03:00 | host=heatsafe-srv | usuario=henrique | euid=0 | script=teste_falha.sh | pid=7010 | ETAPA | Teste de carga: CPU a 100% por 85s
+2026-11-17T14:08:51-03:00 | host=heatsafe-srv | usuario=henrique | euid=0 | script=teste_falha.sh | pid=7010 | TESTE_CARGA | CPU 100% por 85s
+2026-11-17T14:13:27-03:00 | host=heatsafe-srv | usuario=root | euid=0 | script=healthcheck.sh | pid=7066 | AUTOCORRECAO | heatsafe-monitor: processo travado (sem heartbeat há 277s)
+2026-11-17T14:15:33-03:00 | host=heatsafe-srv | usuario=henrique | euid=0 | script=teste_falha.sh | pid=7010 | FIM | sucesso (duração 402s)
+2026-11-17T14:16:35-03:00 | host=heatsafe-srv | usuario=henrique | euid=0 | script=teste_falha.sh | pid=8757 | INICIO | execução iniciada (args: cpu)
+2026-11-17T14:16:35-03:00 | host=heatsafe-srv | usuario=henrique | euid=0 | script=teste_falha.sh | pid=8757 | ETAPA | Teste de carga: CPU a 100% por 85s
+2026-11-17T14:16:35-03:00 | host=heatsafe-srv | usuario=henrique | euid=0 | script=teste_falha.sh | pid=8757 | TESTE_CARGA | CPU 100% por 85s
+2026-11-17T14:22:32-03:00 | host=heatsafe-srv | usuario=root | euid=0 | script=healthcheck.sh | pid=8815 | AUTOCORRECAO | heatsafe-monitor: processo travado (sem heartbeat há 361s)
+2026-11-17T14:24:38-03:00 | host=heatsafe-srv | usuario=henrique | euid=0 | script=teste_falha.sh | pid=8757 | FIM | sucesso (duração 483s)
+2026-11-17T16:23:13-03:00 | host=heatsafe-srv | usuario=henrique | euid=0 | script=teste_falha.sh | pid=2916 | INICIO | execução iniciada (args: cpu)
+2026-11-17T16:23:13-03:00 | host=heatsafe-srv | usuario=henrique | euid=0 | script=teste_falha.sh | pid=2916 | ETAPA | Teste de carga: CPU a 100% por 85s
+2026-11-17T16:23:13-03:00 | host=heatsafe-srv | usuario=henrique | euid=0 | script=teste_falha.sh | pid=2916 | TESTE_CARGA | CPU 100% por 85s
+2026-11-17T16:24:01-03:00 | host=heatsafe-srv | usuario=henrique | euid=0 | script=teste_falha.sh | pid=2916 | FIM | sucesso (duração 48s)
+2026-11-17T16:24:47-03:00 | host=heatsafe-srv | usuario=henrique | euid=0 | script=teste_falha.sh | pid=3683 | INICIO | execução iniciada (args: disco)
+2026-11-17T16:24:47-03:00 | host=heatsafe-srv | usuario=henrique | euid=0 | script=teste_falha.sh | pid=3683 | ETAPA | Teste de falha: disco cheio — criando /var/tmp/heatsafe-teste-disco.img com 12347 MB (alvo ~92%)
+2026-11-17T16:24:47-03:00 | host=heatsafe-srv | usuario=henrique | euid=0 | script=teste_falha.sh | pid=3683 | OK | Ocupando espaço (fallocate) :: fallocate -l 12644143K /var/tmp/heatsafe-teste-disco.img
+2026-11-17T16:25:01-03:00 | host=heatsafe-srv | usuario=henrique | euid=0 | script=teste_falha.sh | pid=3683 | OK | Liberando o espaço :: rm -f /var/tmp/heatsafe-teste-disco.img
+2026-11-17T16:25:17-03:00 | host=heatsafe-srv | usuario=henrique | euid=0 | script=teste_falha.sh | pid=3683 | FIM | sucesso (duração 30s)
+2026-11-17T16:25:43-03:00 | host=heatsafe-srv | usuario=henrique | euid=0 | script=teste_falha.sh | pid=4130 | INICIO | execução iniciada (args: memoria)
+2026-11-17T16:25:43-03:00 | host=heatsafe-srv | usuario=henrique | euid=0 | script=teste_falha.sh | pid=4130 | ETAPA | Teste de carga: memória até ~92% (alocando 2452 MB por 50s)
+2026-11-17T16:25:43-03:00 | host=heatsafe-srv | usuario=henrique | euid=0 | script=teste_falha.sh | pid=4130 | TESTE_CARGA | memória +2452 MB por 50s
+2026-11-17T16:26:19-03:00 | host=heatsafe-srv | usuario=henrique | euid=0 | script=teste_falha.sh | pid=4130 | FIM | sucesso (duração 36s)
+2026-11-17T16:27:36-03:00 | host=heatsafe-srv | usuario=henrique | euid=0 | script=coletar_evidencias.sh | pid=4923 | INICIO | execução iniciada (args: nenhum)
+2026-11-17T16:27:36-03:00 | host=heatsafe-srv | usuario=henrique | euid=0 | script=coletar_evidencias.sh | pid=4923 | ETAPA | Coletando evidências em /home/henrique/heatsafe/infra/evidencias/20261117-162736

@@ -1,0 +1,240 @@
+
+===== 2026-11-16T18:10:07+00:00 | provision_infra.sh | usuario=henrique | args: nenhum =====
+
+==> [1] Checagens do sistema
+[2026-11-16 18:10:07] INFO  Sistema: Ubuntu 24.04.3 LTS | kernel 6.8.0-149-generic | 2 CPU(s) | 3915 MB RAM
+[2026-11-16 18:10:07] OK    Pré-requisitos atendidos
+
+==> [2] Pacotes base
+[2026-11-16 18:10:07] INFO  Atualizando o índice de pacotes (apt-get update)
+Hit:1 http://archive.ubuntu.com/ubuntu noble InRelease
+Get:2 http://archive.ubuntu.com/ubuntu noble-updates InRelease [126 kB]
+Get:3 http://archive.ubuntu.com/ubuntu noble-backports InRelease [126 kB]
+Get:4 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 Packages [1,450 kB]
+Get:5 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 Components [181 kB]
+Get:6 http://archive.ubuntu.com/ubuntu noble-updates/universe amd64 Packages [1,713 kB]
+Get:7 http://archive.ubuntu.com/ubuntu noble-updates/universe amd64 Components [388 kB]
+Get:8 http://archive.ubuntu.com/ubuntu noble-updates/multiverse amd64 Components [940 B]
+Get:9 http://archive.ubuntu.com/ubuntu noble-backports/main amd64 Components [5,764 B]
+Get:10 http://archive.ubuntu.com/ubuntu noble-backports/universe amd64 Components [12.6 kB]
+Get:11 http://security.ubuntu.com/ubuntu noble-security InRelease [126 kB]
+Get:12 http://security.ubuntu.com/ubuntu noble-security/main amd64 Packages [1,195 kB]
+Get:13 http://security.ubuntu.com/ubuntu noble-security/main Translation-en [238 kB]
+Get:14 http://security.ubuntu.com/ubuntu noble-security/main amd64 Components [46.4 kB]
+Get:15 http://security.ubuntu.com/ubuntu noble-security/universe amd64 Packages [1,229 kB]
+Get:16 http://security.ubuntu.com/ubuntu noble-security/universe Translation-en [248 kB]
+Get:17 http://security.ubuntu.com/ubuntu noble-security/universe amd64 Components [76.3 kB]
+Get:18 http://security.ubuntu.com/ubuntu noble-security/multiverse Translation-en [12.7 kB]
+Fetched 7,175 kB in 25s (292 kB/s)
+Reading package lists...
+[2026-11-16 18:10:52] INFO  Instalando pacotes: curl ca-certificates git rsync jq ufw auditd dnsutils iproute2 iputils-ping logrotate openssl procps psmisc python3
+Waiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is held by process 1719 (unattended-upgr)...
+Waiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is held by process 1719 (unattended-upgr)...
+Waiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is held by process 1719 (unattended-upgr)...
+Waiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is held by process 1719 (unattended-upgr)...
+Waiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is held by process 1719 (unattended-upgr)...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+curl is already the newest version (8.5.0-2ubuntu10.16).
+curl set to manually installed.
+ca-certificates is already the newest version (20260816ubuntu0.24.04.2).
+ca-certificates set to manually installed.
+git is already the newest version (1:2.43.0-1ubuntu7.4).
+git set to manually installed.
+rsync is already the newest version (3.2.7-1ubuntu1.5).
+rsync set to manually installed.
+jq is already the newest version (1.7.1-3ubuntu0.24.04.2).
+jq set to manually installed.
+ufw is already the newest version (0.36.2-6).
+ufw set to manually installed.
+iputils-ping is already the newest version (3:20240117-1ubuntu0.1).
+iputils-ping set to manually installed.
+logrotate is already the newest version (3.21.0-2build1).
+logrotate set to manually installed.
+openssl is already the newest version (3.0.13-0ubuntu3.16).
+openssl set to manually installed.
+psmisc is already the newest version (23.7-1build1).
+psmisc set to manually installed.
+python3 is already the newest version (3.12.3-0ubuntu2.1).
+python3 set to manually installed.
+The following additional packages will be installed:
+  libaudit-common libaudit1 libauparse0t64 libproc2-0
+Suggested packages:
+  audispd-plugins iproute2-doc
+The following NEW packages will be installed:
+  auditd dnsutils libauparse0t64
+The following packages will be upgraded:
+  iproute2 libaudit-common libaudit1 libproc2-0 procps
+5 upgraded, 3 newly installed, 0 to remove and 73 not upgraded.
+Need to get 2,216 kB of archives.
+After this operation, 937 kB of additional disk space will be used.
+Get:1 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libaudit-common all 1:3.1.2-2.1ubuntu0.1 [5,948 B]
+Get:2 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libaudit1 amd64 1:3.1.2-2.1ubuntu0.1 [47.1 kB]
+Get:3 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libauparse0t64 amd64 1:3.1.2-2.1ubuntu0.1 [59.0 kB]
+Get:4 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 auditd amd64 1:3.1.2-2.1ubuntu0.1 [215 kB]
+Get:5 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libproc2-0 amd64 2:4.0.4-4ubuntu3.3 [58.9 kB]
+Get:6 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 procps amd64 2:4.0.4-4ubuntu3.3 [707 kB]
+Get:7 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 iproute2 amd64 6.1.0-1ubuntu6.4 [1,120 kB]
+Get:8 http://archive.ubuntu.com/ubuntu noble-updates/universe amd64 dnsutils all 1:9.18.39-0ubuntu0.24.04.9 [3,684 B]
+Preconfiguring packages ...
+Fetched 2,216 kB in 3s (781 kB/s)
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 88217 files and directories currently installed.)
+Preparing to unpack .../libaudit-common_1%3a3.1.2-2.1ubuntu0.1_all.deb ...
+Unpacking libaudit-common (1:3.1.2-2.1ubuntu0.1) over (1:3.1.2-2.1build1.1) ...
+Setting up libaudit-common (1:3.1.2-2.1ubuntu0.1) ...
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 88217 files and directories currently installed.)
+Preparing to unpack .../libaudit1_1%3a3.1.2-2.1ubuntu0.1_amd64.deb ...
+Unpacking libaudit1:amd64 (1:3.1.2-2.1ubuntu0.1) over (1:3.1.2-2.1build1.1) ...
+Setting up libaudit1:amd64 (1:3.1.2-2.1ubuntu0.1) ...
+Selecting previously unselected package libauparse0t64:amd64.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 88217 files and directories currently installed.)
+Preparing to unpack .../0-libauparse0t64_1%3a3.1.2-2.1ubuntu0.1_amd64.deb ...
+Adding 'diversion of /lib/x86_64-linux-gnu/libauparse.so.0 to /lib/x86_64-linux-gnu/libauparse.so.0.usr-is-merged by libauparse0t64'
+Adding 'diversion of /lib/x86_64-linux-gnu/libauparse.so.0.0.0 to /lib/x86_64-linux-gnu/libauparse.so.0.0.0.usr-is-merged by libauparse0t64'
+Unpacking libauparse0t64:amd64 (1:3.1.2-2.1ubuntu0.1) ...
+Selecting previously unselected package auditd.
+Preparing to unpack .../1-auditd_1%3a3.1.2-2.1ubuntu0.1_amd64.deb ...
+Unpacking auditd (1:3.1.2-2.1ubuntu0.1) ...
+Preparing to unpack .../2-libproc2-0_2%3a4.0.4-4ubuntu3.3_amd64.deb ...
+Unpacking libproc2-0:amd64 (2:4.0.4-4ubuntu3.3) over (2:4.0.4-4ubuntu3.2) ...
+Preparing to unpack .../3-procps_2%3a4.0.4-4ubuntu3.3_amd64.deb ...
+Unpacking procps (2:4.0.4-4ubuntu3.3) over (2:4.0.4-4ubuntu3.2) ...
+Preparing to unpack .../4-iproute2_6.1.0-1ubuntu6.4_amd64.deb ...
+Unpacking iproute2 (6.1.0-1ubuntu6.4) over (6.1.0-1ubuntu6.2) ...
+Selecting previously unselected package dnsutils.
+Preparing to unpack .../5-dnsutils_1%3a9.18.39-0ubuntu0.24.04.9_all.deb ...
+Unpacking dnsutils (1:9.18.39-0ubuntu0.24.04.9) ...
+Setting up iproute2 (6.1.0-1ubuntu6.4) ...
+Setting up dnsutils (1:9.18.39-0ubuntu0.24.04.9) ...
+Setting up libproc2-0:amd64 (2:4.0.4-4ubuntu3.3) ...
+Setting up procps (2:4.0.4-4ubuntu3.3) ...
+Setting up libauparse0t64:amd64 (1:3.1.2-2.1ubuntu0.1) ...
+Setting up auditd (1:3.1.2-2.1ubuntu0.1) ...
+Created symlink /etc/systemd/system/multi-user.target.wants/auditd.service → /usr/lib/systemd/system/auditd.service.
+Processing triggers for man-db (2.12.0-4build2) ...
+Processing triggers for libc-bin (2.39-0ubuntu8.12) ...
+
+Running kernel seems to be up-to-date.
+
+Restarting services...
+ /etc/needrestart/restart.d/systemd-manager
+ systemctl restart cron.service ssh.service systemd-networkd.service systemd-resolved.service
+
+Service restarts being deferred:
+ /etc/needrestart/restart.d/dbus.service
+ systemctl restart systemd-logind.service
+
+No containers need to be restarted.
+
+User sessions running outdated binaries:
+ henrique @ session #1: sshd[992]
+ henrique @ user manager service: systemd[999]
+
+No VM guests are running outdated hypervisor (qemu) binaries on this host.
+[2026-11-16 18:28:27] OK    stress-ng instalado (testes de carga)
+
+==> [3] Hostname, fuso horário e NTP
+[2026-11-16 18:28:27] OK    Hostname já é heatsafe-srv
+[2026-11-16 18:28:27] INFO  Fuso horário: America/Sao_Paulo
+[2026-11-16 15:28:27] OK    Sincronização de horário (NTP) ligada
+
+==> [4] Usuário de serviço e estrutura de pastas
+[2026-11-16 15:28:27] INFO  Criando grupo heatsafe
+[2026-11-16 15:28:27] INFO  Criando usuário de serviço heatsafe (sem login, sem senha)
+[2026-11-16 15:28:27] INFO  Adicionando henrique aos grupos heatsafe e adm (leitura dos logs)
+[2026-11-16 15:28:27] OK    Pastas prontas:
+      drwxr-x--- 2 root     heatsafe 4096 Nov 16 15:28 /etc/heatsafe
+      drwxr-x--- 2 root     heatsafe 4096 Nov 16 15:28 /opt/heatsafe
+      drwxr-x--- 5 heatsafe heatsafe 4096 Nov 16 15:28 /var/lib/heatsafe
+      drwxrws--- 2 root     heatsafe 4096 Nov 16 15:10 /var/log/heatsafe
+      drwxr-xr-x 2 heatsafe heatsafe 4096 Nov 16 15:28 /var/www/heatsafe-status
+
+==> [5] Instalando os scripts em /opt/heatsafe/infra
+[2026-11-16 15:28:27] OK    Scripts instalados (usados pelos serviços systemd)
+
+==> [6] Rede: IP (static) e servidores DNS
+[2026-11-16 15:28:27] INFO  Interface: enp0s3 | IP atual: 10.0.2.15/24 | gateway atual: 10.0.2.2
+      # Gerado por HeatSafe provision_infra.sh — não edite à mão (edite config/heatsafe.conf)
+      network:
+        version: 2
+        renderer: networkd
+        ethernets:
+          enp0s3:
+            dhcp4: false
+            dhcp6: false
+            addresses: [10.0.2.15/24]
+            routes:
+              - to: default
+                via: 10.0.2.2
+            nameservers:
+              search: [heatsafe.local]
+              addresses: [1.1.1.1, 8.8.8.8]
+[2026-11-16 15:28:27] INFO  Validando a configuração (netplan generate)
+[2026-11-16 15:28:28] INFO  Aplicando a rede (netplan apply)
+[2026-11-16 15:28:31] OK    IP em enp0s3: 10.0.2.15/24 | rota padrão via 10.0.2.2
+[2026-11-16 15:28:32] OK    DNS externo resolvendo (archive.ubuntu.com -> 2a06:bc80:10:1000::90)
+
+==> [7] DNS local (/etc/hosts): heatsafe.local api.heatsafe.local previsao.heatsafe.local monitor.heatsafe.local
+[2026-11-16 15:28:32] OK    heatsafe-srv -> 10.0.2.15
+[2026-11-16 15:28:32] OK    heatsafe.local -> 10.0.2.15
+[2026-11-16 15:28:32] OK    api.heatsafe.local -> 10.0.2.15
+[2026-11-16 15:28:32] OK    previsao.heatsafe.local -> 10.0.2.15
+[2026-11-16 15:28:32] OK    monitor.heatsafe.local -> 10.0.2.15
+
+==> [8] Firewall (ufw): nega tudo, libera só SSH e HTTP
+[2026-11-16 15:28:32] INFO  Política padrão: bloquear entrada
+Default incoming policy changed to 'deny'
+(be sure to update your rules accordingly)
+[2026-11-16 15:28:32] INFO  Política padrão: liberar saída
+Default outgoing policy changed to 'allow'
+(be sure to update your rules accordingly)
+[2026-11-16 15:28:32] INFO  SSH (22) com limite anti-força-bruta
+Rules updated
+Rules updated (v6)
+[2026-11-16 15:28:32] INFO  HTTP (80) para o nginx
+Rules updated
+Rules updated (v6)
+[2026-11-16 15:28:33] INFO  Porta interna da API bloqueada
+Rules updated
+Rules updated (v6)
+[2026-11-16 15:28:33] INFO  Porta interna da previsão bloqueada
+Rules updated
+Rules updated (v6)
+[2026-11-16 15:28:33] INFO  Ativando o firewall
+Firewall is active and enabled on system startup
+      Status: active
+      Logging: on (low)
+      Default: deny (incoming), allow (outgoing), disabled (routed)
+      New profiles: skip
+      
+      To                         Action      From
+      --                         ------      ----
+      22/tcp                     LIMIT IN    Anywhere                   # SSH administracao
+      80/tcp                     ALLOW IN    Anywhere                   # HeatSafe nginx
+      5000/tcp                   DENY IN     Anywhere                   # API so via nginx
+      8000/tcp                   DENY IN     Anywhere                   # Previsao so via nginx
+      22/tcp (v6)                LIMIT IN    Anywhere (v6)              # SSH administracao
+      80/tcp (v6)                ALLOW IN    Anywhere (v6)              # HeatSafe nginx
+      5000/tcp (v6)              DENY IN     Anywhere (v6)              # API so via nginx
+      8000/tcp (v6)              DENY IN     Anywhere (v6)              # Previsao so via nginx
+      
+
+==> [9] SSH endurecido
+[2026-11-16 15:28:34] OK    SSH recarregado com a nova configuração
+
+==> [10] Auditoria do sistema (auditd) e rotação de logs
+[2026-11-16 15:28:35] OK    Regras do auditd carregadas (13 regras)
+[2026-11-16 15:28:35] OK    logrotate: /var/log/heatsafe/*.log rotaciona diariamente (14 dias)
+
+==> [11] Resumo da infraestrutura
+      Hostname         heatsafe-srv (heatsafe-srv.heatsafe.local)
+      IP               10.0.2.15/24 em enp0s3 (static)
+      Gateway          10.0.2.2
+      DNS              1.1.1.1,8.8.8.8 (+ local: heatsafe.local api.heatsafe.local previsao.heatsafe.local monitor.heatsafe.local)
+      Fuso             America/Sao_Paulo
+      Usuário         uid=999(heatsafe) gid=988(heatsafe) groups=988(heatsafe)
+      Firewall         Status: active
+      auditd           active
+      Logs             /var/log/heatsafe
+[2026-11-16 15:28:35] OK    provision_infra.sh concluído em 1108s. Log: /var/log/heatsafe/provision_infra.log

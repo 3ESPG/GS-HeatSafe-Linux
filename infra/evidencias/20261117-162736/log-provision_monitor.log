@@ -1,0 +1,86 @@
+
+===== 2026-11-16T15:38:28-03:00 | provision_monitor.sh | usuario=henrique | args: nenhum =====
+
+==> [1] Checagens
+[2026-11-16 15:38:28] OK    Pré-requisitos ok
+
+==> [2] Teste rápido do monitor (uma leitura, como usuário heatsafe)
+      [2026-11-16 15:38:29] CPU 0% | MEM 11% (431/3915 MB) | DISCO /=24% | LOAD 0.00 3.66 9.11 | sem serviços de app
+
+==> [3] Instalando as units do systemd
+[2026-11-16 15:38:29] OK    /etc/systemd/system/heatsafe-monitor.service
+[2026-11-16 15:38:29] OK    /etc/systemd/system/heatsafe-healthcheck.service
+[2026-11-16 15:38:29] ERRO  Erro na linha 160: tr -d '@'
+[2026-11-16 15:38:29] OK    /etc/systemd/system/heatsafe-healthcheck.timer
+[2026-11-16 15:38:29] INFO  Recarregando o systemd
+
+==> [4] Ligando o monitor e o timer de healthcheck
+[2026-11-16 15:38:30] INFO  Habilitando no boot
+Created symlink /etc/systemd/system/multi-user.target.wants/heatsafe-monitor.service → /etc/systemd/system/heatsafe-monitor.service.
+Created symlink /etc/systemd/system/timers.target.wants/heatsafe-healthcheck.timer → /etc/systemd/system/heatsafe-healthcheck.timer.
+[2026-11-16 15:38:30] INFO  (Re)iniciando o monitor
+[2026-11-16 15:38:30] INFO  Iniciando o timer
+
+==> [5] Verificando
+[2026-11-16 15:38:30] OK    heatsafe-monitor ativo (PID 4409, Restart=always)
+[2026-11-16 15:38:30] OK    Heartbeat: 2026-11-16 15:38:29
+[2026-11-16 15:38:30] OK    Última leitura: [2026-11-16 15:38:30] Monitor iniciado (PID 4409, intervalo 15s) | limites CPU 70/90% MEM 75/90% DISCO 80/90%
+      NEXT LEFT LAST                          PASSED UNIT                       ACTIVATES
+      -       - Mon 2026-11-16 15:38:30 -03 77ms ago heatsafe-healthcheck.timer heatsafe-healthcheck.service
+      
+      1 timers listed.
+      Pass --all to see loaded but inactive timers, too.
+[2026-11-16 15:38:30] INFO  Primeira execução do healthcheck
+[2026-11-16 15:38:30] OK    Healthcheck: [2026-11-16 15:38:30] VERIFICACAO | monitor=ok(heartbeat 1s) | ações: 0
+[2026-11-16 15:38:30] AVISO status.json via nginx respondeu HTTP 000 (o nginx é configurado pelo provision_app.sh)
+
+==> [6] Resumo do monitoramento
+      Intervalo            15s
+      Limites              CPU 70/90% | MEM 75/90% | DISCO 80/90% (alerta/crítico)
+      Alertas              /var/log/heatsafe/alertas.log  (e journalctl -t heatsafe-monitor)
+      Leituras             /var/log/heatsafe/monitor.log
+      Autocorreção       /var/log/heatsafe/healthcheck.log (timer a cada 1 min)
+      Webhook              não configurado
+[2026-11-16 15:38:30] OK    provision_monitor.sh concluído em 2s. Log: /var/log/heatsafe/provision_monitor.log
+
+===== 2026-11-17T13:59:37-03:00 | provision_monitor.sh | usuario=henrique | args: nenhum =====
+
+==> [1] Checagens
+[2026-11-17 13:59:37] OK    Pré-requisitos ok
+
+==> [2] Teste rápido do monitor (uma leitura, como usuário heatsafe)
+      [2026-11-17 13:59:38] CPU 0% | MEM 28% (1129/3915 MB) | DISCO /=36% | LOAD 0.06 0.40 0.38 | api=active/200 previsao=active/200
+
+==> [3] Instalando as units do systemd
+[2026-11-17 13:59:38] OK    /etc/systemd/system/heatsafe-monitor.service
+[2026-11-17 13:59:38] OK    /etc/systemd/system/heatsafe-healthcheck.service
+[2026-11-17 13:59:38] ERRO  Erro na linha 160: tr -d '@'
+[2026-11-17 13:59:38] OK    /etc/systemd/system/heatsafe-healthcheck.timer
+[2026-11-17 13:59:38] INFO  Recarregando o systemd
+
+==> [4] Ligando o monitor e o timer de healthcheck
+[2026-11-17 13:59:38] INFO  Habilitando no boot
+[2026-11-17 13:59:39] INFO  (Re)iniciando o monitor
+[2026-11-17 13:59:39] INFO  Iniciando o timer
+
+==> [5] Verificando
+[2026-11-17 13:59:39] OK    heatsafe-monitor ativo (PID 3547, Restart=always)
+[2026-11-17 13:59:39] OK    Heartbeat: 2026-11-17 13:59:38
+[2026-11-17 13:59:39] OK    Última leitura: [2026-11-17 13:59:39] Monitor iniciado (PID 3547, intervalo 15s) | limites CPU 70/90% MEM 75/90% DISCO 80/90%
+      NEXT LEFT LAST                           PASSED UNIT                       ACTIVATES
+      -       - Tue 2026-11-17 13:59:39 -03 120ms ago heatsafe-healthcheck.timer heatsafe-healthcheck.service
+      
+      1 timers listed.
+      Pass --all to see loaded but inactive timers, too.
+[2026-11-17 13:59:39] INFO  Primeira execução do healthcheck
+[2026-11-17 13:59:39] OK    Healthcheck: [2026-11-17 13:59:39] VERIFICACAO | api=ok(HTTP 200) previsao=ok(HTTP 200) monitor=ok(heartbeat 1s) | ações: 0
+[2026-11-17 13:59:39] OK    Página de status: http://monitor.heatsafe.local (status.json HTTP 200)
+
+==> [6] Resumo do monitoramento
+      Intervalo            15s
+      Limites              CPU 70/90% | MEM 75/90% | DISCO 80/90% (alerta/crítico)
+      Alertas              /var/log/heatsafe/alertas.log  (e journalctl -t heatsafe-monitor)
+      Leituras             /var/log/heatsafe/monitor.log
+      Autocorreção       /var/log/heatsafe/healthcheck.log (timer a cada 1 min)
+      Webhook              não configurado
+[2026-11-17 13:59:39] OK    provision_monitor.sh concluído em 2s. Log: /var/log/heatsafe/provision_monitor.log

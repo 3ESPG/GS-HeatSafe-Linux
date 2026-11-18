@@ -1,0 +1,39 @@
+### Identidade
+$ hostnamectl
+ Static hostname: heatsafe-srv
+       Icon name: computer-vm
+         Chassis: vm 🖴
+      Machine ID: 60fb68449cb545f5945c4c387c6c5ee1
+         Boot ID: 48a1422055884860b45f0b65d0018963
+  Virtualization: oracle
+Operating System: Ubuntu 24.04.3 LTS
+          Kernel: Linux 6.8.0-149-generic
+    Architecture: x86-64
+ Hardware Vendor: innotek GmbH
+  Hardware Model: VirtualBox
+Firmware Version: VirtualBox
+   Firmware Date: Fri 2006-12-01
+    Firmware Age: 19y 11month 2w 3d
+
+### Data, fuso e NTP
+$ timedatectl
+               Local time: Tue 2026-11-17 16:27:36 -03
+           Universal time: Tue 2026-11-17 19:27:36 UTC
+                 RTC time: Tue 2026-11-17 19:27:36
+                Time zone: America/Sao_Paulo (-03, -0300)
+System clock synchronized: yes
+              NTP service: active
+          RTC in local TZ: no
+
+### Usuário de serviço
+$ id heatsafe
+uid=999(heatsafe) gid=988(heatsafe) groups=988(heatsafe)
+
+### Pastas
+$ ls -ld /opt/heatsafe /etc/heatsafe /var/lib/heatsafe /var/log/heatsafe /var/www/heatsafe-status
+drwxr-x--- 2 root     heatsafe 4096 Nov 17 13:59 /etc/heatsafe
+drwxr-x--- 6 root     heatsafe 4096 Nov 16 19:53 /opt/heatsafe
+drwxr-x--- 6 heatsafe heatsafe 4096 Nov 16 19:53 /var/lib/heatsafe
+drwxrws--- 2 root     heatsafe 4096 Nov 17 16:27 /var/log/heatsafe
+drwxr-xr-x 2 heatsafe heatsafe 4096 Nov 17 16:27 /var/www/heatsafe-status
+

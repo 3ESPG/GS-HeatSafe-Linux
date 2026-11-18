@@ -1,0 +1,54 @@
+### Interfaces
+$ ip -br addr
+lo               UNKNOWN        127.0.0.1/8 ::1/128 
+enp0s3           UP             10.0.2.15/24 fd17:625c:f037:2:a00:27ff:fe9b:a83f/64 fe80::a00:27ff:fe9b:a83f/64 
+
+### Rotas
+$ ip route
+default via 10.0.2.2 dev enp0s3 proto static 
+10.0.2.0/24 dev enp0s3 proto kernel scope link src 10.0.2.15 
+
+### Netplan HeatSafe
+$ cat /etc/netplan/60-heatsafe.yaml
+# Gerado por HeatSafe provision_infra.sh — não edite à mão (edite config/heatsafe.conf)
+network:
+  version: 2
+  renderer: networkd
+  ethernets:
+    enp0s3:
+      dhcp4: false
+      dhcp6: false
+      addresses: [10.0.2.15/24]
+      routes:
+        - to: default
+          via: 10.0.2.2
+      nameservers:
+        search: [heatsafe.local]
+        addresses: [1.1.1.1, 8.8.8.8]
+
+### DNS (resolved)
+$ resolvectl status
+Global
+         Protocols: -LLMNR -mDNS -DNSOverTLS DNSSEC=no/unsupported
+  resolv.conf mode: stub
+
+Link 2 (enp0s3)
+    Current Scopes: DNS
+         Protocols: +DefaultRoute -LLMNR -mDNS -DNSOverTLS DNSSEC=no/unsupported
+Current DNS Server: 1.1.1.1
+       DNS Servers: 1.1.1.1 8.8.8.8 fd17:625c:f037:2::3
+        DNS Domain: heatsafe.local
+
+### Portas em escuta
+$ ss -tlnp
+State  Recv-Q Send-Q      Local Address:Port  Peer Address:PortProcess                                                                            
+LISTEN 0      4096           127.0.0.54:53         0.0.0.0:*    users:(("systemd-resolve",pid=598,fd=17))                                         
+LISTEN 0      151             127.0.0.1:3306       0.0.0.0:*    users:(("mysqld",pid=996,fd=23))                                                  
+LISTEN 0      70              127.0.0.1:33060      0.0.0.0:*    users:(("mysqld",pid=996,fd=21))                                                  
+LISTEN 0      4096        127.0.0.53%lo:53         0.0.0.0:*    users:(("systemd-resolve",pid=598,fd=15))                                         
+LISTEN 0      512             127.0.0.1:5000       0.0.0.0:*    users:(("dotnet",pid=1182,fd=298))                                                
+LISTEN 0      4096              0.0.0.0:22         0.0.0.0:*    users:(("sshd",pid=1716,fd=3),("systemd",pid=1,fd=92))                            
+LISTEN 0      511               0.0.0.0:80         0.0.0.0:*    users:(("nginx",pid=1033,fd=10),("nginx",pid=1032,fd=10),("nginx",pid=1031,fd=10))
+LISTEN 0      100    [::ffff:127.0.0.1]:8000             *:*    users:(("java",pid=1170,fd=19))                                                   
+LISTEN 0      4096                 [::]:22            [::]:*    users:(("sshd",pid=1716,fd=4),("systemd",pid=1,fd=93))                            
+

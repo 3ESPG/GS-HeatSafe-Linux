@@ -1,0 +1,300 @@
+Adding debian:Security_Communication_ECC_RootCA1.pem
+Adding debian:Security_Communication_RootCA2.pem
+Adding debian:Starfield_Root_Certificate_Authority_-_G2.pem
+Adding debian:Starfield_Services_Root_Certificate_Authority_-_G2.pem
+Adding debian:SwissSign_RSA_TLS_Root_CA_2022_-_1.pem
+Adding debian:T-TeleSec_GlobalRoot_Class_2.pem
+Adding debian:T-TeleSec_GlobalRoot_Class_3.pem
+Adding debian:TUBITAK_Kamu_SM_SSL_Kok_Sertifikasi_-_Surum_1.pem
+Adding debian:TWCA_CYBER_Root_CA.pem
+Adding debian:TWCA_Global_Root_CA.pem
+Adding debian:TWCA_Root_Certification_Authority.pem
+Adding debian:Telekom_Security_TLS_ECC_Root_2020.pem
+Adding debian:Telekom_Security_TLS_RSA_Root_2023.pem
+Adding debian:Telia_EC_TLS_Root_CA_v3.pem
+Adding debian:Telia_RSA_TLS_Root_CA_v3.pem
+Adding debian:Telia_Root_CA_v2.pem
+Adding debian:TrustAsia_Global_Root_CA_G3.pem
+Adding debian:TrustAsia_Global_Root_CA_G4.pem
+Adding debian:TrustAsia_TLS_ECC_Root_CA.pem
+Adding debian:TrustAsia_TLS_RSA_Root_CA.pem
+Adding debian:TunTrust_Root_CA.pem
+Adding debian:UCA_Extended_Validation_Root.pem
+Adding debian:UCA_Global_G2_Root.pem
+Adding debian:USERTrust_ECC_Certification_Authority.pem
+Adding debian:USERTrust_RSA_Certification_Authority.pem
+Adding debian:certSIGN_Root_CA_G2.pem
+Adding debian:e-Szigno_Root_CA_2017.pem
+Adding debian:e-Szigno_TLS_Root_CA_2023.pem
+Adding debian:emSign_ECC_Root_CA_-_C3.pem
+Adding debian:emSign_Root_CA_-_C1.pem
+Adding debian:emSign_Root_CA_-_G1.pem
+Adding debian:vTrus_ECC_Root_CA.pem
+Adding debian:vTrus_Root_CA.pem
+done.
+Setting up openjdk-21-jdk-headless:amd64 (21.0.13.0.3+1-1~24.04.1) ...
+update-alternatives: using /usr/lib/jvm/java-21-openjdk-amd64/bin/jar to provide /usr/bin/jar (jar) in auto mode
+update-alternatives: using /usr/lib/jvm/java-21-openjdk-amd64/bin/jarsigner to provide /usr/bin/jarsigner (jarsigner) in auto mode
+update-alternatives: using /usr/lib/jvm/java-21-openjdk-amd64/bin/javac to provide /usr/bin/javac (javac) in auto mode
+update-alternatives: using /usr/lib/jvm/java-21-openjdk-amd64/bin/javadoc to provide /usr/bin/javadoc (javadoc) in auto mode
+update-alternatives: using /usr/lib/jvm/java-21-openjdk-amd64/bin/javap to provide /usr/bin/javap (javap) in auto mode
+update-alternatives: using /usr/lib/jvm/java-21-openjdk-amd64/bin/jcmd to provide /usr/bin/jcmd (jcmd) in auto mode
+update-alternatives: using /usr/lib/jvm/java-21-openjdk-amd64/bin/jdb to provide /usr/bin/jdb (jdb) in auto mode
+update-alternatives: using /usr/lib/jvm/java-21-openjdk-amd64/bin/jdeprscan to provide /usr/bin/jdeprscan (jdeprscan) in auto mode
+update-alternatives: using /usr/lib/jvm/java-21-openjdk-amd64/bin/jdeps to provide /usr/bin/jdeps (jdeps) in auto mode
+update-alternatives: using /usr/lib/jvm/java-21-openjdk-amd64/bin/jfr to provide /usr/bin/jfr (jfr) in auto mode
+update-alternatives: using /usr/lib/jvm/java-21-openjdk-amd64/bin/jimage to provide /usr/bin/jimage (jimage) in auto mode
+update-alternatives: using /usr/lib/jvm/java-21-openjdk-amd64/bin/jinfo to provide /usr/bin/jinfo (jinfo) in auto mode
+update-alternatives: using /usr/lib/jvm/java-21-openjdk-amd64/bin/jlink to provide /usr/bin/jlink (jlink) in auto mode
+update-alternatives: using /usr/lib/jvm/java-21-openjdk-amd64/bin/jmap to provide /usr/bin/jmap (jmap) in auto mode
+update-alternatives: using /usr/lib/jvm/java-21-openjdk-amd64/bin/jmod to provide /usr/bin/jmod (jmod) in auto mode
+update-alternatives: using /usr/lib/jvm/java-21-openjdk-amd64/bin/jps to provide /usr/bin/jps (jps) in auto mode
+update-alternatives: using /usr/lib/jvm/java-21-openjdk-amd64/bin/jrunscript to provide /usr/bin/jrunscript (jrunscript) in auto mode
+update-alternatives: using /usr/lib/jvm/java-21-openjdk-amd64/bin/jshell to provide /usr/bin/jshell (jshell) in auto mode
+update-alternatives: using /usr/lib/jvm/java-21-openjdk-amd64/bin/jstack to provide /usr/bin/jstack (jstack) in auto mode
+update-alternatives: using /usr/lib/jvm/java-21-openjdk-amd64/bin/jstat to provide /usr/bin/jstat (jstat) in auto mode
+update-alternatives: using /usr/lib/jvm/java-21-openjdk-amd64/bin/jstatd to provide /usr/bin/jstatd (jstatd) in auto mode
+update-alternatives: using /usr/lib/jvm/java-21-openjdk-amd64/bin/jwebserver to provide /usr/bin/jwebserver (jwebserver) in auto mode
+update-alternatives: using /usr/lib/jvm/java-21-openjdk-amd64/bin/serialver to provide /usr/bin/serialver (serialver) in auto mode
+update-alternatives: using /usr/lib/jvm/java-21-openjdk-amd64/bin/jhsdb to provide /usr/bin/jhsdb (jhsdb) in auto mode
+
+Running kernel seems to be up-to-date.
+
+Restarting services...
+ systemctl restart fwupd.service
+
+Service restarts being deferred:
+ /etc/needrestart/restart.d/dbus.service
+ systemctl restart systemd-logind.service
+
+No containers need to be restarted.
+
+No user sessions are running outdated binaries.
+
+No VM guests are running outdated hypervisor (qemu) binaries on this host.
+[2026-11-16 19:38:37] OK    nginx 1.24.0 (Ubuntu) | openjdk version "21.0.13.0.3" 2026-10-24 | /usr/sbin/mysqld 8.0.46-0ubuntu0.24.04.5
+
+==> [3] Código da aplicação (repositórios do grupo no GitHub)
+[2026-11-16 19:38:37] INFO  Clonando https://github.com/3ESPG/GS-HeatSafe-SOA.git (branch main)
+[2026-11-16 19:38:38] OK    previsao: 9584300 2026-11-16 docs: completa a Ficha da CitizenTech (o que cada parte faz e links dos repositórios)
+[2026-11-16 19:38:38] INFO  Clonando https://github.com/GustavooHM/HeatSafe-Backend.git (branch master)
+[2026-11-16 19:38:39] OK    api: bafb98a 2026-11-16 docs: completa a Ficha da CitizenTech (o que cada parte faz e links dos repositórios)
+
+==> [4] Bancos de dados: MySQL (previsão) e SQLite (API)
+[2026-11-16 19:38:39] INFO  Ligando o MySQL
+Synchronizing state of mysql.service with SysV service script with /usr/lib/systemd/systemd-sysv-install.
+Executing: /usr/lib/systemd/systemd-sysv-install enable mysql
+[2026-11-16 19:38:40] OK    MySQL: banco 'heatsafe', usuário 'heatsafe' (acesso só local, porta 3306 fechada para fora)
+[2026-11-16 19:38:40] OK    SQLite da API: /var/lib/heatsafe/api/heatsafe.db (criado pela própria API ao iniciar)
+
+==> [5] Variáveis de ambiente (um arquivo por serviço: cada um só vê os próprios segredos)
+[2026-11-16 19:38:40] OK    /etc/heatsafe/previsao.env (640 root:heatsafe):
+      PORT="8000"
+      SERVER_ADDRESS="127.0.0.1"
+      SERVER_FORWARD_HEADERS_STRATEGY="framework"
+      DB_URL="jdbc:mysql://localhost:3306/heatsafe?allowPublicKeyRetrieval=true&useSSL=false"
+      DB_USER="heatsafe"
+      DB_PASSWORD="********"
+      CARREGAR_INMET="true"
+      CORS_ALLOWED_ORIGINS="http://api.heatsafe.local,http://heatsafe.local,http://localhost:8081,http://localhost:3000"
+      TZ="America/Sao_Paulo"
+[2026-11-16 19:38:40] OK    /etc/heatsafe/api.env (640 root:heatsafe):
+      ASPNETCORE_ENVIRONMENT="Development"
+      ASPNETCORE_URLS="http://127.0.0.1:5000"
+      ConnectionStrings__HeatSafe="Data Source=/var/lib/heatsafe/api/heatsafe.db;Cache=Shared"
+      Forecast__BaseUrl="http://previsao.heatsafe.local/"
+      Forecast__Station="A701"
+      Jwt__SigningKey="********"
+      DOTNET_CLI_TELEMETRY_OPTOUT="1"
+      TZ="America/Sao_Paulo"
+
+==> [6] Serviço de previsão (Java 21 / Spring Boot + MySQL)
+[2026-11-16 19:38:40] INFO  Compilando com o Maven Wrapper (a 1ª vez baixa as dependências: alguns minutos)...
+[2026-11-16 19:38:40] INFO  Gerando o .jar (mvnw package, sem testes: os testes usam H2 e rodam no CI do colega)
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ----------------< br.com.fiap3espg:heatsafe-clima-api >-----------------
+[INFO] Building HeatSafe Clima API 1.0.0
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ heatsafe-clima-api ---
+[INFO] Copying 1 resource from src/main/resources to target/classes
+[INFO] Copying 5 resources from src/main/resources to target/classes
+[INFO] 
+[INFO] --- compiler:3.14.1:compile (default-compile) @ heatsafe-clima-api ---
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 46 source files with javac [debug parameters release 21] to target/classes
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ heatsafe-clima-api ---
+[INFO] Copying 1 resource from src/test/resources to target/test-classes
+[INFO] 
+[INFO] --- compiler:3.14.1:testCompile (default-testCompile) @ heatsafe-clima-api ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 6 source files with javac [debug parameters release 21] to target/test-classes
+[INFO] 
+[INFO] --- surefire:3.5.5:test (default-test) @ heatsafe-clima-api ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- jar:3.4.2:jar (default-jar) @ heatsafe-clima-api ---
+[INFO] Building jar: /opt/heatsafe/app/previsao/target/heatsafe-clima-api-1.0.0.jar
+[INFO] 
+[INFO] --- spring-boot:4.0.5:repackage (repackage) @ heatsafe-clima-api ---
+[INFO] Replacing main artifact /opt/heatsafe/app/previsao/target/heatsafe-clima-api-1.0.0.jar with repackaged archive, adding nested dependencies in BOOT-INF/.
+[INFO] The original artifact has been renamed to /opt/heatsafe/app/previsao/target/heatsafe-clima-api-1.0.0.jar.original
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  05:22 min
+[INFO] Finished at: 2026-11-16T19:52:39-03:00
+[INFO] ------------------------------------------------------------------------
+[2026-11-16 19:52:39] OK    .jar publicado: /opt/heatsafe/previsao/heatsafe-previsao.jar (61M)
+[2026-11-16 19:52:39] INFO  Na 1ª subida o Flyway cria as tabelas e o serviço importa os 3.996 dias do INMET
+[2026-11-16 19:52:40] INFO  Habilitando no boot e (re)iniciando heatsafe-previsao
+[2026-11-16 19:52:40] INFO  Aguardando heatsafe-previsao responder em http://127.0.0.1:8000/health (até 180s)...
+[2026-11-16 19:52:47] OK    http://127.0.0.1:8000/health respondeu HTTP 200 após 7s
+
+==> [7] API central (C# / ASP.NET Core)
+[2026-11-16 19:52:47] INFO  Projeto HeatSafe.Api/HeatSafe.Api.csproj | TargetFramework net10.0 -> .NET SDK 10.0
+[2026-11-16 19:52:48] INFO  Instalando .NET SDK 10.0 (apt)
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following additional packages will be installed:
+  aspnetcore-runtime-10.0 aspnetcore-targeting-pack-10.0
+  dotnet-apphost-pack-10.0 dotnet-host-10.0 dotnet-hostfxr-10.0
+  dotnet-runtime-10.0 dotnet-sdk-aot-10.0 dotnet-targeting-pack-10.0
+  dotnet-templates-10.0 liblttng-ust-common1t64 liblttng-ust-ctl5t64
+  liblttng-ust1t64
+Suggested packages:
+  aspnetcore-runtime-dbg-10.0 dotnet-runtime-dbg-10.0 dotnet-sdk-dbg-10.0
+The following NEW packages will be installed:
+  aspnetcore-runtime-10.0 aspnetcore-targeting-pack-10.0
+  dotnet-apphost-pack-10.0 dotnet-host-10.0 dotnet-hostfxr-10.0
+  dotnet-runtime-10.0 dotnet-sdk-10.0 dotnet-sdk-aot-10.0
+  dotnet-targeting-pack-10.0 dotnet-templates-10.0 liblttng-ust-common1t64
+  liblttng-ust-ctl5t64 liblttng-ust1t64
+0 upgraded, 13 newly installed, 0 to remove and 71 not upgraded.
+Need to get 164 MB of archives.
+After this operation, 625 MB of additional disk space will be used.
+Get:1 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 dotnet-host-10.0 amd64 10.0.15-0ubuntu1~24.04.1 [202 kB]
+Get:2 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 dotnet-hostfxr-10.0 amd64 10.0.15-0ubuntu1~24.04.1 [148 kB]
+Get:3 http://archive.ubuntu.com/ubuntu noble/main amd64 liblttng-ust-common1t64 amd64 2.13.7-1.1ubuntu2 [27.5 kB]
+Get:4 http://archive.ubuntu.com/ubuntu noble/main amd64 liblttng-ust-ctl5t64 amd64 2.13.7-1.1ubuntu2 [74.9 kB]
+Get:5 http://archive.ubuntu.com/ubuntu noble/main amd64 liblttng-ust1t64 amd64 2.13.7-1.1ubuntu2 [185 kB]
+Get:6 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 dotnet-runtime-10.0 amd64 10.0.15-0ubuntu1~24.04.1 [25.7 MB]
+Get:7 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 aspnetcore-runtime-10.0 amd64 10.0.15-0ubuntu1~24.04.1 [8,484 kB]
+Get:8 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 aspnetcore-targeting-pack-10.0 amd64 10.0.15-0ubuntu1~24.04.1 [3,525 kB]
+Get:9 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 dotnet-apphost-pack-10.0 amd64 10.0.15-0ubuntu1~24.04.1 [3,716 kB]
+Get:10 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 dotnet-targeting-pack-10.0 amd64 10.0.15-0ubuntu1~24.04.1 [3,174 kB]
+Get:11 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 dotnet-templates-10.0 amd64 10.0.115-0ubuntu1~24.04.1 [2,919 kB]
+Get:12 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 dotnet-sdk-10.0 amd64 10.0.115-0ubuntu1~24.04.1 [100 MB]
+Get:13 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 dotnet-sdk-aot-10.0 amd64 10.0.115-0ubuntu1~24.04.1 [15.8 MB]
+Fetched 164 MB in 22s (7,620 kB/s)
+Selecting previously unselected package dotnet-host-10.0.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 90801 files and directories currently installed.)
+Preparing to unpack .../00-dotnet-host-10.0_10.0.15-0ubuntu1~24.04.1_amd64.deb ...
+Unpacking dotnet-host-10.0 (10.0.15-0ubuntu1~24.04.1) ...
+Selecting previously unselected package dotnet-hostfxr-10.0.
+Preparing to unpack .../01-dotnet-hostfxr-10.0_10.0.15-0ubuntu1~24.04.1_amd64.deb ...
+Unpacking dotnet-hostfxr-10.0 (10.0.15-0ubuntu1~24.04.1) ...
+Selecting previously unselected package liblttng-ust-common1t64:amd64.
+Preparing to unpack .../02-liblttng-ust-common1t64_2.13.7-1.1ubuntu2_amd64.deb ...
+Unpacking liblttng-ust-common1t64:amd64 (2.13.7-1.1ubuntu2) ...
+Selecting previously unselected package liblttng-ust-ctl5t64:amd64.
+Preparing to unpack .../03-liblttng-ust-ctl5t64_2.13.7-1.1ubuntu2_amd64.deb ...
+Unpacking liblttng-ust-ctl5t64:amd64 (2.13.7-1.1ubuntu2) ...
+Selecting previously unselected package liblttng-ust1t64:amd64.
+Preparing to unpack .../04-liblttng-ust1t64_2.13.7-1.1ubuntu2_amd64.deb ...
+Unpacking liblttng-ust1t64:amd64 (2.13.7-1.1ubuntu2) ...
+Selecting previously unselected package dotnet-runtime-10.0.
+Preparing to unpack .../05-dotnet-runtime-10.0_10.0.15-0ubuntu1~24.04.1_amd64.deb ...
+Unpacking dotnet-runtime-10.0 (10.0.15-0ubuntu1~24.04.1) ...
+Selecting previously unselected package aspnetcore-runtime-10.0.
+Preparing to unpack .../06-aspnetcore-runtime-10.0_10.0.15-0ubuntu1~24.04.1_amd64.deb ...
+Unpacking aspnetcore-runtime-10.0 (10.0.15-0ubuntu1~24.04.1) ...
+Selecting previously unselected package aspnetcore-targeting-pack-10.0.
+Preparing to unpack .../07-aspnetcore-targeting-pack-10.0_10.0.15-0ubuntu1~24.04.1_amd64.deb ...
+Unpacking aspnetcore-targeting-pack-10.0 (10.0.15-0ubuntu1~24.04.1) ...
+Selecting previously unselected package dotnet-apphost-pack-10.0.
+Preparing to unpack .../08-dotnet-apphost-pack-10.0_10.0.15-0ubuntu1~24.04.1_amd64.deb ...
+Unpacking dotnet-apphost-pack-10.0 (10.0.15-0ubuntu1~24.04.1) ...
+Selecting previously unselected package dotnet-targeting-pack-10.0.
+Preparing to unpack .../09-dotnet-targeting-pack-10.0_10.0.15-0ubuntu1~24.04.1_amd64.deb ...
+Unpacking dotnet-targeting-pack-10.0 (10.0.15-0ubuntu1~24.04.1) ...
+Selecting previously unselected package dotnet-templates-10.0.
+Preparing to unpack .../10-dotnet-templates-10.0_10.0.115-0ubuntu1~24.04.1_amd64.deb ...
+Unpacking dotnet-templates-10.0 (10.0.115-0ubuntu1~24.04.1) ...
+Selecting previously unselected package dotnet-sdk-10.0.
+Preparing to unpack .../11-dotnet-sdk-10.0_10.0.115-0ubuntu1~24.04.1_amd64.deb ...
+Unpacking dotnet-sdk-10.0 (10.0.115-0ubuntu1~24.04.1) ...
+Selecting previously unselected package dotnet-sdk-aot-10.0.
+Preparing to unpack .../12-dotnet-sdk-aot-10.0_10.0.115-0ubuntu1~24.04.1_amd64.deb ...
+Unpacking dotnet-sdk-aot-10.0 (10.0.115-0ubuntu1~24.04.1) ...
+Setting up dotnet-targeting-pack-10.0 (10.0.15-0ubuntu1~24.04.1) ...
+Setting up liblttng-ust-common1t64:amd64 (2.13.7-1.1ubuntu2) ...
+Setting up aspnetcore-targeting-pack-10.0 (10.0.15-0ubuntu1~24.04.1) ...
+Setting up liblttng-ust-ctl5t64:amd64 (2.13.7-1.1ubuntu2) ...
+Setting up dotnet-apphost-pack-10.0 (10.0.15-0ubuntu1~24.04.1) ...
+Setting up dotnet-host-10.0 (10.0.15-0ubuntu1~24.04.1) ...
+Setting up dotnet-hostfxr-10.0 (10.0.15-0ubuntu1~24.04.1) ...
+Setting up dotnet-templates-10.0 (10.0.115-0ubuntu1~24.04.1) ...
+Setting up liblttng-ust1t64:amd64 (2.13.7-1.1ubuntu2) ...
+Setting up dotnet-runtime-10.0 (10.0.15-0ubuntu1~24.04.1) ...
+Setting up aspnetcore-runtime-10.0 (10.0.15-0ubuntu1~24.04.1) ...
+Setting up dotnet-sdk-10.0 (10.0.115-0ubuntu1~24.04.1) ...
+Setting up dotnet-sdk-aot-10.0 (10.0.115-0ubuntu1~24.04.1) ...
+Processing triggers for man-db (2.12.0-4build2) ...
+Processing triggers for libc-bin (2.39-0ubuntu8.12) ...
+
+Running kernel seems to be up-to-date.
+
+Restarting services...
+
+Service restarts being deferred:
+ /etc/needrestart/restart.d/dbus.service
+ systemctl restart systemd-logind.service
+
+No containers need to be restarted.
+
+No user sessions are running outdated binaries.
+
+No VM guests are running outdated hypervisor (qemu) binaries on this host.
+[2026-11-16 19:53:22] INFO  Compilando e publicando (dotnet publish -c Release)
+  Determining projects to restore...
+  Restored /opt/heatsafe/app/api/HeatSafe.Api/HeatSafe.Api.csproj (in 7.99 sec).
+  HeatSafe.Api -> /opt/heatsafe/app/api/HeatSafe.Api/bin/Release/net10.0/HeatSafe.Api.dll
+  HeatSafe.Api -> /opt/heatsafe/api.novo/
+[2026-11-16 19:53:40] OK    API publicada: /opt/heatsafe/api/HeatSafe.Api.dll
+[2026-11-16 19:53:40] INFO  Migrações do EF Core: a própria API aplica ao iniciar (Database.MigrateAsync) e cria os dados de exemplo
+[2026-11-16 19:53:40] INFO  Habilitando no boot e (re)iniciando heatsafe-api
+[2026-11-16 19:53:40] INFO  Aguardando heatsafe-api responder em http://127.0.0.1:5000/health (até 120s)...
+[2026-11-16 19:53:43] OK    http://127.0.0.1:5000/health respondeu HTTP 200 após 2s
+
+==> [8] nginx (proxy reverso na porta 80)
+[2026-11-16 19:53:43] INFO  Validando a configuração (nginx -t)
+nginx: the configuration file /etc/nginx/nginx.conf syntax is ok
+nginx: configuration file /etc/nginx/nginx.conf test is successful
+[2026-11-16 19:53:43] INFO  Ligando o nginx
+Synchronizing state of nginx.service with SysV service script with /usr/lib/systemd/systemd-sysv-install.
+Executing: /usr/lib/systemd/systemd-sysv-install enable nginx
+[2026-11-16 19:53:43] INFO  Recarregando o nginx
+[2026-11-16 19:53:44] OK    Regras do auditd carregadas (14 regras)
+
+==> [9] Testes de fumaça (pelo nome DNS, passando pelo nginx)
+[2026-11-16 19:53:44] OK    http://previsao.heatsafe.local/health -> HTTP 200
+[2026-11-16 19:53:44] OK    http://previsao.heatsafe.local/swagger-ui.html -> HTTP 302
+[2026-11-16 19:53:44] OK    http://api.heatsafe.local/health -> HTTP 200
+[2026-11-16 19:53:44] OK    http://api.heatsafe.local/swagger/index.html -> HTTP 200
+[2026-11-16 19:53:45] INFO  Contrato usado pela API C#: GET /previsao/amanha?estacao=A701 -> {"estacao":"A701","data":"2026-01-01","perigoso":false,"probabilidade":0.193,"indiceCalorPrevisto":29.9,"nivelRisco":"ATENCAO"}
+
+==> [10] Resumo da aplicação
+      Previsão (Java)       no ar (PID 27967)
+      API C# (.NET)          no ar (PID 28726)
+      MySQL                  active
+      nginx                  active
+      Swagger da API         http://api.heatsafe.local/swagger/index.html
+      Swagger da previsão   http://previsao.heatsafe.local/swagger-ui.html
+      Variáveis             /etc/heatsafe/api.env | /etc/heatsafe/previsao.env
+      Logs                   journalctl -u heatsafe-api -u heatsafe-previsao | /var/log/heatsafe/servicos.log
+[2026-11-16 19:53:45] OK    provision_app.sh concluído em 1920s. Log: /var/log/heatsafe/provision_app.log

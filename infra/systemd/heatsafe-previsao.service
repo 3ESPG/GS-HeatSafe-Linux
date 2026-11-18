@@ -1,0 +1,45 @@
+# HeatSafe · Serviço de previsão (SOA) — Java 21 / Spring Boot + MySQL
+# Modelo: os valores entre arrobas são preenchidos pelo provision_app.sh
+[Unit]
+Description=HeatSafe - Servico de previsao de calor (Java / Spring Boot)
+Documentation=file:@HS_INFRA_INSTALL@/README.md
+After=network-online.target mysql.service
+Wants=network-online.target mysql.service
+# 0 = o systemd nunca "desiste" de reiniciar, por mais falhas que aconteçam
+StartLimitIntervalSec=0
+
+[Service]
+Type=simple
+User=@HS_USER@
+Group=@HS_GROUP@
+WorkingDirectory=@HS_PREVISAO_DIR@
+EnvironmentFile=@HS_ENV_PREVISAO@
+Environment=HOME=@HS_DATA@
+ExecStart=@JAVA_BIN@ @JAVA_OPTS@ -jar @PREVISAO_JAR@
+# Ganchos de auditoria: registram em /var/log/heatsafe/servicos.log quando sobe/cai e por quê
+ExecStartPost=-+@HS_INFRA_INSTALL@/scripts/hooks/evento_servico.sh %n iniciado
+ExecStopPost=-+@HS_INFRA_INSTALL@/scripts/hooks/evento_servico.sh %n parado
+
+# Tolerância a falhas: qualquer queda (crash, kill -9, OOM) -> reinicia em 3 s
+Restart=always
+RestartSec=3
+# A JVM sai com 143 quando recebe SIGTERM numa parada normal: não é falha
+SuccessExitStatus=143
+TimeoutStopSec=20
+SyslogIdentifier=heatsafe-previsao
+
+# Limites de recursos (cgroups)
+MemoryMax=1G
+TasksMax=256
+
+# Endurecimento (sandbox do systemd)
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=full
+ProtectHome=true
+ProtectKernelTunables=true
+ProtectControlGroups=true
+ReadWritePaths=@HS_DATA@ @HS_LOG@
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,138 @@
+### Serviços HeatSafe
+$ systemctl status --no-pager -l heatsafe-api heatsafe-previsao heatsafe-monitor heatsafe-healthcheck.timer nginx mysql
+● heatsafe-api.service - HeatSafe - API central (C# / ASP.NET Core)
+     Loaded: loaded (/etc/systemd/system/heatsafe-api.service; enabled; preset: enabled)
+     Active: active (running) since Tue 2026-11-17 16:17:41 -03; 9min ago
+       Docs: file:/opt/heatsafe/infra/README.md
+    Process: 1184 ExecStartPost=/opt/heatsafe/infra/scripts/hooks/evento_servico.sh heatsafe-api.service iniciado (code=exited, status=0/SUCCESS)
+   Main PID: 1182 (dotnet)
+      Tasks: 21 (limit: 256)
+     Memory: 170.2M (max: 768.0M available: 597.7M peak: 170.7M)
+        CPU: 8.576s
+     CGroup: /system.slice/heatsafe-api.service
+             └─1182 /usr/lib/dotnet/dotnet /opt/heatsafe/api/HeatSafe.Api.dll
+
+Nov 17 16:17:43 heatsafe-srv heatsafe-api[1182]: info: Microsoft.EntityFrameworkCore.Migrations[20405]
+Nov 17 16:17:43 heatsafe-srv heatsafe-api[1182]:       No migrations were applied. The database is already up to date.
+Nov 17 16:17:44 heatsafe-srv heatsafe-api[1182]: info: Microsoft.Hosting.Lifetime[14]
+Nov 17 16:17:44 heatsafe-srv heatsafe-api[1182]:       Now listening on: http://127.0.0.1:5000
+Nov 17 16:17:44 heatsafe-srv heatsafe-api[1182]: info: Microsoft.Hosting.Lifetime[0]
+Nov 17 16:17:44 heatsafe-srv heatsafe-api[1182]:       Application started. Press Ctrl+C to shut down.
+Nov 17 16:17:44 heatsafe-srv heatsafe-api[1182]: info: Microsoft.Hosting.Lifetime[0]
+Nov 17 16:17:44 heatsafe-srv heatsafe-api[1182]:       Hosting environment: Development
+Nov 17 16:17:44 heatsafe-srv heatsafe-api[1182]: info: Microsoft.Hosting.Lifetime[0]
+Nov 17 16:17:44 heatsafe-srv heatsafe-api[1182]:       Content root path: /opt/heatsafe/api
+
+● heatsafe-previsao.service - HeatSafe - Servico de previsao de calor (Java / Spring Boot)
+     Loaded: loaded (/etc/systemd/system/heatsafe-previsao.service; enabled; preset: enabled)
+     Active: active (running) since Tue 2026-11-17 16:17:41 -03; 9min ago
+       Docs: file:/opt/heatsafe/infra/README.md
+    Process: 1171 ExecStartPost=/opt/heatsafe/infra/scripts/hooks/evento_servico.sh heatsafe-previsao.service iniciado (code=exited, status=0/SUCCESS)
+   Main PID: 1170 (java)
+      Tasks: 31 (limit: 256)
+     Memory: 364.2M (max: 1.0G available: 659.7M peak: 393.1M)
+        CPU: 19.748s
+     CGroup: /system.slice/heatsafe-previsao.service
+             └─1170 /usr/lib/jvm/java-21-openjdk-amd64/bin/java -Xms128m -Xmx512m -XX:+UseSerialGC -jar /opt/heatsafe/previsao/heatsafe-previsao.jar
+
+Nov 17 16:17:50 heatsafe-srv heatsafe-previsao[1170]: 2026-11-17T16:17:50.833-03:00  INFO 1170 --- [HeatSafeClimaAPI] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+Nov 17 16:17:50 heatsafe-srv heatsafe-previsao[1170]: 2026-11-17T16:17:50.930-03:00  INFO 1170 --- [HeatSafeClimaAPI] [           main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+Nov 17 16:17:52 heatsafe-srv heatsafe-previsao[1170]: 2026-11-17T16:17:52.839-03:00  INFO 1170 --- [HeatSafeClimaAPI] [           main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8000 (http) with context path '/'
+Nov 17 16:17:52 heatsafe-srv heatsafe-previsao[1170]: 2026-11-17T16:17:52.870-03:00  INFO 1170 --- [HeatSafeClimaAPI] [           main] b.c.f.h.HeatSafeClimaApiApplication      : Started HeatSafeClimaApiApplication in 9.559 seconds (process running for 11.674)
+Nov 17 16:17:53 heatsafe-srv heatsafe-previsao[1170]: 2026-11-17T16:17:53.084-03:00  INFO 1170 --- [HeatSafeClimaAPI] [           main] b.c.f.h.i.config.CarregadorDadosInmet    : Estação A701 já tem observações: carga inicial do INMET ignorada.
+Nov 17 16:17:53 heatsafe-srv heatsafe-previsao[1170]: 2026-11-17T16:17:53.086-03:00  WARN 1170 --- [HeatSafeClimaAPI] [           main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+Nov 17 16:17:53 heatsafe-srv heatsafe-previsao[1170]: 2026-11-17T16:17:53.086-03:00  WARN 1170 --- [HeatSafeClimaAPI] [           main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+Nov 17 16:17:56 heatsafe-srv heatsafe-previsao[1170]: 2026-11-17T16:17:56.311-03:00  INFO 1170 --- [HeatSafeClimaAPI] [0.1-8000-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+Nov 17 16:17:56 heatsafe-srv heatsafe-previsao[1170]: 2026-11-17T16:17:56.311-03:00  INFO 1170 --- [HeatSafeClimaAPI] [0.1-8000-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+Nov 17 16:17:56 heatsafe-srv heatsafe-previsao[1170]: 2026-11-17T16:17:56.312-03:00  INFO 1170 --- [HeatSafeClimaAPI] [0.1-8000-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+
+● heatsafe-monitor.service - HeatSafe - Monitor de infraestrutura (CPU, memoria, disco, servicos)
+     Loaded: loaded (/etc/systemd/system/heatsafe-monitor.service; enabled; preset: enabled)
+     Active: active (running) since Tue 2026-11-17 16:17:39 -03; 9min ago
+       Docs: file:/opt/heatsafe/infra/README.md
+    Process: 1029 ExecStartPost=/opt/heatsafe/infra/scripts/hooks/evento_servico.sh heatsafe-monitor.service iniciado (code=exited, status=0/SUCCESS)
+   Main PID: 1028 (bash)
+      Tasks: 2 (limit: 4600)
+     Memory: 8.9M (max: 128.0M available: 119.0M peak: 11.7M)
+        CPU: 3.425s
+     CGroup: /system.slice/heatsafe-monitor.service
+             ├─1028 bash /opt/heatsafe/infra/scripts/monitor.sh
+             └─4920 sleep 15
+
+Nov 17 16:26:04 heatsafe-srv heatsafe-monitor[1028]: [2026-11-17 16:26:04] [CRITICO] Uso de memória em 92% (limite 90%) | 3621/3915 MB | maiores consumidores de mem: python3(pid 4162) 62.9%, mysqld(pid 996) 10.1%, java(pid 1170) 8.2%
+Nov 17 16:26:04 heatsafe-srv heatsafe-monitor[4379]: [CRITICO] Uso de memória em 92% (limite 90%) | 3621/3915 MB | maiores consumidores de mem: python3(pid 4162) 62.9%, mysqld(pid 996) 10.1%, java(pid 1170) 8.2%
+Nov 17 16:26:04 heatsafe-srv heatsafe-monitor[1028]: [2026-11-17 16:26:04] CPU 9% | MEM 92% (3621/3915 MB) | DISCO /=36% | LOAD 0.35 0.52 0.36 | api=active/200 previsao=active/200
+Nov 17 16:26:19 heatsafe-srv heatsafe-monitor[1028]: [2026-11-17 16:26:19] [RESOLVIDO] Uso de memória normalizado: 30% (alerta a partir de 75%)
+Nov 17 16:26:19 heatsafe-srv heatsafe-monitor[1028]: [2026-11-17 16:26:19] CPU 1% | MEM 30% (1183/3915 MB) | DISCO /=36% | LOAD 0.27 0.50 0.36 | api=active/200 previsao=active/200
+Nov 17 16:26:34 heatsafe-srv heatsafe-monitor[1028]: [2026-11-17 16:26:34] CPU 0% | MEM 30% (1180/3915 MB) | DISCO /=36% | LOAD 0.21 0.47 0.35 | api=active/200 previsao=active/200
+Nov 17 16:26:49 heatsafe-srv heatsafe-monitor[1028]: [2026-11-17 16:26:49] CPU 1% | MEM 30% (1178/3915 MB) | DISCO /=36% | LOAD 0.16 0.45 0.34 | api=active/200 previsao=active/200
+Nov 17 16:27:04 heatsafe-srv heatsafe-monitor[1028]: [2026-11-17 16:27:04] CPU 1% | MEM 30% (1178/3915 MB) | DISCO /=36% | LOAD 0.21 0.44 0.34 | api=active/200 previsao=active/200
+Nov 17 16:27:19 heatsafe-srv heatsafe-monitor[1028]: [2026-11-17 16:27:19] CPU 1% | MEM 30% (1179/3915 MB) | DISCO /=36% | LOAD 0.16 0.42 0.34 | api=active/200 previsao=active/200
+Nov 17 16:27:34 heatsafe-srv heatsafe-monitor[1028]: [2026-11-17 16:27:34] CPU 1% | MEM 30% (1179/3915 MB) | DISCO /=36% | LOAD 0.12 0.40 0.33 | api=active/200 previsao=active/200
+
+● heatsafe-healthcheck.timer - HeatSafe - Healthcheck a cada 1 minuto
+     Loaded: loaded (/etc/systemd/system/heatsafe-healthcheck.timer; enabled; preset: enabled)
+     Active: active (waiting) since Tue 2026-11-17 16:17:38 -03; 9min ago
+    Trigger: Tue 2026-11-17 16:28:00 -03; 23s left
+   Triggers: ● heatsafe-healthcheck.service
+
+Nov 17 16:17:38 heatsafe-srv systemd[1]: Started heatsafe-healthcheck.timer - HeatSafe - Healthcheck a cada 1 minuto.
+
+● nginx.service - A high performance web server and a reverse proxy server
+     Loaded: loaded (/usr/lib/systemd/system/nginx.service; enabled; preset: enabled)
+     Active: active (running) since Tue 2026-11-17 16:17:39 -03; 9min ago
+       Docs: man:nginx(8)
+    Process: 1026 ExecStartPre=/usr/sbin/nginx -t -q -g daemon on; master_process on; (code=exited, status=0/SUCCESS)
+    Process: 1030 ExecStart=/usr/sbin/nginx -g daemon on; master_process on; (code=exited, status=0/SUCCESS)
+   Main PID: 1031 (nginx)
+      Tasks: 3 (limit: 4600)
+     Memory: 3.7M (peak: 4.0M)
+        CPU: 15ms
+     CGroup: /system.slice/nginx.service
+             ├─1031 "nginx: master process /usr/sbin/nginx -g daemon on; master_process on;"
+             ├─1032 "nginx: worker process"
+             └─1033 "nginx: worker process"
+
+Nov 17 16:17:39 heatsafe-srv systemd[1]: Starting nginx.service - A high performance web server and a reverse proxy server...
+Nov 17 16:17:39 heatsafe-srv systemd[1]: Started nginx.service - A high performance web server and a reverse proxy server.
+
+● mysql.service - MySQL Community Server
+     Loaded: loaded (/usr/lib/systemd/system/mysql.service; enabled; preset: enabled)
+     Active: active (running) since Tue 2026-11-17 16:17:41 -03; 9min ago
+    Process: 888 ExecStartPre=/usr/share/mysql/mysql-systemd-start pre (code=exited, status=0/SUCCESS)
+   Main PID: 996 (mysqld)
+     Status: "Server is operational"
+      Tasks: 47 (limit: 4600)
+     Memory: 402.7M (peak: 440.3M)
+        CPU: 4.506s
+     CGroup: /system.slice/mysql.service
+             └─996 /usr/sbin/mysqld
+
+Nov 17 16:17:38 heatsafe-srv systemd[1]: Starting mysql.service - MySQL Community Server...
+Nov 17 16:17:41 heatsafe-srv systemd[1]: Started mysql.service - MySQL Community Server.
+
+### Timers
+$ systemctl list-timers --no-pager heatsafe-*
+NEXT                        LEFT LAST                         PASSED UNIT                       ACTIVATES
+Tue 2026-11-17 16:28:00 -03  23s Tue 2026-11-17 16:27:04 -03 32s ago heatsafe-healthcheck.timer heatsafe-healthcheck.service
+
+1 timers listed.
+Pass --all to see loaded but inactive timers, too.
+
+### Reinícios (NRestarts)
+$ systemctl show -p Id -p NRestarts -p Restart -p MainPID heatsafe-api heatsafe-previsao heatsafe-monitor
+Restart=always
+MainPID=1182
+NRestarts=0
+Id=heatsafe-api.service
+
+Restart=always
+MainPID=1170
+NRestarts=0
+Id=heatsafe-previsao.service
+
+Restart=always
+MainPID=1028
+NRestarts=0
+Id=heatsafe-monitor.service
+

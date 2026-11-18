@@ -1,0 +1,208 @@
+### auditd chave heatsafe_kill9
+$ bash -c ausearch -k heatsafe_kill9 -i 2>/dev/null | tail -n 40
+type=CONFIG_CHANGE msg=audit(11/16/2026 19:53:44.473:2051) : auid=henrique ses=6 subj=unconfined op=remove_rule key=heatsafe_kill9 list=exit res=yes 
+----
+type=PROCTITLE msg=audit(11/16/2026 19:53:44.479:2052) : proctitle=/sbin/auditctl -R /etc/audit/audit.rules 
+type=SOCKADDR msg=audit(11/16/2026 19:53:44.479:2052) : saddr={ saddr_fam=netlink nlnk-fam=16 nlnk-pid=0 } 
+type=SYSCALL msg=audit(11/16/2026 19:53:44.479:2052) : arch=x86_64 syscall=sendto success=yes exit=1072 a0=0x5 a1=0x7ffd3b9ffba0 a2=0x430 a3=0x0 items=0 ppid=29127 pid=29141 auid=henrique uid=root gid=root euid=root suid=root fsuid=root egid=root sgid=root fsgid=root tty=pts1 ses=6 comm=auditctl exe=/usr/sbin/auditctl subj=unconfined key=(null) 
+type=CONFIG_CHANGE msg=audit(11/16/2026 19:53:44.479:2052) : auid=henrique ses=6 subj=unconfined op=remove_rule key=heatsafe_kill9 list=exit res=yes 
+----
+type=PROCTITLE msg=audit(11/16/2026 19:53:44.487:2067) : proctitle=/sbin/auditctl -R /etc/audit/audit.rules 
+type=SOCKADDR msg=audit(11/16/2026 19:53:44.487:2067) : saddr={ saddr_fam=netlink nlnk-fam=16 nlnk-pid=0 } 
+type=SYSCALL msg=audit(11/16/2026 19:53:44.487:2067) : arch=x86_64 syscall=sendto success=yes exit=1072 a0=0x5 a1=0x7ffd3ba02040 a2=0x430 a3=0x0 items=0 ppid=29127 pid=29141 auid=henrique uid=root gid=root euid=root suid=root fsuid=root egid=root sgid=root fsgid=root tty=pts1 ses=6 comm=auditctl exe=/usr/sbin/auditctl subj=unconfined key=(null) 
+type=CONFIG_CHANGE msg=audit(11/16/2026 19:53:44.487:2067) : auid=henrique ses=6 subj=unconfined op=add_rule key=heatsafe_kill9 list=exit res=yes 
+----
+type=PROCTITLE msg=audit(11/16/2026 19:53:44.487:2068) : proctitle=/sbin/auditctl -R /etc/audit/audit.rules 
+type=SOCKADDR msg=audit(11/16/2026 19:53:44.487:2068) : saddr={ saddr_fam=netlink nlnk-fam=16 nlnk-pid=0 } 
+type=SYSCALL msg=audit(11/16/2026 19:53:44.487:2068) : arch=x86_64 syscall=sendto success=yes exit=1072 a0=0x5 a1=0x7ffd3ba02040 a2=0x430 a3=0x0 items=0 ppid=29127 pid=29141 auid=henrique uid=root gid=root euid=root suid=root fsuid=root egid=root sgid=root fsgid=root tty=pts1 ses=6 comm=auditctl exe=/usr/sbin/auditctl subj=unconfined key=(null) 
+type=CONFIG_CHANGE msg=audit(11/16/2026 19:53:44.487:2068) : auid=henrique ses=6 subj=unconfined op=add_rule key=heatsafe_kill9 list=exit res=yes 
+----
+type=PROCTITLE msg=audit(11/17/2026 13:51:21.264:70) : proctitle=/sbin/auditctl -R /etc/audit/audit.rules 
+type=SOCKADDR msg=audit(11/17/2026 13:51:21.264:70) : saddr={ saddr_fam=netlink nlnk-fam=16 nlnk-pid=0 } 
+type=SYSCALL msg=audit(11/17/2026 13:51:21.264:70) : arch=x86_64 syscall=sendto success=yes exit=1072 a0=0x3 a1=0x7ffcbda790c0 a2=0x430 a3=0x0 items=0 ppid=699 pid=760 auid=unset uid=root gid=root euid=root suid=root fsuid=root egid=root sgid=root fsgid=root tty=(none) ses=unset comm=auditctl exe=/usr/sbin/auditctl subj=unconfined key=(null) 
+type=CONFIG_CHANGE msg=audit(11/17/2026 13:51:21.264:70) : auid=unset ses=unset subj=unconfined op=add_rule key=heatsafe_kill9 list=exit res=yes 
+----
+type=PROCTITLE msg=audit(11/17/2026 13:51:21.264:71) : proctitle=/sbin/auditctl -R /etc/audit/audit.rules 
+type=SOCKADDR msg=audit(11/17/2026 13:51:21.264:71) : saddr={ saddr_fam=netlink nlnk-fam=16 nlnk-pid=0 } 
+type=SYSCALL msg=audit(11/17/2026 13:51:21.264:71) : arch=x86_64 syscall=sendto success=yes exit=1072 a0=0x3 a1=0x7ffcbda790c0 a2=0x430 a3=0x0 items=0 ppid=699 pid=760 auid=unset uid=root gid=root euid=root suid=root fsuid=root egid=root sgid=root fsgid=root tty=(none) ses=unset comm=auditctl exe=/usr/sbin/auditctl subj=unconfined key=(null) 
+type=CONFIG_CHANGE msg=audit(11/17/2026 13:51:21.264:71) : auid=unset ses=unset subj=unconfined op=add_rule key=heatsafe_kill9 list=exit res=yes 
+----
+type=PROCTITLE msg=audit(11/17/2026 14:05:41.704:486) : proctitle=bash /home/henrique/heatsafe/infra/scripts/teste_falha.sh api 
+type=OBJ_PID msg=audit(11/17/2026 14:05:41.704:486) : opid=1221 oauid=unset ouid=heatsafe oses=-1 obj=unconfined ocomm=dotnet 
+type=SYSCALL msg=audit(11/17/2026 14:05:41.704:486) : arch=x86_64 syscall=kill success=yes exit=0 a0=0x4c5 a1=SIGKILL a2=0x0 a3=0x7bab225b2fc0 items=0 ppid=5672 pid=5673 auid=henrique uid=root gid=root euid=root suid=root fsuid=root egid=root sgid=root fsgid=root tty=pts1 ses=1 comm=bash exe=/usr/bin/bash subj=unconfined key=heatsafe_kill9 
+----
+type=PROCTITLE msg=audit(11/17/2026 16:17:37.887:63) : proctitle=/sbin/auditctl -R /etc/audit/audit.rules 
+type=SOCKADDR msg=audit(11/17/2026 16:17:37.887:63) : saddr={ saddr_fam=netlink nlnk-fam=16 nlnk-pid=0 } 
+type=SYSCALL msg=audit(11/17/2026 16:17:37.887:63) : arch=x86_64 syscall=sendto success=yes exit=1072 a0=0x3 a1=0x7fff4463c9e0 a2=0x430 a3=0x0 items=0 ppid=627 pid=661 auid=unset uid=root gid=root euid=root suid=root fsuid=root egid=root sgid=root fsgid=root tty=(none) ses=unset comm=auditctl exe=/usr/sbin/auditctl subj=unconfined key=(null) 
+type=CONFIG_CHANGE msg=audit(11/17/2026 16:17:37.887:63) : auid=unset ses=unset subj=unconfined op=add_rule key=heatsafe_kill9 list=exit res=yes 
+----
+type=PROCTITLE msg=audit(11/17/2026 16:17:37.887:64) : proctitle=/sbin/auditctl -R /etc/audit/audit.rules 
+type=SOCKADDR msg=audit(11/17/2026 16:17:37.887:64) : saddr={ saddr_fam=netlink nlnk-fam=16 nlnk-pid=0 } 
+type=SYSCALL msg=audit(11/17/2026 16:17:37.887:64) : arch=x86_64 syscall=sendto success=yes exit=1072 a0=0x3 a1=0x7fff4463c9e0 a2=0x430 a3=0x0 items=0 ppid=627 pid=661 auid=unset uid=root gid=root euid=root suid=root fsuid=root egid=root sgid=root fsgid=root tty=(none) ses=unset comm=auditctl exe=/usr/sbin/auditctl subj=unconfined key=(null) 
+type=CONFIG_CHANGE msg=audit(11/17/2026 16:17:37.887:64) : auid=unset ses=unset subj=unconfined op=add_rule key=heatsafe_kill9 list=exit res=yes 
+
+### auditd chave heatsafe_config
+$ bash -c ausearch -k heatsafe_config -i 2>/dev/null | tail -n 40
+type=SYSCALL msg=audit(11/16/2026 19:38:40.087:1728) : arch=x86_64 syscall=fchmodat success=yes exit=0 a0=AT_FDCWD a1=0x7ffdf369773f a2=0640 a3=0x3dc items=1 ppid=24289 pid=26855 auid=henrique uid=root gid=root euid=root suid=root fsuid=root egid=root sgid=root fsgid=root tty=pts1 ses=6 comm=install exe=/usr/bin/install subj=unconfined key=heatsafe_config 
+----
+type=PROCTITLE msg=audit(11/16/2026 19:53:44.408:2040) : proctitle=/sbin/auditctl -R /etc/audit/audit.rules 
+type=SOCKADDR msg=audit(11/16/2026 19:53:44.408:2040) : saddr={ saddr_fam=netlink nlnk-fam=16 nlnk-pid=0 } 
+type=SYSCALL msg=audit(11/16/2026 19:53:44.408:2040) : arch=x86_64 syscall=sendto success=yes exit=1084 a0=0x5 a1=0x7ffd3b9ffba0 a2=0x43c a3=0x0 items=0 ppid=29127 pid=29141 auid=henrique uid=root gid=root euid=root suid=root fsuid=root egid=root sgid=root fsgid=root tty=pts1 ses=6 comm=auditctl exe=/usr/sbin/auditctl subj=unconfined key=(null) 
+type=CONFIG_CHANGE msg=audit(11/16/2026 19:53:44.408:2040) : auid=henrique ses=6 subj=unconfined op=remove_rule key=heatsafe_config list=exit res=yes 
+----
+type=PROCTITLE msg=audit(11/16/2026 19:53:44.487:2055) : proctitle=/sbin/auditctl -R /etc/audit/audit.rules 
+type=SYSCALL msg=audit(11/16/2026 19:53:44.487:2055) : arch=x86_64 syscall=sendto success=yes exit=1084 a0=0x5 a1=0x7ffd3ba02040 a2=0x43c a3=0x0 items=0 ppid=29127 pid=29141 auid=henrique uid=root gid=root euid=root suid=root fsuid=root egid=root sgid=root fsgid=root tty=pts1 ses=6 comm=auditctl exe=/usr/sbin/auditctl subj=unconfined key=(null) 
+type=CONFIG_CHANGE msg=audit(11/16/2026 19:53:44.487:2055) : auid=henrique ses=6 subj=unconfined op=add_rule key=heatsafe_config list=exit res=yes 
+----
+type=PROCTITLE msg=audit(11/17/2026 13:51:21.251:57) : proctitle=/sbin/auditctl -R /etc/audit/audit.rules 
+type=SYSCALL msg=audit(11/17/2026 13:51:21.251:57) : arch=x86_64 syscall=sendto success=yes exit=1084 a0=0x3 a1=0x7ffcbda790c0 a2=0x43c a3=0x0 items=0 ppid=699 pid=760 auid=unset uid=root gid=root euid=root suid=root fsuid=root egid=root sgid=root fsgid=root tty=(none) ses=unset comm=auditctl exe=/usr/sbin/auditctl subj=unconfined key=(null) 
+type=CONFIG_CHANGE msg=audit(11/17/2026 13:51:21.251:57) : auid=unset ses=unset subj=unconfined op=add_rule key=heatsafe_config list=exit res=yes 
+----
+type=PROCTITLE msg=audit(11/17/2026 13:59:37.225:389) : proctitle=ln -sfn /opt/heatsafe/infra/config/heatsafe.conf /etc/heatsafe/heatsafe.conf 
+type=PATH msg=audit(11/17/2026 13:59:37.225:389) : item=1 name=/opt/heatsafe/infra/config/heatsafe.conf nametype=UNKNOWN cap_fp=none cap_fi=none cap_fe=0 cap_fver=0 cap_frootid=0 
+type=PATH msg=audit(11/17/2026 13:59:37.225:389) : item=0 name=/etc/heatsafe/ inode=301416 dev=fc:00 mode=dir,750 ouid=root ogid=heatsafe rdev=00:00 nametype=PARENT cap_fp=none cap_fi=none cap_fe=0 cap_fver=0 cap_frootid=0 
+type=CWD msg=audit(11/17/2026 13:59:37.225:389) : cwd=/home/henrique/heatsafe 
+type=SYSCALL msg=audit(11/17/2026 13:59:37.225:389) : arch=x86_64 syscall=symlinkat success=no exit=EEXIST(File exists) a0=0x7ffe8e835735 a1=0xffffff9c a2=0x7ffe8e83575e a3=0x59d359820303 items=2 ppid=3241 pid=3279 auid=henrique uid=root gid=root euid=root suid=root fsuid=root egid=root sgid=root fsgid=root tty=pts1 ses=1 comm=ln exe=/usr/bin/ln subj=unconfined key=heatsafe_config 
+----
+type=PROCTITLE msg=audit(11/17/2026 13:59:37.225:390) : proctitle=ln -sfn /opt/heatsafe/infra/config/heatsafe.conf /etc/heatsafe/heatsafe.conf 
+type=PATH msg=audit(11/17/2026 13:59:37.225:390) : item=2 name=/etc/heatsafe/CukhHXyP inode=301444 dev=fc:00 mode=link,777 ouid=root ogid=root rdev=00:00 nametype=CREATE cap_fp=none cap_fi=none cap_fe=0 cap_fver=0 cap_frootid=0 
+type=PATH msg=audit(11/17/2026 13:59:37.225:390) : item=1 name=/opt/heatsafe/infra/config/heatsafe.conf nametype=UNKNOWN cap_fp=none cap_fi=none cap_fe=0 cap_fver=0 cap_frootid=0 
+type=PATH msg=audit(11/17/2026 13:59:37.225:390) : item=0 name=/etc/heatsafe/ inode=301416 dev=fc:00 mode=dir,750 ouid=root ogid=heatsafe rdev=00:00 nametype=PARENT cap_fp=none cap_fi=none cap_fe=0 cap_fver=0 cap_frootid=0 
+type=CWD msg=audit(11/17/2026 13:59:37.225:390) : cwd=/home/henrique/heatsafe 
+type=SYSCALL msg=audit(11/17/2026 13:59:37.225:390) : arch=x86_64 syscall=symlinkat success=yes exit=0 a0=0x7ffe8e835735 a1=0xffffff9c a2=0x7ffe8e833760 a3=0x0 items=3 ppid=3241 pid=3279 auid=henrique uid=root gid=root euid=root suid=root fsuid=root egid=root sgid=root fsgid=root tty=pts1 ses=1 comm=ln exe=/usr/bin/ln subj=unconfined key=heatsafe_config 
+----
+type=PROCTITLE msg=audit(11/17/2026 13:59:37.225:391) : proctitle=ln -sfn /opt/heatsafe/infra/config/heatsafe.conf /etc/heatsafe/heatsafe.conf 
+type=PATH msg=audit(11/17/2026 13:59:37.225:391) : item=4 name=/etc/heatsafe/heatsafe.conf inode=301444 dev=fc:00 mode=link,777 ouid=root ogid=root rdev=00:00 nametype=CREATE cap_fp=none cap_fi=none cap_fe=0 cap_fver=0 cap_frootid=0 
+type=PATH msg=audit(11/17/2026 13:59:37.225:391) : item=3 name=/etc/heatsafe/heatsafe.conf inode=301447 dev=fc:00 mode=link,777 ouid=root ogid=root rdev=00:00 nametype=DELETE cap_fp=none cap_fi=none cap_fe=0 cap_fver=0 cap_frootid=0 
+type=PATH msg=audit(11/17/2026 13:59:37.225:391) : item=2 name=/etc/heatsafe/CukhHXyP inode=301444 dev=fc:00 mode=link,777 ouid=root ogid=root rdev=00:00 nametype=DELETE cap_fp=none cap_fi=none cap_fe=0 cap_fver=0 cap_frootid=0 
+type=PATH msg=audit(11/17/2026 13:59:37.225:391) : item=1 name=/etc/heatsafe/ inode=301416 dev=fc:00 mode=dir,750 ouid=root ogid=heatsafe rdev=00:00 nametype=PARENT cap_fp=none cap_fi=none cap_fe=0 cap_fver=0 cap_frootid=0 
+type=PATH msg=audit(11/17/2026 13:59:37.225:391) : item=0 name=/etc/heatsafe/ inode=301416 dev=fc:00 mode=dir,750 ouid=root ogid=heatsafe rdev=00:00 nametype=PARENT cap_fp=none cap_fi=none cap_fe=0 cap_fver=0 cap_frootid=0 
+type=CWD msg=audit(11/17/2026 13:59:37.225:391) : cwd=/home/henrique/heatsafe 
+type=SYSCALL msg=audit(11/17/2026 13:59:37.225:391) : arch=x86_64 syscall=renameat success=yes exit=0 a0=AT_FDCWD a1=0x7ffe8e833760 a2=AT_FDCWD a3=0x7ffe8e83575e items=5 ppid=3241 pid=3279 auid=henrique uid=root gid=root euid=root suid=root fsuid=root egid=root sgid=root fsgid=root tty=pts1 ses=1 comm=ln exe=/usr/bin/ln subj=unconfined key=heatsafe_config 
+----
+type=PROCTITLE msg=audit(11/17/2026 16:17:37.850:47) : proctitle=/sbin/auditctl -R /etc/audit/audit.rules 
+type=SYSCALL msg=audit(11/17/2026 16:17:37.850:47) : arch=x86_64 syscall=sendto success=yes exit=1084 a0=0x3 a1=0x7fff4463c9e0 a2=0x43c a3=0x0 items=0 ppid=627 pid=661 auid=unset uid=root gid=root euid=root suid=root fsuid=root egid=root sgid=root fsgid=root tty=(none) ses=unset comm=auditctl exe=/usr/sbin/auditctl subj=unconfined key=(null) 
+type=CONFIG_CHANGE msg=audit(11/17/2026 16:17:37.850:47) : auid=unset ses=unset subj=unconfined op=add_rule key=heatsafe_config list=exit res=yes 
+
+### auditd chave heatsafe_dns
+$ bash -c ausearch -k heatsafe_dns -i 2>/dev/null | tail -n 40
+type=PATH msg=audit(11/16/2026 19:53:44.487:2058) : item=0 name=/etc/ inode=131074 dev=fc:00 mode=dir,755 ouid=root ogid=root rdev=00:00 nametype=PARENT cap_fp=none cap_fi=none cap_fe=0 cap_fver=0 cap_frootid=0 
+type=CWD msg=audit(11/16/2026 19:53:44.487:2058) : cwd=/home/henrique/heatsafe 
+type=SOCKADDR msg=audit(11/16/2026 19:53:44.487:2058) : saddr={ saddr_fam=netlink nlnk-fam=16 nlnk-pid=0 } 
+type=SYSCALL msg=audit(11/16/2026 19:53:44.487:2058) : arch=x86_64 syscall=sendto success=yes exit=1080 a0=0x5 a1=0x7ffd3ba02040 a2=0x438 a3=0x0 items=1 ppid=29127 pid=29141 auid=henrique uid=root gid=root euid=root suid=root fsuid=root egid=root sgid=root fsgid=root tty=pts1 ses=6 comm=auditctl exe=/usr/sbin/auditctl subj=unconfined key=(null) 
+type=CONFIG_CHANGE msg=audit(11/16/2026 19:53:44.487:2058) : auid=henrique ses=6 subj=unconfined op=add_rule key=heatsafe_dns list=exit res=yes 
+----
+type=PROCTITLE msg=audit(11/16/2026 19:53:44.487:2059) : proctitle=/sbin/auditctl -R /etc/audit/audit.rules 
+type=PATH msg=audit(11/16/2026 19:53:44.487:2059) : item=0 name=/etc/ inode=131074 dev=fc:00 mode=dir,755 ouid=root ogid=root rdev=00:00 nametype=PARENT cap_fp=none cap_fi=none cap_fe=0 cap_fver=0 cap_frootid=0 
+type=CWD msg=audit(11/16/2026 19:53:44.487:2059) : cwd=/home/henrique/heatsafe 
+type=SOCKADDR msg=audit(11/16/2026 19:53:44.487:2059) : saddr={ saddr_fam=netlink nlnk-fam=16 nlnk-pid=0 } 
+type=SYSCALL msg=audit(11/16/2026 19:53:44.487:2059) : arch=x86_64 syscall=sendto success=yes exit=1084 a0=0x5 a1=0x7ffd3ba02040 a2=0x43c a3=0x0 items=1 ppid=29127 pid=29141 auid=henrique uid=root gid=root euid=root suid=root fsuid=root egid=root sgid=root fsgid=root tty=pts1 ses=6 comm=auditctl exe=/usr/sbin/auditctl subj=unconfined key=(null) 
+type=CONFIG_CHANGE msg=audit(11/16/2026 19:53:44.487:2059) : auid=henrique ses=6 subj=unconfined op=add_rule key=heatsafe_dns list=exit res=yes 
+----
+type=PROCTITLE msg=audit(11/17/2026 13:51:21.260:60) : proctitle=/sbin/auditctl -R /etc/audit/audit.rules 
+type=PATH msg=audit(11/17/2026 13:51:21.260:60) : item=0 name=/etc/ inode=131074 dev=fc:00 mode=dir,755 ouid=root ogid=root rdev=00:00 nametype=PARENT cap_fp=none cap_fi=none cap_fe=0 cap_fver=0 cap_frootid=0 
+type=CWD msg=audit(11/17/2026 13:51:21.260:60) : cwd=/ 
+type=SOCKADDR msg=audit(11/17/2026 13:51:21.260:60) : saddr={ saddr_fam=netlink nlnk-fam=16 nlnk-pid=0 } 
+type=SYSCALL msg=audit(11/17/2026 13:51:21.260:60) : arch=x86_64 syscall=sendto success=yes exit=1080 a0=0x3 a1=0x7ffcbda790c0 a2=0x438 a3=0x0 items=1 ppid=699 pid=760 auid=unset uid=root gid=root euid=root suid=root fsuid=root egid=root sgid=root fsgid=root tty=(none) ses=unset comm=auditctl exe=/usr/sbin/auditctl subj=unconfined key=(null) 
+type=CONFIG_CHANGE msg=audit(11/17/2026 13:51:21.260:60) : auid=unset ses=unset subj=unconfined op=add_rule key=heatsafe_dns list=exit res=yes 
+----
+type=PROCTITLE msg=audit(11/17/2026 13:51:21.260:61) : proctitle=/sbin/auditctl -R /etc/audit/audit.rules 
+type=PATH msg=audit(11/17/2026 13:51:21.260:61) : item=0 name=/etc/ inode=131074 dev=fc:00 mode=dir,755 ouid=root ogid=root rdev=00:00 nametype=PARENT cap_fp=none cap_fi=none cap_fe=0 cap_fver=0 cap_frootid=0 
+type=CWD msg=audit(11/17/2026 13:51:21.260:61) : cwd=/ 
+type=SOCKADDR msg=audit(11/17/2026 13:51:21.260:61) : saddr={ saddr_fam=netlink nlnk-fam=16 nlnk-pid=0 } 
+type=SYSCALL msg=audit(11/17/2026 13:51:21.260:61) : arch=x86_64 syscall=sendto success=yes exit=1084 a0=0x3 a1=0x7ffcbda790c0 a2=0x43c a3=0x0 items=1 ppid=699 pid=760 auid=unset uid=root gid=root euid=root suid=root fsuid=root egid=root sgid=root fsgid=root tty=(none) ses=unset comm=auditctl exe=/usr/sbin/auditctl subj=unconfined key=(null) 
+type=CONFIG_CHANGE msg=audit(11/17/2026 13:51:21.260:61) : auid=unset ses=unset subj=unconfined op=add_rule key=heatsafe_dns list=exit res=yes 
+----
+type=PROCTITLE msg=audit(11/17/2026 16:17:37.858:51) : proctitle=/sbin/auditctl -R /etc/audit/audit.rules 
+type=PATH msg=audit(11/17/2026 16:17:37.858:51) : item=0 name=/etc/ inode=131074 dev=fc:00 mode=dir,755 ouid=root ogid=root rdev=00:00 nametype=PARENT cap_fp=none cap_fi=none cap_fe=0 cap_fver=0 cap_frootid=0 
+type=CWD msg=audit(11/17/2026 16:17:37.858:51) : cwd=/ 
+type=SOCKADDR msg=audit(11/17/2026 16:17:37.858:51) : saddr={ saddr_fam=netlink nlnk-fam=16 nlnk-pid=0 } 
+type=SYSCALL msg=audit(11/17/2026 16:17:37.858:51) : arch=x86_64 syscall=sendto success=yes exit=1080 a0=0x3 a1=0x7fff4463c9e0 a2=0x438 a3=0x0 items=1 ppid=627 pid=661 auid=unset uid=root gid=root euid=root suid=root fsuid=root egid=root sgid=root fsgid=root tty=(none) ses=unset comm=auditctl exe=/usr/sbin/auditctl subj=unconfined key=(null) 
+type=CONFIG_CHANGE msg=audit(11/17/2026 16:17:37.858:51) : auid=unset ses=unset subj=unconfined op=add_rule key=heatsafe_dns list=exit res=yes 
+----
+type=PROCTITLE msg=audit(11/17/2026 16:17:37.859:52) : proctitle=/sbin/auditctl -R /etc/audit/audit.rules 
+type=PATH msg=audit(11/17/2026 16:17:37.859:52) : item=0 name=/etc/ inode=131074 dev=fc:00 mode=dir,755 ouid=root ogid=root rdev=00:00 nametype=PARENT cap_fp=none cap_fi=none cap_fe=0 cap_fver=0 cap_frootid=0 
+type=CWD msg=audit(11/17/2026 16:17:37.859:52) : cwd=/ 
+type=SOCKADDR msg=audit(11/17/2026 16:17:37.859:52) : saddr={ saddr_fam=netlink nlnk-fam=16 nlnk-pid=0 } 
+type=SYSCALL msg=audit(11/17/2026 16:17:37.859:52) : arch=x86_64 syscall=sendto success=yes exit=1084 a0=0x3 a1=0x7fff4463c9e0 a2=0x43c a3=0x0 items=1 ppid=627 pid=661 auid=unset uid=root gid=root euid=root suid=root fsuid=root egid=root sgid=root fsgid=root tty=(none) ses=unset comm=auditctl exe=/usr/sbin/auditctl subj=unconfined key=(null) 
+type=CONFIG_CHANGE msg=audit(11/17/2026 16:17:37.859:52) : auid=unset ses=unset subj=unconfined op=add_rule key=heatsafe_dns list=exit res=yes 
+
+### auditd chave heatsafe_rede
+$ bash -c ausearch -k heatsafe_rede -i 2>/dev/null | tail -n 40
+----
+type=PROCTITLE msg=audit(11/16/2026 15:28:35.144:521) : proctitle=/sbin/auditctl -R /etc/audit/audit.rules 
+type=PATH msg=audit(11/16/2026 15:28:35.144:521) : item=0 name=/etc/netplan inode=131135 dev=fc:00 mode=dir,755 ouid=root ogid=root rdev=00:00 nametype=NORMAL cap_fp=none cap_fi=none cap_fe=0 cap_fver=0 cap_frootid=0 
+type=CWD msg=audit(11/16/2026 15:28:35.144:521) : cwd=/home/henrique/heatsafe 
+type=SOCKADDR msg=audit(11/16/2026 15:28:35.144:521) : saddr={ saddr_fam=netlink nlnk-fam=16 nlnk-pid=0 } 
+type=SYSCALL msg=audit(11/16/2026 15:28:35.144:521) : arch=x86_64 syscall=sendto success=yes exit=1084 a0=0x5 a1=0x7ffd9bd7d3b0 a2=0x43c a3=0x0 items=1 ppid=3494 pid=3512 auid=henrique uid=root gid=root euid=root suid=root fsuid=root egid=root sgid=root fsgid=root tty=pts1 ses=1 comm=auditctl exe=/usr/sbin/auditctl subj=unconfined key=(null) 
+type=CONFIG_CHANGE msg=audit(11/16/2026 15:28:35.144:521) : auid=henrique ses=1 subj=unconfined op=add_rule key=heatsafe_rede list=exit res=yes 
+----
+type=PROCTITLE msg=audit(11/16/2026 19:53:44.434:2045) : proctitle=/sbin/auditctl -R /etc/audit/audit.rules 
+type=SOCKADDR msg=audit(11/16/2026 19:53:44.434:2045) : saddr={ saddr_fam=netlink nlnk-fam=16 nlnk-pid=0 } 
+type=SYSCALL msg=audit(11/16/2026 19:53:44.434:2045) : arch=x86_64 syscall=sendto success=yes exit=1084 a0=0x5 a1=0x7ffd3b9ffba0 a2=0x43c a3=0x0 items=0 ppid=29127 pid=29141 auid=henrique uid=root gid=root euid=root suid=root fsuid=root egid=root sgid=root fsgid=root tty=pts1 ses=6 comm=auditctl exe=/usr/sbin/auditctl subj=unconfined key=(null) 
+type=CONFIG_CHANGE msg=audit(11/16/2026 19:53:44.434:2045) : auid=henrique ses=6 subj=unconfined op=remove_rule key=heatsafe_rede list=exit res=yes 
+----
+type=PROCTITLE msg=audit(11/16/2026 19:53:44.487:2060) : proctitle=/sbin/auditctl -R /etc/audit/audit.rules 
+type=PATH msg=audit(11/16/2026 19:53:44.487:2060) : item=0 name=/etc/netplan inode=131135 dev=fc:00 mode=dir,755 ouid=root ogid=root rdev=00:00 nametype=NORMAL cap_fp=none cap_fi=none cap_fe=0 cap_fver=0 cap_frootid=0 
+type=CWD msg=audit(11/16/2026 19:53:44.487:2060) : cwd=/home/henrique/heatsafe 
+type=SOCKADDR msg=audit(11/16/2026 19:53:44.487:2060) : saddr={ saddr_fam=netlink nlnk-fam=16 nlnk-pid=0 } 
+type=SYSCALL msg=audit(11/16/2026 19:53:44.487:2060) : arch=x86_64 syscall=sendto success=yes exit=1084 a0=0x5 a1=0x7ffd3ba02040 a2=0x43c a3=0x0 items=1 ppid=29127 pid=29141 auid=henrique uid=root gid=root euid=root suid=root fsuid=root egid=root sgid=root fsgid=root tty=pts1 ses=6 comm=auditctl exe=/usr/sbin/auditctl subj=unconfined key=(null) 
+type=CONFIG_CHANGE msg=audit(11/16/2026 19:53:44.487:2060) : auid=henrique ses=6 subj=unconfined op=add_rule key=heatsafe_rede list=exit res=yes 
+----
+type=PROCTITLE msg=audit(11/17/2026 13:51:21.260:63) : proctitle=/sbin/auditctl -R /etc/audit/audit.rules 
+type=PATH msg=audit(11/17/2026 13:51:21.260:63) : item=0 name=/etc/netplan inode=131135 dev=fc:00 mode=dir,755 ouid=root ogid=root rdev=00:00 nametype=NORMAL cap_fp=none cap_fi=none cap_fe=0 cap_fver=0 cap_frootid=0 
+type=CWD msg=audit(11/17/2026 13:51:21.260:63) : cwd=/ 
+type=SOCKADDR msg=audit(11/17/2026 13:51:21.260:63) : saddr={ saddr_fam=netlink nlnk-fam=16 nlnk-pid=0 } 
+type=SYSCALL msg=audit(11/17/2026 13:51:21.260:63) : arch=x86_64 syscall=sendto success=yes exit=1084 a0=0x3 a1=0x7ffcbda790c0 a2=0x43c a3=0x0 items=1 ppid=699 pid=760 auid=unset uid=root gid=root euid=root suid=root fsuid=root egid=root sgid=root fsgid=root tty=(none) ses=unset comm=auditctl exe=/usr/sbin/auditctl subj=unconfined key=(null) 
+type=CONFIG_CHANGE msg=audit(11/17/2026 13:51:21.260:63) : auid=unset ses=unset subj=unconfined op=add_rule key=heatsafe_rede list=exit res=yes 
+----
+type=PROCTITLE msg=audit(11/17/2026 16:17:37.859:53) : proctitle=/sbin/auditctl -R /etc/audit/audit.rules 
+type=PATH msg=audit(11/17/2026 16:17:37.859:53) : item=0 name=/etc/netplan inode=131135 dev=fc:00 mode=dir,755 ouid=root ogid=root rdev=00:00 nametype=NORMAL cap_fp=none cap_fi=none cap_fe=0 cap_fver=0 cap_frootid=0 
+type=CWD msg=audit(11/17/2026 16:17:37.859:53) : cwd=/ 
+type=SOCKADDR msg=audit(11/17/2026 16:17:37.859:53) : saddr={ saddr_fam=netlink nlnk-fam=16 nlnk-pid=0 } 
+type=SYSCALL msg=audit(11/17/2026 16:17:37.859:53) : arch=x86_64 syscall=sendto success=yes exit=1084 a0=0x3 a1=0x7fff4463c9e0 a2=0x43c a3=0x0 items=1 ppid=627 pid=661 auid=unset uid=root gid=root euid=root suid=root fsuid=root egid=root sgid=root fsgid=root tty=(none) ses=unset comm=auditctl exe=/usr/sbin/auditctl subj=unconfined key=(null) 
+type=CONFIG_CHANGE msg=audit(11/17/2026 16:17:37.859:53) : auid=unset ses=unset subj=unconfined op=add_rule key=heatsafe_rede list=exit res=yes 
+
+### auditd chave heatsafe_systemd
+$ bash -c ausearch -k heatsafe_systemd -i 2>/dev/null | tail -n 40
+type=CONFIG_CHANGE msg=audit(11/16/2026 19:53:44.419:2042) : auid=henrique ses=6 subj=unconfined op=remove_rule key=heatsafe_systemd list=exit res=yes 
+----
+type=PROCTITLE msg=audit(11/16/2026 19:53:44.487:2057) : proctitle=/sbin/auditctl -R /etc/audit/audit.rules 
+type=PATH msg=audit(11/16/2026 19:53:44.487:2057) : item=0 name=/etc/systemd/system inode=131953 dev=fc:00 mode=dir,755 ouid=root ogid=root rdev=00:00 nametype=NORMAL cap_fp=none cap_fi=none cap_fe=0 cap_fver=0 cap_frootid=0 
+type=CWD msg=audit(11/16/2026 19:53:44.487:2057) : cwd=/home/henrique/heatsafe 
+type=SOCKADDR msg=audit(11/16/2026 19:53:44.487:2057) : saddr={ saddr_fam=netlink nlnk-fam=16 nlnk-pid=0 } 
+type=SYSCALL msg=audit(11/16/2026 19:53:44.487:2057) : arch=x86_64 syscall=sendto success=yes exit=1092 a0=0x5 a1=0x7ffd3ba02040 a2=0x444 a3=0x0 items=1 ppid=29127 pid=29141 auid=henrique uid=root gid=root euid=root suid=root fsuid=root egid=root sgid=root fsgid=root tty=pts1 ses=6 comm=auditctl exe=/usr/sbin/auditctl subj=unconfined key=(null) 
+type=CONFIG_CHANGE msg=audit(11/16/2026 19:53:44.487:2057) : auid=henrique ses=6 subj=unconfined op=add_rule key=heatsafe_systemd list=exit res=yes 
+----
+type=PROCTITLE msg=audit(11/17/2026 13:51:21.259:59) : proctitle=/sbin/auditctl -R /etc/audit/audit.rules 
+type=PATH msg=audit(11/17/2026 13:51:21.259:59) : item=0 name=/etc/systemd/system inode=131953 dev=fc:00 mode=dir,755 ouid=root ogid=root rdev=00:00 nametype=NORMAL cap_fp=none cap_fi=none cap_fe=0 cap_fver=0 cap_frootid=0 
+type=CWD msg=audit(11/17/2026 13:51:21.259:59) : cwd=/ 
+type=SOCKADDR msg=audit(11/17/2026 13:51:21.259:59) : saddr={ saddr_fam=netlink nlnk-fam=16 nlnk-pid=0 } 
+type=SYSCALL msg=audit(11/17/2026 13:51:21.259:59) : arch=x86_64 syscall=sendto success=yes exit=1092 a0=0x3 a1=0x7ffcbda790c0 a2=0x444 a3=0x0 items=1 ppid=699 pid=760 auid=unset uid=root gid=root euid=root suid=root fsuid=root egid=root sgid=root fsgid=root tty=(none) ses=unset comm=auditctl exe=/usr/sbin/auditctl subj=unconfined key=(null) 
+type=CONFIG_CHANGE msg=audit(11/17/2026 13:51:21.259:59) : auid=unset ses=unset subj=unconfined op=add_rule key=heatsafe_systemd list=exit res=yes 
+----
+type=PROCTITLE msg=audit(11/17/2026 13:59:38.442:396) : proctitle=bash /home/henrique/heatsafe/infra/scripts/provision_monitor.sh 
+type=PATH msg=audit(11/17/2026 13:59:38.442:396) : item=1 name=/etc/systemd/system/heatsafe-monitor.service inode=131772 dev=fc:00 mode=file,644 ouid=root ogid=root rdev=00:00 nametype=NORMAL cap_fp=none cap_fi=none cap_fe=0 cap_fver=0 cap_frootid=0 
+type=PATH msg=audit(11/17/2026 13:59:38.442:396) : item=0 name=/etc/systemd/system/ inode=131953 dev=fc:00 mode=dir,755 ouid=root ogid=root rdev=00:00 nametype=PARENT cap_fp=none cap_fi=none cap_fe=0 cap_fver=0 cap_frootid=0 
+type=CWD msg=audit(11/17/2026 13:59:38.442:396) : cwd=/home/henrique/heatsafe 
+type=SYSCALL msg=audit(11/17/2026 13:59:38.442:396) : arch=x86_64 syscall=openat success=yes exit=5 a0=AT_FDCWD a1=0x59132994ee40 a2=O_WRONLY|O_CREAT|O_TRUNC a3=0x1b6 items=2 ppid=3211 pid=3241 auid=henrique uid=root gid=root euid=root suid=root fsuid=root egid=root sgid=root fsgid=root tty=pts1 ses=1 comm=bash exe=/usr/bin/bash subj=unconfined key=heatsafe_systemd 
+----
+type=PROCTITLE msg=audit(11/17/2026 13:59:38.464:397) : proctitle=bash /home/henrique/heatsafe/infra/scripts/provision_monitor.sh 
+type=PATH msg=audit(11/17/2026 13:59:38.464:397) : item=1 name=/etc/systemd/system/heatsafe-healthcheck.service inode=131775 dev=fc:00 mode=file,644 ouid=root ogid=root rdev=00:00 nametype=NORMAL cap_fp=none cap_fi=none cap_fe=0 cap_fver=0 cap_frootid=0 
+type=PATH msg=audit(11/17/2026 13:59:38.464:397) : item=0 name=/etc/systemd/system/ inode=131953 dev=fc:00 mode=dir,755 ouid=root ogid=root rdev=00:00 nametype=PARENT cap_fp=none cap_fi=none cap_fe=0 cap_fver=0 cap_frootid=0 
+type=CWD msg=audit(11/17/2026 13:59:38.464:397) : cwd=/home/henrique/heatsafe 
+type=SYSCALL msg=audit(11/17/2026 13:59:38.464:397) : arch=x86_64 syscall=openat success=yes exit=5 a0=AT_FDCWD a1=0x59132994c7d0 a2=O_WRONLY|O_CREAT|O_TRUNC a3=0x1b6 items=2 ppid=3211 pid=3241 auid=henrique uid=root gid=root euid=root suid=root fsuid=root egid=root sgid=root fsgid=root tty=pts1 ses=1 comm=bash exe=/usr/bin/bash subj=unconfined key=heatsafe_systemd 
+----
+type=PROCTITLE msg=audit(11/17/2026 13:59:38.499:398) : proctitle=bash /home/henrique/heatsafe/infra/scripts/provision_monitor.sh 
+type=PATH msg=audit(11/17/2026 13:59:38.499:398) : item=1 name=/etc/systemd/system/heatsafe-healthcheck.timer inode=131777 dev=fc:00 mode=file,644 ouid=root ogid=root rdev=00:00 nametype=NORMAL cap_fp=none cap_fi=none cap_fe=0 cap_fver=0 cap_frootid=0 
+type=PATH msg=audit(11/17/2026 13:59:38.499:398) : item=0 name=/etc/systemd/system/ inode=131953 dev=fc:00 mode=dir,755 ouid=root ogid=root rdev=00:00 nametype=PARENT cap_fp=none cap_fi=none cap_fe=0 cap_fver=0 cap_frootid=0 
+type=CWD msg=audit(11/17/2026 13:59:38.499:398) : cwd=/home/henrique/heatsafe 
+type=SYSCALL msg=audit(11/17/2026 13:59:38.499:398) : arch=x86_64 syscall=openat success=yes exit=5 a0=AT_FDCWD a1=0x5913299420e0 a2=O_WRONLY|O_CREAT|O_TRUNC a3=0x1b6 items=2 ppid=3211 pid=3241 auid=henrique uid=root gid=root euid=root suid=root fsuid=root egid=root sgid=root fsgid=root tty=pts1 ses=1 comm=bash exe=/usr/bin/bash subj=unconfined key=heatsafe_systemd 
+----
+type=PROCTITLE msg=audit(11/17/2026 16:17:37.858:50) : proctitle=/sbin/auditctl -R /etc/audit/audit.rules 
+type=PATH msg=audit(11/17/2026 16:17:37.858:50) : item=0 name=/etc/systemd/system inode=131953 dev=fc:00 mode=dir,755 ouid=root ogid=root rdev=00:00 nametype=NORMAL cap_fp=none cap_fi=none cap_fe=0 cap_fver=0 cap_frootid=0 
+type=CWD msg=audit(11/17/2026 16:17:37.858:50) : cwd=/ 
+type=SOCKADDR msg=audit(11/17/2026 16:17:37.858:50) : saddr={ saddr_fam=netlink nlnk-fam=16 nlnk-pid=0 } 
+type=SYSCALL msg=audit(11/17/2026 16:17:37.858:50) : arch=x86_64 syscall=sendto success=yes exit=1092 a0=0x3 a1=0x7fff4463c9e0 a2=0x444 a3=0x0 items=1 ppid=627 pid=661 auid=unset uid=root gid=root euid=root suid=root fsuid=root egid=root sgid=root fsgid=root tty=(none) ses=unset comm=auditctl exe=/usr/sbin/auditctl subj=unconfined key=(null) 
+type=CONFIG_CHANGE msg=audit(11/17/2026 16:17:37.858:50) : auid=unset ses=unset subj=unconfined op=add_rule key=heatsafe_systemd list=exit res=yes 
+

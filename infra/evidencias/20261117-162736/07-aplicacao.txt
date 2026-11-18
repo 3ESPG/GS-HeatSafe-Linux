@@ -1,0 +1,124 @@
+### API (via DNS)
+$ curl -s -i -m 5 http://api.heatsafe.local/health
+HTTP/1.1 200 OK
+Server: nginx/1.24.0 (Ubuntu)
+Date: Tue, 17 Nov 2026 19:27:36 GMT
+Content-Type: application/json; charset=utf-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+
+{"status":"healthy","application":"HeatSafe.Api","utc":"2026-11-17T19:27:36.7374846Z"}
+### Previsão health (via DNS)
+$ curl -s -i -m 5 http://previsao.heatsafe.local/health
+HTTP/1.1 200 
+Server: nginx/1.24.0 (Ubuntu)
+Date: Tue, 17 Nov 2026 19:27:36 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+
+{"horario":"2026-11-17T16:27:36.758637958","servico":"HeatSafe Clima API","status":"UP"}
+### Previsão de amanhã (contrato usado pela API C#)
+$ curl -s -i -m 15 http://previsao.heatsafe.local/previsao/amanha?estacao=A701
+HTTP/1.1 200 
+Server: nginx/1.24.0 (Ubuntu)
+Date: Tue, 17 Nov 2026 19:27:37 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+
+{"estacao":"A701","data":"2026-01-01","perigoso":false,"probabilidade":0.193,"indiceCalorPrevisto":29.9,"nivelRisco":"ATENCAO"}
+### Status do monitor
+$ curl -s -m 5 http://monitor.heatsafe.local/status.json
+{
+  "host": "heatsafe-srv",
+  "atualizado": "2026-11-17T16:27:34-03:00",
+  "cpu_pct": 1,
+  "mem_pct": 30,
+  "mem_usado_mb": 1179,
+  "mem_total_mb": 3915,
+  "load": "0.12 0.40 0.33",
+  "discos": [
+    {
+      "montagem": "/",
+      "uso_pct": 36,
+      "livre_mb": 14106
+    }
+  ],
+  "servicos": [
+    {
+      "servico": "heatsafe-api",
+      "estado": "active",
+      "http": "200",
+      "reinicios": 0,
+      "pid": "1182"
+    },
+    {
+      "servico": "heatsafe-previsao",
+      "estado": "active",
+      "http": "200",
+      "reinicios": 0,
+      "pid": "1170"
+    }
+  ],
+  "limites": {
+    "cpu": [
+      70,
+      90
+    ],
+    "mem": [
+      75,
+      90
+    ],
+    "disco": [
+      80,
+      90
+    ]
+  },
+  "alertas_ativos": [],
+  "ultimos_alertas": [
+    "[2026-11-17 16:26:19] [RESOLVIDO] Uso de memória normalizado: 30% (alerta a partir de 75%)",
+    "[2026-11-17 16:26:04] [CRITICO] Uso de memória em 92% (limite 90%) | 3621/3915 MB | maiores consumidores de mem: python3(pid 4162) 62.9%, mysqld(pid 996) 10.1%, java(pid 1170) 8.2%",
+    "[2026-11-17 16:25:16] [RESOLVIDO] Uso de disco em / normalizado: 36% (alerta a partir de 80%)",
+    "[2026-11-17 16:25:01] [CRITICO] Uso de disco em / em 93% (limite 90%) | livre: 1758 MB (/dev/mapper/ubuntu--vg-ubuntu--lv)",
+    "[2026-11-17 16:24:00] [RESOLVIDO] Uso de CPU normalizado: 6% (alerta a partir de 70%)",
+    "[2026-11-17 16:23:45] [CRITICO] Uso de CPU em 100% (limite 90%) | load 1.05 / 0.68 / 0.38 | maiores consumidores de cpu: stress-ng-cpu(pid 2965) 98.9%, stress-ng-cpu(pid 2964) 98.9%, java(pid 1170) 5.3%",
+    "[2026-11-17 16:17:56] [RESOLVIDO] Serviço heatsafe-previsao normalizado: systemd=active, HTTP=200",
+    "[2026-11-17 16:17:56] [RESOLVIDO] Serviço heatsafe-api normalizado: systemd=active, HTTP=200",
+    "[2026-11-17 16:17:40] [CRITICO] Serviço heatsafe-previsao com problema: systemd=inactive, HTTP=---",
+    "[2026-11-17 16:17:40] [CRITICO] Serviço heatsafe-api com problema: systemd=inactive, HTTP=---"
+  ]
+}
+
+### /etc/heatsafe/api.env (segredos mascarados)
+# HeatSafe · API central (ASP.NET Core) — gerado por provision_app.sh
+# em 2026-11-16T19:38:40-03:00. NÃO versionar (contém a chave do JWT).
+# O ASP.NET lê "Secao__Chave" como Secao:Chave do appsettings.json.
+ASPNETCORE_ENVIRONMENT="Development"
+ASPNETCORE_URLS="http://127.0.0.1:5000"
+ConnectionStrings__HeatSafe="Data Source=/var/lib/heatsafe/api/heatsafe.db;Cache=Shared"
+Forecast__BaseUrl="http://previsao.heatsafe.local/"
+Forecast__Station="A701"
+Jwt__SigningKey="********"
+DOTNET_CLI_TELEMETRY_OPTOUT="1"
+TZ="America/Sao_Paulo"
+
+### /etc/heatsafe/previsao.env (segredos mascarados)
+# HeatSafe · serviço de previsão (Java/Spring Boot) — gerado por provision_app.sh
+# em 2026-11-16T19:38:40-03:00. NÃO versionar (contém a senha do banco).
+PORT="8000"
+SERVER_ADDRESS="127.0.0.1"
+SERVER_FORWARD_HEADERS_STRATEGY="framework"
+DB_URL="jdbc:mysql://localhost:3306/heatsafe?allowPublicKeyRetrieval=true&useSSL=false"
+DB_USER="heatsafe"
+DB_PASSWORD="********"
+CARREGAR_INMET="true"
+CORS_ALLOWED_ORIGINS="http://api.heatsafe.local,http://heatsafe.local,http://localhost:8081,http://localhost:3000"
+TZ="America/Sao_Paulo"
+

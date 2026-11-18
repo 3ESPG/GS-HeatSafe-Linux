@@ -1,0 +1,11 @@
+# HeatSafe · Healthcheck (autocorreção) — disparado pelo heatsafe-healthcheck.timer
+[Unit]
+Description=HeatSafe - Healthcheck e autocorrecao dos servicos
+Documentation=file:@HS_INFRA_INSTALL@/README.md
+
+[Service]
+Type=oneshot
+# Precisa de root para reiniciar serviços
+ExecStart=@HS_INFRA_INSTALL@/scripts/healthcheck.sh
+SyslogIdentifier=heatsafe-healthcheck
+TimeoutStartSec=90

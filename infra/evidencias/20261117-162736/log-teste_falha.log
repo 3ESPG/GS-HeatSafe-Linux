@@ -1,0 +1,91 @@
+
+===== 2026-11-17T14:05:41-03:00 | teste_falha.sh | usuario=henrique | args: api =====
+
+==> [1] Teste de falha: kill -9 em heatsafe-api
+[2026-11-17 14:05:41] INFO  ANTES: heatsafe-api ativo | PID 1221 | reinícios automáticos: 0 | http://api.heatsafe.local/health -> HTTP 200
+[2026-11-17 14:05:41] INFO  Simulando um crash: kill -9 1221 (SIGKILL não pode ser tratado pelo processo)
+      t+ 0.5s  systemd=activating   PID=0       HTTP 502
+      t+ 1.0s  systemd=activating   PID=0       HTTP 502
+      t+ 1.5s  systemd=activating   PID=0       HTTP 502
+      t+ 2.1s  systemd=activating   PID=0       HTTP 502
+      t+ 2.6s  systemd=activating   PID=0       HTTP 502
+      t+ 3.2s  systemd=activating   PID=5856    HTTP 502
+      t+ 3.7s  systemd=active       PID=5856    HTTP 502
+      t+ 4.2s  systemd=active       PID=5856    HTTP 502
+      t+ 4.8s  systemd=active       PID=5856    HTTP 502
+      t+ 5.5s  systemd=active       PID=5856    HTTP 200
+[2026-11-17 14:05:47] OK    RECUPERADO em 5.5s | PID 1221 -> 5856 | reinícios automáticos 0 -> 1
+[2026-11-17 14:05:48] INFO  Evidência 1 — /var/log/heatsafe/servicos.log:
+      2026-11-17T13:52:30-03:00 | heatsafe-api.service | INICIADO | pid=1221 | reinicios_automaticos=0
+      2026-11-17T14:05:41-03:00 | heatsafe-api.service | FALHA | resultado=signal codigo=killed status=KILL -> systemd vai reiniciar (Restart=always)
+      2026-11-17T14:05:44-03:00 | heatsafe-api.service | INICIADO | pid=5856 | reinicios_automaticos=1
+[2026-11-17 14:05:48] INFO  Evidência 2 — journal do systemd:
+      2026-11-17T14:05:46-03:00 heatsafe-srv heatsafe-api[5856]: info: Microsoft.Hosting.Lifetime[0]
+      2026-11-17T14:05:46-03:00 heatsafe-srv heatsafe-api[5856]:       Application started. Press Ctrl+C to shut down.
+      2026-11-17T14:05:46-03:00 heatsafe-srv heatsafe-api[5856]: info: Microsoft.Hosting.Lifetime[0]
+      2026-11-17T14:05:46-03:00 heatsafe-srv heatsafe-api[5856]:       Hosting environment: Development
+      2026-11-17T14:05:46-03:00 heatsafe-srv heatsafe-api[5856]: info: Microsoft.Hosting.Lifetime[0]
+      2026-11-17T14:05:46-03:00 heatsafe-srv heatsafe-api[5856]:       Content root path: /opt/heatsafe/api
+[2026-11-17 14:05:48] INFO  Evidência 3 — auditd (quem enviou o SIGKILL):
+      auid=henrique uid=root uid=root uid=root uid=root comm=bash exe=/usr/bin/bash
+[2026-11-17 14:05:48] OK    teste_falha.sh concluído em 7s. Log: /var/log/heatsafe/teste_falha.log
+
+===== 2026-11-17T14:07:25-03:00 | teste_falha.sh | usuario=henrique | args: travar =====
+
+==> [1] Teste de falha: monitor TRAVADO (processo vivo, mas parado)
+[2026-11-17 14:07:25] INFO  Congelando o monitor: kill -STOP 3547
+[2026-11-17 14:07:25] INFO  O systemd ainda acha que está tudo bem: active. Só o heartbeat revela o problema.
+[2026-11-17 14:08:01] INFO  Disparando o healthcheck agora (o timer faz isso sozinho a cada 1 min; use ESPERAR_TIMER=1 para esperar)
+[2026-11-17 14:08:07] OK    Monitor: PID 3547 -> 6721 | active
+[2026-11-17 14:08:07] INFO  Evidência — /var/log/heatsafe/healthcheck.log:
+      [2026-11-17 14:08:01] TRAVADO | heatsafe-monitor | último heartbeat há 46s (limite 45s)
+      [2026-11-17 14:08:02] AUTOCORRECAO | heatsafe-monitor | processo travado (sem heartbeat há 46s) -> reiniciando
+      [2026-11-17 14:08:05] AUTOCORRECAO | heatsafe-monitor | agora: active (PID 6721)
+      [2026-11-17 14:08:05] VERIFICACAO | api=ok(HTTP 200) previsao=ok(HTTP 200) monitor=destravado | ações: 1
+[2026-11-17 14:08:07] OK    teste_falha.sh concluído em 42s. Log: /var/log/heatsafe/teste_falha.log
+
+===== 2026-11-17T14:08:51-03:00 | teste_falha.sh | usuario=henrique | args: cpu =====
+
+==> [1] Teste de carga: CPU a 100% por 85s
+[2026-11-17 14:08:51] INFO  stress-ng --cpu 2 --timeout 85s
+[2026-11-17 14:14:51] INFO  A CPU não chegou ao nível crítico (90%) nesta máquina; veja acima o nível atingido
+[2026-11-17 14:14:51] INFO  Encerrando a carga...
+[2026-11-17 14:15:33] AVISO Alerta de CPU ainda não foi resolvido
+[2026-11-17 14:15:33] OK    teste_falha.sh concluído em 402s. Log: /var/log/heatsafe/teste_falha.log
+
+===== 2026-11-17T14:16:35-03:00 | teste_falha.sh | usuario=henrique | args: cpu =====
+
+==> [1] Teste de carga: CPU a 100% por 85s
+[2026-11-17 14:16:35] INFO  stress-ng --cpu 2 --timeout 85s
+[2026-11-17 14:23:57] INFO  A CPU não chegou ao nível crítico (90%) nesta máquina; veja acima o nível atingido
+[2026-11-17 14:23:57] INFO  Encerrando a carga...
+[2026-11-17 14:24:38] AVISO Alerta de CPU ainda não foi resolvido
+[2026-11-17 14:24:38] OK    teste_falha.sh concluído em 483s. Log: /var/log/heatsafe/teste_falha.log
+
+===== 2026-11-17T16:23:13-03:00 | teste_falha.sh | usuario=henrique | args: cpu =====
+
+==> [1] Teste de carga: CPU a 100% por 85s
+[2026-11-17 16:23:13] INFO  stress-ng --cpu 2 --timeout 85s
+      [2026-11-17 16:23:45] [CRITICO] Uso de CPU em 100% (limite 90%) | load 1.05 / 0.68 / 0.38 | maiores consumidores de cpu: stress-ng-cpu(pid 2965) 98.9%, stress-ng-cpu(pid 2964) 98.9%, java(pid 1170) 5.3%
+[2026-11-17 16:23:46] INFO  Encerrando a carga...
+      [2026-11-17 16:24:00] [RESOLVIDO] Uso de CPU normalizado: 6% (alerta a partir de 70%)
+[2026-11-17 16:24:01] OK    teste_falha.sh concluído em 48s. Log: /var/log/heatsafe/teste_falha.log
+
+===== 2026-11-17T16:24:47-03:00 | teste_falha.sh | usuario=henrique | args: disco =====
+
+==> [1] Teste de falha: disco cheio — criando /var/tmp/heatsafe-teste-disco.img com 12347 MB (alvo ~92%)
+[2026-11-17 16:24:47] INFO  Ocupando espaço (fallocate)
+      Filesystem                         Size  Used Avail Use% Mounted on
+      /dev/mapper/ubuntu--vg-ubuntu--lv   23G   20G  1.8G  93% /
+      [2026-11-17 16:25:01] [CRITICO] Uso de disco em / em 93% (limite 90%) | livre: 1758 MB (/dev/mapper/ubuntu--vg-ubuntu--lv)
+[2026-11-17 16:25:01] INFO  Liberando o espaço
+      [2026-11-17 16:25:16] [RESOLVIDO] Uso de disco em / normalizado: 36% (alerta a partir de 80%)
+[2026-11-17 16:25:17] OK    teste_falha.sh concluído em 30s. Log: /var/log/heatsafe/teste_falha.log
+
+===== 2026-11-17T16:25:43-03:00 | teste_falha.sh | usuario=henrique | args: memoria =====
+
+==> [1] Teste de carga: memória até ~92% (alocando 2452 MB por 50s)
+      [2026-11-17 16:26:04] [CRITICO] Uso de memória em 92% (limite 90%) | 3621/3915 MB | maiores consumidores de mem: python3(pid 4162) 62.9%, mysqld(pid 996) 10.1%, java(pid 1170) 8.2%
+[2026-11-17 16:26:04] INFO  Memória liberada
+      [2026-11-17 16:26:19] [RESOLVIDO] Uso de memória normalizado: 30% (alerta a partir de 75%)
+[2026-11-17 16:26:19] OK    teste_falha.sh concluído em 36s. Log: /var/log/heatsafe/teste_falha.log

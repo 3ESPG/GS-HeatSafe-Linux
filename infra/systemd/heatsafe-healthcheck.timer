@@ -1,0 +1,12 @@
+# HeatSafe · Timer do healthcheck: roda heatsafe-healthcheck.service a cada 1 minuto
+# Usa o relógio (OnCalendar) e não "tempo desde o boot": assim continua disparando
+# mesmo depois de um boot lento ou de um reboot (o agendamento nunca se perde).
+[Unit]
+Description=HeatSafe - Healthcheck a cada 1 minuto
+
+[Timer]
+OnCalendar=*-*-* *:*:00
+AccuracySec=5s
+
+[Install]
+WantedBy=timers.target

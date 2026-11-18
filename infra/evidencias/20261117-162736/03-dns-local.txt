@@ -1,0 +1,34 @@
+### /etc/hosts
+$ cat /etc/hosts
+127.0.0.1 localhost
+
+# The following lines are desirable for IPv6 capable hosts
+::1     ip6-localhost ip6-loopback
+fe00::0 ip6-localnet
+ff00::0 ip6-mcastprefix
+ff02::1 ip6-allnodes
+ff02::2 ip6-allrouters
+# >>> HeatSafe (gerenciado por provision_infra.sh — não editar este bloco)
+10.0.2.15 heatsafe-srv.heatsafe.local heatsafe-srv heatsafe.local api.heatsafe.local previsao.heatsafe.local monitor.heatsafe.local
+# <<< HeatSafe
+
+### Resolução de heatsafe-srv
+$ getent hosts heatsafe-srv
+10.0.2.15       heatsafe-srv.heatsafe.local heatsafe-srv heatsafe.local api.heatsafe.local previsao.heatsafe.local monitor.heatsafe.local
+
+### Resolução de heatsafe.local
+$ getent hosts heatsafe.local
+10.0.2.15       heatsafe-srv.heatsafe.local heatsafe-srv heatsafe.local api.heatsafe.local previsao.heatsafe.local monitor.heatsafe.local
+
+### Resolução de api.heatsafe.local
+$ getent hosts api.heatsafe.local
+10.0.2.15       heatsafe-srv.heatsafe.local heatsafe-srv heatsafe.local api.heatsafe.local previsao.heatsafe.local monitor.heatsafe.local
+
+### Resolução de previsao.heatsafe.local
+$ getent hosts previsao.heatsafe.local
+10.0.2.15       heatsafe-srv.heatsafe.local heatsafe-srv heatsafe.local api.heatsafe.local previsao.heatsafe.local monitor.heatsafe.local
+
+### Resolução de monitor.heatsafe.local
+$ getent hosts monitor.heatsafe.local
+10.0.2.15       heatsafe-srv.heatsafe.local heatsafe-srv heatsafe.local api.heatsafe.local previsao.heatsafe.local monitor.heatsafe.local
+

@@ -1,0 +1,47 @@
+# HeatSafe · API central (C# / ASP.NET Core)
+# Modelo: os valores entre arrobas são preenchidos pelo provision_app.sh
+[Unit]
+Description=HeatSafe - API central (C# / ASP.NET Core)
+Documentation=file:@HS_INFRA_INSTALL@/README.md
+After=network-online.target heatsafe-previsao.service
+Wants=network-online.target
+# 0 = o systemd nunca "desiste" de reiniciar, por mais falhas que aconteçam
+StartLimitIntervalSec=0
+
+[Service]
+Type=simple
+User=@HS_USER@
+Group=@HS_GROUP@
+WorkingDirectory=@HS_API_DIR@
+EnvironmentFile=@HS_ENV_API@
+Environment=DOTNET_ROOT=@DOTNET_ROOT@
+# HOME gravável: o ASP.NET guarda ali as chaves de proteção de dados
+Environment=HOME=@HS_DATA@
+ExecStart=@DOTNET_BIN@ @API_DLL@
+# Ganchos de auditoria: registram em /var/log/heatsafe/servicos.log quando sobe/cai e por quê
+# ("+" = roda como root; "-" = se o gancho falhar, o serviço não é afetado)
+ExecStartPost=-+@HS_INFRA_INSTALL@/scripts/hooks/evento_servico.sh %n iniciado
+ExecStopPost=-+@HS_INFRA_INSTALL@/scripts/hooks/evento_servico.sh %n parado
+
+# Tolerância a falhas: qualquer queda (crash, kill -9, OOM) -> reinicia em 3 s
+Restart=always
+RestartSec=3
+KillSignal=SIGINT
+TimeoutStopSec=20
+SyslogIdentifier=heatsafe-api
+
+# Limites de recursos (cgroups)
+MemoryMax=768M
+TasksMax=256
+
+# Endurecimento (sandbox do systemd)
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=full
+ProtectHome=true
+ProtectKernelTunables=true
+ProtectControlGroups=true
+ReadWritePaths=@HS_DATA@ @HS_LOG@
+
+[Install]
+WantedBy=multi-user.target

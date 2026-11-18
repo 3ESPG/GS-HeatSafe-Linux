@@ -1,0 +1,71 @@
+
+===== 2026-11-17T14:04:09-03:00 | teste_ponta_a_ponta.sh | usuario=henrique | args: nenhum =====
+
+==> [1] 1. Serviço de previsão (Java/Spring Boot) em http://previsao.heatsafe.local
+[2026-11-17 14:04:09] OK    Health da previsão -> HTTP 200
+      {
+        "horario": "2026-11-17T14:04:09.297043785",
+        "servico": "HeatSafe Clima API",
+        "status": "UP"
+      }
+[2026-11-17 14:04:09] OK    Previsão de amanhã (contrato usado pela API C#) -> HTTP 200
+      {
+        "estacao": "A701",
+        "data": "2026-01-01",
+        "perigoso": false,
+        "probabilidade": 0.193,
+        "indiceCalorPrevisto": 29.9,
+        "nivelRisco": "ATENCAO"
+      }
+
+==> [2] 2. API central (C#/.NET) em http://api.heatsafe.local
+[2026-11-17 14:04:09] OK    Health da API -> HTTP 200
+      {
+        "status": "healthy",
+        "application": "HeatSafe.Api",
+        "utc": "2026-11-17T17:04:09.4356336Z"
+      }
+
+==> [3] 3. ESP32: token de dispositivo e leitura de calor perigoso
+[2026-11-17 14:04:09] OK    Token do dispositivo HS-001 obtido (368 caracteres)
+[2026-11-17 14:04:09] INFO  POST /leituras {"dispositivoId":"HS-001","temperatura":38.5,"umidade":65,"indiceCalor":52.0,"nivel":"PERIGO","movimento":false,"dataHora":"2026-11-17T14:04:09"}
+[2026-11-17 14:04:09] OK    Leitura enviada pelo dispositivo -> HTTP 201
+      {
+        "id": 2,
+        "indiceCalorCalculado": 60.63,
+        "indiceCalorInformado": 52,
+        "nivel": "PERIGO_EXTREMO",
+        "divergencia": "O índice informado pelo dispositivo difere mais de 3 °C do cálculo do servidor. A classificação informada também diverge."
+      }
+
+==> [4] 4. Família / administrador: status da residência 1
+[2026-11-17 14:04:10] OK    Token de administrador obtido
+[2026-11-17 14:04:10] OK    GET /residencias/1/status -> HTTP 200
+      {
+        "indiceCalor": 60.63,
+        "nivel": "PERIGO_EXTREMO",
+        "ultimoMovimento": "2026-11-16T22:23:42.0235649",
+        "ultimaAgua": "2026-11-16T22:08:42.0235649",
+        "alertaAtivo": true,
+        "modoVigilancia": false,
+        "vigilanciaAteUtc": null
+      }
+
+==> [5] 5. Agente da UBS: visitas prioritárias
+[2026-11-17 14:04:10] OK    GET /visitas/prioritarias -> HTTP 200
+      [
+        {
+          "id": 1,
+          "idoso": "Dona Maria (demonstração)",
+          "endereco": "Residência demonstrativa 001 (endereço fictício)",
+          "nivel": "PERIGO_EXTREMO",
+          "pontuacao": 100,
+          "motivo": "Índice de calor classificado como perigo extremo. índice de calor elevado; período prolongado sem movimentação; período prolongado sem registro de hidratação; vulnerabilidade cadastrada; alerta familiar ainda não confirmado.",
+          "criadaEmUtc": "2026-11-17T17:04:09.8146812",
+          "status": "PENDENTE"
+        }
+      ]
+
+==> [6] Resultado
+[2026-11-17 14:04:10] OK    Fluxo completo funcionando: ESP32 -> API C# -> alertas/visitas, e previsão (SOA) respondendo pelo DNS
+[2026-11-17 14:04:10] OK    teste_ponta_a_ponta.sh concluído em 1s. Log: /var/log/heatsafe/teste_ponta_a_ponta.log

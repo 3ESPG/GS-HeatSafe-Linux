@@ -1,0 +1,19 @@
+### ufw
+$ ufw status verbose
+Status: active
+Logging: on (low)
+Default: deny (incoming), allow (outgoing), disabled (routed)
+New profiles: skip
+
+To                         Action      From
+--                         ------      ----
+22/tcp                     LIMIT IN    Anywhere                   # SSH administracao
+80/tcp                     ALLOW IN    Anywhere                   # HeatSafe nginx
+5000/tcp                   DENY IN     Anywhere                   # API so via nginx
+8000/tcp                   DENY IN     Anywhere                   # Previsao so via nginx
+22/tcp (v6)                LIMIT IN    Anywhere (v6)              # SSH administracao
+80/tcp (v6)                ALLOW IN    Anywhere (v6)              # HeatSafe nginx
+5000/tcp (v6)              DENY IN     Anywhere (v6)              # API so via nginx
+8000/tcp (v6)              DENY IN     Anywhere (v6)              # Previsao so via nginx
+
+

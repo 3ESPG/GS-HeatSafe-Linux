@@ -1,0 +1,300 @@
+[2026-11-16 16:58:23] VERIFICACAO | monitor=ok(heartbeat 0s) | ações: 0
+[2026-11-16 16:59:23] VERIFICACAO | monitor=ok(heartbeat 0s) | ações: 0
+[2026-11-16 17:00:23] VERIFICACAO | monitor=ok(heartbeat 0s) | ações: 0
+[2026-11-16 17:01:24] VERIFICACAO | monitor=ok(heartbeat 0s) | ações: 0
+[2026-11-16 17:02:24] VERIFICACAO | monitor=ok(heartbeat 0s) | ações: 0
+[2026-11-16 17:03:24] VERIFICACAO | monitor=ok(heartbeat 0s) | ações: 0
+[2026-11-16 17:04:24] VERIFICACAO | monitor=ok(heartbeat 0s) | ações: 0
+[2026-11-16 17:05:25] VERIFICACAO | monitor=ok(heartbeat 0s) | ações: 0
+[2026-11-16 17:06:25] VERIFICACAO | monitor=ok(heartbeat 0s) | ações: 0
+[2026-11-16 17:07:25] VERIFICACAO | monitor=ok(heartbeat 0s) | ações: 0
+[2026-11-16 17:08:25] VERIFICACAO | monitor=ok(heartbeat 0s) | ações: 0
+[2026-11-16 17:09:26] VERIFICACAO | monitor=ok(heartbeat 0s) | ações: 0
+[2026-11-16 17:10:26] VERIFICACAO | monitor=ok(heartbeat 0s) | ações: 0
+[2026-11-16 17:11:26] VERIFICACAO | monitor=ok(heartbeat 0s) | ações: 0
+[2026-11-16 17:12:27] VERIFICACAO | monitor=ok(heartbeat 1s) | ações: 0
+[2026-11-16 17:13:27] VERIFICACAO | monitor=ok(heartbeat 0s) | ações: 0
+[2026-11-16 17:14:27] VERIFICACAO | monitor=ok(heartbeat 0s) | ações: 0
+[2026-11-16 17:15:27] VERIFICACAO | monitor=ok(heartbeat 0s) | ações: 0
+[2026-11-16 17:16:28] VERIFICACAO | monitor=ok(heartbeat 0s) | ações: 0
+[2026-11-16 17:17:28] VERIFICACAO | monitor=ok(heartbeat 0s) | ações: 0
+[2026-11-16 17:18:28] VERIFICACAO | monitor=ok(heartbeat 0s) | ações: 0
+[2026-11-16 17:19:28] VERIFICACAO | monitor=ok(heartbeat 0s) | ações: 0
+[2026-11-16 17:20:29] VERIFICACAO | monitor=ok(heartbeat 0s) | ações: 0
+[2026-11-16 17:21:29] VERIFICACAO | monitor=ok(heartbeat 0s) | ações: 0
+[2026-11-16 17:22:29] VERIFICACAO | monitor=ok(heartbeat 15s) | ações: 0
+[2026-11-16 17:23:29] VERIFICACAO | monitor=ok(heartbeat 0s) | ações: 0
+[2026-11-16 17:24:30] VERIFICACAO | monitor=ok(heartbeat 0s) | ações: 0
+[2026-11-16 17:25:30] VERIFICACAO | monitor=ok(heartbeat 0s) | ações: 0
+[2026-11-16 17:26:30] VERIFICACAO | monitor=ok(heartbeat 0s) | ações: 0
+[2026-11-16 17:44:36] TRAVADO | heatsafe-monitor | último heartbeat há 1071s (limite 45s)
+[2026-11-16 17:44:37] AUTOCORRECAO | heatsafe-monitor | processo travado (sem heartbeat há 1071s) -> reiniciando
+[2026-11-16 17:44:40] AUTOCORRECAO | heatsafe-monitor | agora: active (PID 17421)
+[2026-11-16 17:44:40] VERIFICACAO | monitor=destravado | ações: 1
+[2026-11-16 17:45:39] VERIFICACAO | monitor=ok(heartbeat 0s) | ações: 0
+[2026-11-16 17:46:39] VERIFICACAO | monitor=ok(heartbeat 15s) | ações: 0
+[2026-11-16 17:47:39] VERIFICACAO | monitor=ok(heartbeat 0s) | ações: 0
+[2026-11-16 17:48:40] VERIFICACAO | monitor=ok(heartbeat 0s) | ações: 0
+[2026-11-16 17:49:40] VERIFICACAO | monitor=ok(heartbeat 0s) | ações: 0
+[2026-11-16 17:50:40] VERIFICACAO | monitor=ok(heartbeat 0s) | ações: 0
+[2026-11-16 17:51:41] VERIFICACAO | monitor=ok(heartbeat 0s) | ações: 0
+[2026-11-16 17:52:41] VERIFICACAO | monitor=ok(heartbeat 0s) | ações: 0
+[2026-11-16 17:53:41] VERIFICACAO | monitor=ok(heartbeat 0s) | ações: 0
+[2026-11-16 17:54:41] VERIFICACAO | monitor=ok(heartbeat 0s) | ações: 0
+[2026-11-16 17:55:42] VERIFICACAO | monitor=ok(heartbeat 0s) | ações: 0
+[2026-11-16 17:56:42] VERIFICACAO | monitor=ok(heartbeat 0s) | ações: 0
+[2026-11-16 17:57:42] VERIFICACAO | monitor=ok(heartbeat 0s) | ações: 0
+[2026-11-16 17:58:42] VERIFICACAO | monitor=ok(heartbeat 0s) | ações: 0
+[2026-11-16 17:59:43] VERIFICACAO | monitor=ok(heartbeat 0s) | ações: 0
+[2026-11-16 18:00:43] VERIFICACAO | monitor=ok(heartbeat 0s) | ações: 0
+[2026-11-16 18:01:43] VERIFICACAO | monitor=ok(heartbeat 0s) | ações: 0
+[2026-11-16 18:40:54] TRAVADO | heatsafe-monitor | último heartbeat há 2336s (limite 45s)
+[2026-11-16 18:40:55] AUTOCORRECAO | heatsafe-monitor | processo travado (sem heartbeat há 2336s) -> reiniciando
+[2026-11-16 18:40:58] AUTOCORRECAO | heatsafe-monitor | agora: active (PID 20206)
+[2026-11-16 18:40:58] VERIFICACAO | monitor=destravado | ações: 1
+[2026-11-16 18:41:57] VERIFICACAO | monitor=ok(heartbeat 0s) | ações: 0
+[2026-11-16 18:42:57] VERIFICACAO | monitor=ok(heartbeat 0s) | ações: 0
+[2026-11-16 18:43:57] VERIFICACAO | monitor=ok(heartbeat 0s) | ações: 0
+[2026-11-16 18:44:58] VERIFICACAO | monitor=ok(heartbeat 0s) | ações: 0
+[2026-11-16 18:45:58] VERIFICACAO | monitor=ok(heartbeat 0s) | ações: 0
+[2026-11-16 18:46:58] VERIFICACAO | monitor=ok(heartbeat 0s) | ações: 0
+[2026-11-16 18:47:58] VERIFICACAO | monitor=ok(heartbeat 0s) | ações: 0
+[2026-11-16 18:48:59] VERIFICACAO | monitor=ok(heartbeat 0s) | ações: 0
+[2026-11-16 18:49:59] VERIFICACAO | monitor=ok(heartbeat 0s) | ações: 0
+[2026-11-16 18:50:59] VERIFICACAO | monitor=ok(heartbeat 15s) | ações: 0
+[2026-11-16 19:06:54] TRAVADO | heatsafe-monitor | último heartbeat há 955s (limite 45s)
+[2026-11-16 19:06:55] AUTOCORRECAO | heatsafe-monitor | processo travado (sem heartbeat há 955s) -> reiniciando
+[2026-11-16 19:06:58] AUTOCORRECAO | heatsafe-monitor | agora: active (PID 21872)
+[2026-11-16 19:06:58] VERIFICACAO | monitor=destravado | ações: 1
+[2026-11-16 19:07:57] VERIFICACAO | monitor=ok(heartbeat 0s) | ações: 0
+[2026-11-16 19:08:58] VERIFICACAO | monitor=ok(heartbeat 1s) | ações: 0
+[2026-11-16 19:09:58] VERIFICACAO | monitor=ok(heartbeat 0s) | ações: 0
+[2026-11-16 19:10:58] VERIFICACAO | monitor=ok(heartbeat 0s) | ações: 0
+[2026-11-16 19:11:58] VERIFICACAO | monitor=ok(heartbeat 0s) | ações: 0
+[2026-11-16 19:12:59] VERIFICACAO | monitor=ok(heartbeat 0s) | ações: 0
+[2026-11-16 19:13:59] VERIFICACAO | monitor=ok(heartbeat 0s) | ações: 0
+[2026-11-16 19:14:59] VERIFICACAO | monitor=ok(heartbeat 0s) | ações: 0
+[2026-11-16 19:16:00] VERIFICACAO | monitor=ok(heartbeat 0s) | ações: 0
+[2026-11-16 19:17:00] VERIFICACAO | monitor=ok(heartbeat 0s) | ações: 0
+[2026-11-16 19:18:00] VERIFICACAO | monitor=ok(heartbeat 0s) | ações: 0
+[2026-11-16 19:19:01] VERIFICACAO | monitor=ok(heartbeat 0s) | ações: 0
+[2026-11-16 19:20:01] VERIFICACAO | monitor=ok(heartbeat 0s) | ações: 0
+[2026-11-16 19:21:01] VERIFICACAO | monitor=ok(heartbeat 0s) | ações: 0
+[2026-11-16 19:22:01] VERIFICACAO | monitor=ok(heartbeat 0s) | ações: 0
+[2026-11-16 19:24:12] TRAVADO | heatsafe-monitor | último heartbeat há 131s (limite 45s)
+[2026-11-16 19:24:13] AUTOCORRECAO | heatsafe-monitor | processo travado (sem heartbeat há 131s) -> reiniciando
+[2026-11-16 19:24:16] AUTOCORRECAO | heatsafe-monitor | agora: active (PID 25605)
+[2026-11-16 19:24:16] VERIFICACAO | monitor=destravado | ações: 1
+[2026-11-16 19:30:56] TRAVADO | heatsafe-monitor | último heartbeat há 402s (limite 45s)
+[2026-11-16 19:30:57] AUTOCORRECAO | heatsafe-monitor | processo travado (sem heartbeat há 402s) -> reiniciando
+[2026-11-16 19:38:30] TRAVADO | heatsafe-monitor | último heartbeat há 452s (limite 45s)
+[2026-11-16 19:38:31] AUTOCORRECAO | heatsafe-monitor | processo travado (sem heartbeat há 452s) -> reiniciando
+[2026-11-16 19:38:34] AUTOCORRECAO | heatsafe-monitor | agora: active (PID 26166)
+[2026-11-16 19:38:34] VERIFICACAO | monitor=destravado | ações: 1
+[2026-11-16 19:47:17] VERIFICACAO | monitor=ok(heartbeat 0s) | ações: 0
+[2026-11-16 19:51:31] TRAVADO | heatsafe-monitor | último heartbeat há 239s (limite 45s)
+[2026-11-16 19:51:33] AUTOCORRECAO | heatsafe-monitor | processo travado (sem heartbeat há 239s) -> reiniciando
+[2026-11-16 19:51:36] AUTOCORRECAO | heatsafe-monitor | agora: active (PID 27597)
+[2026-11-16 19:51:36] VERIFICACAO | monitor=destravado | ações: 1
+[2026-11-16 19:52:34] VERIFICACAO | monitor=ok(heartbeat 15s) | ações: 0
+[2026-11-16 19:53:36] VERIFICACAO | previsao=ok(HTTP 200) monitor=ok(heartbeat 16s) | ações: 0
+[2026-11-16 19:54:37] VERIFICACAO | api=ok(HTTP 200) previsao=ok(HTTP 200) monitor=ok(heartbeat 15s) | ações: 0
+[2026-11-16 19:55:38] VERIFICACAO | api=ok(HTTP 200) previsao=ok(HTTP 200) monitor=ok(heartbeat 16s) | ações: 0
+[2026-11-16 19:56:38] VERIFICACAO | api=ok(HTTP 200) previsao=ok(HTTP 200) monitor=ok(heartbeat 15s) | ações: 0
+[2026-11-16 19:57:39] VERIFICACAO | api=ok(HTTP 200) previsao=ok(HTTP 200) monitor=ok(heartbeat 0s) | ações: 0
+[2026-11-16 19:58:39] VERIFICACAO | api=ok(HTTP 200) previsao=ok(HTTP 200) monitor=ok(heartbeat 15s) | ações: 0
+[2026-11-16 19:59:40] VERIFICACAO | api=ok(HTTP 200) previsao=ok(HTTP 200) monitor=ok(heartbeat 0s) | ações: 0
+[2026-11-16 20:00:40] VERIFICACAO | api=ok(HTTP 200) previsao=ok(HTTP 200) monitor=ok(heartbeat 15s) | ações: 0
+[2026-11-16 20:01:41] VERIFICACAO | api=ok(HTTP 200) previsao=ok(HTTP 200) monitor=ok(heartbeat 15s) | ações: 0
+[2026-11-16 20:02:41] VERIFICACAO | api=ok(HTTP 200) previsao=ok(HTTP 200) monitor=ok(heartbeat 0s) | ações: 0
+[2026-11-16 20:03:42] VERIFICACAO | api=ok(HTTP 200) previsao=ok(HTTP 200) monitor=ok(heartbeat 15s) | ações: 0
+[2026-11-16 20:04:43] VERIFICACAO | api=ok(HTTP 200) previsao=ok(HTTP 200) monitor=ok(heartbeat 16s) | ações: 0
+[2026-11-16 20:05:43] VERIFICACAO | api=ok(HTTP 200) previsao=ok(HTTP 200) monitor=ok(heartbeat 0s) | ações: 0
+[2026-11-16 20:06:44] VERIFICACAO | api=ok(HTTP 200) previsao=ok(HTTP 200) monitor=ok(heartbeat 0s) | ações: 0
+[2026-11-16 20:07:44] VERIFICACAO | api=ok(HTTP 200) previsao=ok(HTTP 200) monitor=ok(heartbeat 0s) | ações: 0
+[2026-11-17 01:08:31] TRAVADO | heatsafe-monitor | último heartbeat há 18032s (limite 45s)
+[2026-11-17 01:08:32] AUTOCORRECAO | heatsafe-monitor | processo travado (sem heartbeat há 18032s) -> reiniciando
+[2026-11-17 01:08:36] AUTOCORRECAO | heatsafe-monitor | agora: active (PID 33476)
+[2026-11-17 01:08:36] VERIFICACAO | api=ok(HTTP 200) previsao=ok(HTTP 200) monitor=destravado | ações: 1
+[2026-11-17 01:09:34] VERIFICACAO | api=ok(HTTP 200) previsao=ok(HTTP 200) monitor=ok(heartbeat 15s) | ações: 0
+[2026-11-17 01:10:35] VERIFICACAO | api=ok(HTTP 200) previsao=ok(HTTP 200) monitor=ok(heartbeat 15s) | ações: 0
+[2026-11-17 01:11:35] VERIFICACAO | api=ok(HTTP 200) previsao=ok(HTTP 200) monitor=ok(heartbeat 15s) | ações: 0
+[2026-11-17 01:12:36] VERIFICACAO | api=ok(HTTP 200) previsao=ok(HTTP 200) monitor=ok(heartbeat 15s) | ações: 0
+[2026-11-17 01:13:37] VERIFICACAO | api=ok(HTTP 200) previsao=ok(HTTP 200) monitor=ok(heartbeat 16s) | ações: 0
+[2026-11-17 01:14:37] VERIFICACAO | api=ok(HTTP 200) previsao=ok(HTTP 200) monitor=ok(heartbeat 15s) | ações: 0
+[2026-11-17 01:15:38] VERIFICACAO | api=ok(HTTP 200) previsao=ok(HTTP 200) monitor=ok(heartbeat 15s) | ações: 0
+[2026-11-17 01:16:38] VERIFICACAO | api=ok(HTTP 200) previsao=ok(HTTP 200) monitor=ok(heartbeat 15s) | ações: 0
+[2026-11-17 01:17:39] VERIFICACAO | api=ok(HTTP 200) previsao=ok(HTTP 200) monitor=ok(heartbeat 15s) | ações: 0
+[2026-11-17 01:18:39] VERIFICACAO | api=ok(HTTP 200) previsao=ok(HTTP 200) monitor=ok(heartbeat 15s) | ações: 0
+[2026-11-17 01:19:40] VERIFICACAO | api=ok(HTTP 200) previsao=ok(HTTP 200) monitor=ok(heartbeat 15s) | ações: 0
+[2026-11-17 01:20:40] VERIFICACAO | api=ok(HTTP 200) previsao=ok(HTTP 200) monitor=ok(heartbeat 0s) | ações: 0
+[2026-11-17 01:21:41] VERIFICACAO | api=ok(HTTP 200) previsao=ok(HTTP 200) monitor=ok(heartbeat 15s) | ações: 0
+[2026-11-17 01:22:41] VERIFICACAO | api=ok(HTTP 200) previsao=ok(HTTP 200) monitor=ok(heartbeat 0s) | ações: 0
+[2026-11-17 01:23:42] VERIFICACAO | api=ok(HTTP 200) previsao=ok(HTTP 200) monitor=ok(heartbeat 15s) | ações: 0
+[2026-11-17 01:24:43] VERIFICACAO | api=ok(HTTP 200) previsao=ok(HTTP 200) monitor=ok(heartbeat 16s) | ações: 0
+[2026-11-17 01:25:43] VERIFICACAO | api=ok(HTTP 200) previsao=ok(HTTP 200) monitor=ok(heartbeat 15s) | ações: 0
+[2026-11-17 01:26:44] VERIFICACAO | api=ok(HTTP 200) previsao=ok(HTTP 200) monitor=ok(heartbeat 15s) | ações: 0
+[2026-11-17 01:27:44] VERIFICACAO | api=ok(HTTP 200) previsao=ok(HTTP 200) monitor=ok(heartbeat 15s) | ações: 0
+[2026-11-17 01:28:45] VERIFICACAO | api=ok(HTTP 200) previsao=ok(HTTP 200) monitor=ok(heartbeat 0s) | ações: 0
+[2026-11-17 01:29:45] VERIFICACAO | api=ok(HTTP 200) previsao=ok(HTTP 200) monitor=ok(heartbeat 15s) | ações: 0
+[2026-11-17 01:30:46] VERIFICACAO | api=ok(HTTP 200) previsao=ok(HTTP 200) monitor=ok(heartbeat 15s) | ações: 0
+[2026-11-17 01:31:47] VERIFICACAO | api=ok(HTTP 200) previsao=ok(HTTP 200) monitor=ok(heartbeat 16s) | ações: 0
+[2026-11-17 01:32:47] VERIFICACAO | api=ok(HTTP 200) previsao=ok(HTTP 200) monitor=ok(heartbeat 15s) | ações: 0
+[2026-11-17 01:33:48] VERIFICACAO | api=ok(HTTP 200) previsao=ok(HTTP 200) monitor=ok(heartbeat 15s) | ações: 0
+[2026-11-17 01:34:48] VERIFICACAO | api=ok(HTTP 200) previsao=ok(HTTP 200) monitor=ok(heartbeat 15s) | ações: 0
+[2026-11-17 01:35:49] VERIFICACAO | api=ok(HTTP 200) previsao=ok(HTTP 200) monitor=ok(heartbeat 15s) | ações: 0
+[2026-11-17 01:36:49] VERIFICACAO | api=ok(HTTP 200) previsao=ok(HTTP 200) monitor=ok(heartbeat 15s) | ações: 0
+[2026-11-17 01:37:50] VERIFICACAO | api=ok(HTTP 200) previsao=ok(HTTP 200) monitor=ok(heartbeat 15s) | ações: 0
+[2026-11-17 01:38:50] VERIFICACAO | api=ok(HTTP 200) previsao=ok(HTTP 200) monitor=ok(heartbeat 15s) | ações: 0
+[2026-11-17 01:39:51] VERIFICACAO | api=ok(HTTP 200) previsao=ok(HTTP 200) monitor=ok(heartbeat 15s) | ações: 0
+[2026-11-17 03:03:45] VERIFICACAO | api=ok(HTTP 200) previsao=ok(HTTP 200) monitor=ok(heartbeat 0s) | ações: 0
+[2026-11-17 07:00:34] TRAVADO | heatsafe-monitor | último heartbeat há 14209s (limite 45s)
+[2026-11-17 07:00:35] AUTOCORRECAO | heatsafe-monitor | processo travado (sem heartbeat há 14209s) -> reiniciando
+[2026-11-17 07:00:39] AUTOCORRECAO | heatsafe-monitor | agora: active (PID 42336)
+[2026-11-17 07:00:39] VERIFICACAO | api=ok(HTTP 200) previsao=ok(HTTP 200) monitor=destravado | ações: 1
+[2026-11-17 07:01:36] VERIFICACAO | api=ok(HTTP 200) previsao=ok(HTTP 200) monitor=ok(heartbeat 14s) | ações: 0
+[2026-11-17 07:02:38] VERIFICACAO | api=ok(HTTP 200) previsao=ok(HTTP 200) monitor=ok(heartbeat 15s) | ações: 0
+[2026-11-17 07:03:38] VERIFICACAO | api=ok(HTTP 200) previsao=ok(HTTP 200) monitor=ok(heartbeat 14s) | ações: 0
+[2026-11-17 07:04:39] VERIFICACAO | api=ok(HTTP 200) previsao=ok(HTTP 200) monitor=ok(heartbeat 15s) | ações: 0
+[2026-11-17 07:05:40] VERIFICACAO | api=ok(HTTP 200) previsao=ok(HTTP 200) monitor=ok(heartbeat 15s) | ações: 0
+[2026-11-17 07:06:40] VERIFICACAO | api=ok(HTTP 200) previsao=ok(HTTP 200) monitor=ok(heartbeat 15s) | ações: 0
+[2026-11-17 07:07:41] VERIFICACAO | api=ok(HTTP 200) previsao=ok(HTTP 200) monitor=ok(heartbeat 0s) | ações: 0
+[2026-11-17 07:08:41] VERIFICACAO | api=ok(HTTP 200) previsao=ok(HTTP 200) monitor=ok(heartbeat 0s) | ações: 0
+[2026-11-17 07:09:42] VERIFICACAO | api=ok(HTTP 200) previsao=ok(HTTP 200) monitor=ok(heartbeat 15s) | ações: 0
+[2026-11-17 07:10:42] VERIFICACAO | api=ok(HTTP 200) previsao=ok(HTTP 200) monitor=ok(heartbeat 15s) | ações: 0
+[2026-11-17 07:11:43] VERIFICACAO | api=ok(HTTP 200) previsao=ok(HTTP 200) monitor=ok(heartbeat 15s) | ações: 0
+[2026-11-17 07:12:43] VERIFICACAO | api=ok(HTTP 200) previsao=ok(HTTP 200) monitor=ok(heartbeat 15s) | ações: 0
+[2026-11-17 07:13:44] VERIFICACAO | api=ok(HTTP 200) previsao=ok(HTTP 200) monitor=ok(heartbeat 15s) | ações: 0
+[2026-11-17 07:14:44] VERIFICACAO | api=ok(HTTP 200) previsao=ok(HTTP 200) monitor=ok(heartbeat 15s) | ações: 0
+[2026-11-17 07:15:45] VERIFICACAO | api=ok(HTTP 200) previsao=ok(HTTP 200) monitor=ok(heartbeat 15s) | ações: 0
+[2026-11-17 07:16:45] VERIFICACAO | api=ok(HTTP 200) previsao=ok(HTTP 200) monitor=ok(heartbeat 15s) | ações: 0
+[2026-11-17 07:17:46] VERIFICACAO | api=ok(HTTP 200) previsao=ok(HTTP 200) monitor=ok(heartbeat 15s) | ações: 0
+[2026-11-17 07:18:46] VERIFICACAO | api=ok(HTTP 200) previsao=ok(HTTP 200) monitor=ok(heartbeat 0s) | ações: 0
+[2026-11-17 07:19:47] VERIFICACAO | api=ok(HTTP 200) previsao=ok(HTTP 200) monitor=ok(heartbeat 15s) | ações: 0
+[2026-11-17 07:20:47] VERIFICACAO | api=ok(HTTP 200) previsao=ok(HTTP 200) monitor=ok(heartbeat 15s) | ações: 0
+[2026-11-17 07:21:48] VERIFICACAO | api=ok(HTTP 200) previsao=ok(HTTP 200) monitor=ok(heartbeat 15s) | ações: 0
+[2026-11-17 07:22:48] VERIFICACAO | api=ok(HTTP 200) previsao=ok(HTTP 200) monitor=ok(heartbeat 15s) | ações: 0
+[2026-11-17 07:23:49] VERIFICACAO | api=ok(HTTP 200) previsao=ok(HTTP 200) monitor=ok(heartbeat 15s) | ações: 0
+[2026-11-17 07:24:50] VERIFICACAO | api=ok(HTTP 200) previsao=ok(HTTP 200) monitor=ok(heartbeat 16s) | ações: 0
+[2026-11-17 07:25:50] VERIFICACAO | api=ok(HTTP 200) previsao=ok(HTTP 200) monitor=ok(heartbeat 15s) | ações: 0
+[2026-11-17 07:26:51] VERIFICACAO | api=ok(HTTP 200) previsao=ok(HTTP 200) monitor=ok(heartbeat 15s) | ações: 0
+[2026-11-17 07:27:51] VERIFICACAO | api=ok(HTTP 200) previsao=ok(HTTP 200) monitor=ok(heartbeat 15s) | ações: 0
+[2026-11-17 07:28:52] VERIFICACAO | api=ok(HTTP 200) previsao=ok(HTTP 200) monitor=ok(heartbeat 15s) | ações: 0
+[2026-11-17 07:29:52] VERIFICACAO | api=ok(HTTP 200) previsao=ok(HTTP 200) monitor=ok(heartbeat 15s) | ações: 0
+[2026-11-17 12:30:01] TRAVADO | heatsafe-monitor | último heartbeat há 17978s (limite 45s)
+[2026-11-17 12:30:02] AUTOCORRECAO | heatsafe-monitor | processo travado (sem heartbeat há 17978s) -> reiniciando
+[2026-11-17 12:30:05] AUTOCORRECAO | heatsafe-monitor | agora: active (PID 50576)
+[2026-11-17 12:30:05] VERIFICACAO | api=ok(HTTP 200) previsao=ok(HTTP 200) monitor=destravado | ações: 1
+[2026-11-17 12:31:04] VERIFICACAO | api=ok(HTTP 200) previsao=ok(HTTP 200) monitor=ok(heartbeat 15s) | ações: 0
+[2026-11-17 12:32:05] VERIFICACAO | api=ok(HTTP 200) previsao=ok(HTTP 200) monitor=ok(heartbeat 15s) | ações: 0
+[2026-11-17 12:41:13] TRAVADO | heatsafe-monitor | último heartbeat há 518s (limite 45s)
+[2026-11-17 12:41:14] AUTOCORRECAO | heatsafe-monitor | processo travado (sem heartbeat há 518s) -> reiniciando
+[2026-11-17 12:41:17] AUTOCORRECAO | heatsafe-monitor | agora: active (PID 51824)
+[2026-11-17 12:41:17] VERIFICACAO | api=ok(HTTP 200) previsao=ok(HTTP 200) monitor=destravado | ações: 1
+[2026-11-17 12:42:16] VERIFICACAO | api=ok(HTTP 200) previsao=ok(HTTP 200) monitor=ok(heartbeat 15s) | ações: 0
+[2026-11-17 12:43:16] VERIFICACAO | api=ok(HTTP 200) previsao=ok(HTTP 200) monitor=ok(heartbeat 15s) | ações: 0
+[2026-11-17 12:44:17] VERIFICACAO | api=ok(HTTP 200) previsao=ok(HTTP 200) monitor=ok(heartbeat 0s) | ações: 0
+[2026-11-17 12:45:17] VERIFICACAO | api=ok(HTTP 200) previsao=ok(HTTP 200) monitor=ok(heartbeat 15s) | ações: 0
+[2026-11-17 12:46:18] VERIFICACAO | api=ok(HTTP 200) previsao=ok(HTTP 200) monitor=ok(heartbeat 15s) | ações: 0
+[2026-11-17 12:47:18] VERIFICACAO | api=ok(HTTP 200) previsao=ok(HTTP 200) monitor=ok(heartbeat 0s) | ações: 0
+[2026-11-17 12:48:19] VERIFICACAO | api=ok(HTTP 200) previsao=ok(HTTP 200) monitor=ok(heartbeat 15s) | ações: 0
+[2026-11-17 12:49:19] VERIFICACAO | api=ok(HTTP 200) previsao=ok(HTTP 200) monitor=ok(heartbeat 0s) | ações: 0
+[2026-11-17 12:50:20] VERIFICACAO | api=ok(HTTP 200) previsao=ok(HTTP 200) monitor=ok(heartbeat 15s) | ações: 0
+[2026-11-17 12:51:20] VERIFICACAO | api=ok(HTTP 200) previsao=ok(HTTP 200) monitor=ok(heartbeat 15s) | ações: 0
+[2026-11-17 12:52:21] VERIFICACAO | api=ok(HTTP 200) previsao=ok(HTTP 200) monitor=ok(heartbeat 15s) | ações: 0
+[2026-11-17 12:53:22] VERIFICACAO | api=ok(HTTP 200) previsao=ok(HTTP 200) monitor=ok(heartbeat 15s) | ações: 0
+[2026-11-17 12:54:22] VERIFICACAO | api=ok(HTTP 200) previsao=ok(HTTP 200) monitor=ok(heartbeat 15s) | ações: 0
+[2026-11-17 12:55:23] VERIFICACAO | api=ok(HTTP 200) previsao=ok(HTTP 200) monitor=ok(heartbeat 16s) | ações: 0
+[2026-11-17 12:56:23] VERIFICACAO | api=ok(HTTP 200) previsao=ok(HTTP 200) monitor=ok(heartbeat 0s) | ações: 0
+[2026-11-17 12:57:24] VERIFICACAO | api=ok(HTTP 200) previsao=ok(HTTP 200) monitor=ok(heartbeat 16s) | ações: 0
+[2026-11-17 12:58:24] VERIFICACAO | api=ok(HTTP 200) previsao=ok(HTTP 200) monitor=ok(heartbeat 15s) | ações: 0
+[2026-11-17 12:59:25] VERIFICACAO | api=ok(HTTP 200) previsao=ok(HTTP 200) monitor=ok(heartbeat 16s) | ações: 0
+[2026-11-17 13:00:25] VERIFICACAO | api=ok(HTTP 200) previsao=ok(HTTP 200) monitor=ok(heartbeat 15s) | ações: 0
+[2026-11-17 13:01:26] VERIFICACAO | api=ok(HTTP 200) previsao=ok(HTTP 200) monitor=ok(heartbeat 15s) | ações: 0
+[2026-11-17 13:02:27] VERIFICACAO | api=ok(HTTP 200) previsao=ok(HTTP 200) monitor=ok(heartbeat 16s) | ações: 0
+[2026-11-17 13:03:27] VERIFICACAO | api=ok(HTTP 200) previsao=ok(HTTP 200) monitor=ok(heartbeat 15s) | ações: 0
+[2026-11-17 13:04:27] VERIFICACAO | api=ok(HTTP 200) previsao=ok(HTTP 200) monitor=ok(heartbeat 15s) | ações: 0
+[2026-11-17 13:05:28] VERIFICACAO | api=ok(HTTP 200) previsao=ok(HTTP 200) monitor=ok(heartbeat 15s) | ações: 0
+[2026-11-17 13:06:29] VERIFICACAO | api=ok(HTTP 200) previsao=ok(HTTP 200) monitor=ok(heartbeat 0s) | ações: 0
+[2026-11-17 13:07:29] VERIFICACAO | api=ok(HTTP 200) previsao=ok(HTTP 200) monitor=ok(heartbeat 15s) | ações: 0
+[2026-11-17 13:08:30] VERIFICACAO | api=ok(HTTP 200) previsao=ok(HTTP 200) monitor=ok(heartbeat 15s) | ações: 0
+[2026-11-17 13:09:30] VERIFICACAO | api=ok(HTTP 200) previsao=ok(HTTP 200) monitor=ok(heartbeat 15s) | ações: 0
+[2026-11-17 13:10:31] VERIFICACAO | api=ok(HTTP 200) previsao=ok(HTTP 200) monitor=ok(heartbeat 15s) | ações: 0
+[2026-11-17 13:11:32] VERIFICACAO | api=ok(HTTP 200) previsao=ok(HTTP 200) monitor=ok(heartbeat 0s) | ações: 0
+[2026-11-17 13:12:32] VERIFICACAO | api=ok(HTTP 200) previsao=ok(HTTP 200) monitor=ok(heartbeat 15s) | ações: 0
+[2026-11-17 13:13:33] VERIFICACAO | api=ok(HTTP 200) previsao=ok(HTTP 200) monitor=ok(heartbeat 15s) | ações: 0
+[2026-11-17 13:14:33] VERIFICACAO | api=ok(HTTP 200) previsao=ok(HTTP 200) monitor=ok(heartbeat 0s) | ações: 0
+[2026-11-17 13:15:34] VERIFICACAO | api=ok(HTTP 200) previsao=ok(HTTP 200) monitor=ok(heartbeat 0s) | ações: 0
+[2026-11-17 13:31:40] TRAVADO | heatsafe-monitor | último heartbeat há 951s (limite 45s)
+[2026-11-17 13:31:41] AUTOCORRECAO | heatsafe-monitor | processo travado (sem heartbeat há 951s) -> reiniciando
+[2026-11-17 13:31:44] AUTOCORRECAO | heatsafe-monitor | agora: active (PID 61168)
+[2026-11-17 13:31:44] VERIFICACAO | api=ok(HTTP 200) previsao=ok(HTTP 200) monitor=destravado | ações: 1
+[2026-11-17 13:32:43] VERIFICACAO | api=ok(HTTP 200) previsao=ok(HTTP 200) monitor=ok(heartbeat 0s) | ações: 0
+[2026-11-17 13:33:44] VERIFICACAO | api=ok(HTTP 200) previsao=ok(HTTP 200) monitor=ok(heartbeat 15s) | ações: 0
+[2026-11-17 13:59:39] VERIFICACAO | api=ok(HTTP 200) previsao=ok(HTTP 200) monitor=ok(heartbeat 1s) | ações: 0
+[2026-11-17 14:00:03] VERIFICACAO | api=ok(HTTP 200) previsao=ok(HTTP 200) monitor=ok(heartbeat 8s) | ações: 0
+[2026-11-17 14:01:04] VERIFICACAO | api=ok(HTTP 200) previsao=ok(HTTP 200) monitor=ok(heartbeat 8s) | ações: 0
+[2026-11-17 14:02:03] VERIFICACAO | api=ok(HTTP 200) previsao=ok(HTTP 200) monitor=ok(heartbeat 7s) | ações: 0
+[2026-11-17 14:03:04] VERIFICACAO | api=ok(HTTP 200) previsao=ok(HTTP 200) monitor=ok(heartbeat 7s) | ações: 0
+[2026-11-17 14:04:04] VERIFICACAO | api=ok(HTTP 200) previsao=ok(HTTP 200) monitor=ok(heartbeat 6s) | ações: 0
+[2026-11-17 14:05:04] VERIFICACAO | api=ok(HTTP 200) previsao=ok(HTTP 200) monitor=ok(heartbeat 6s) | ações: 0
+[2026-11-17 14:06:04] VERIFICACAO | api=ok(HTTP 200) previsao=ok(HTTP 200) monitor=ok(heartbeat 5s) | ações: 0
+[2026-11-17 14:07:00] VERIFICACAO | api=ok(HTTP 200) previsao=ok(HTTP 200) monitor=ok(heartbeat 0s) | ações: 0
+[2026-11-17 14:08:01] TRAVADO | heatsafe-monitor | último heartbeat há 46s (limite 45s)
+[2026-11-17 14:08:02] AUTOCORRECAO | heatsafe-monitor | processo travado (sem heartbeat há 46s) -> reiniciando
+[2026-11-17 14:08:05] AUTOCORRECAO | heatsafe-monitor | agora: active (PID 6721)
+[2026-11-17 14:08:05] VERIFICACAO | api=ok(HTTP 200) previsao=ok(HTTP 200) monitor=destravado | ações: 1
+[2026-11-17 14:13:26] TRAVADO | heatsafe-monitor | último heartbeat há 277s (limite 45s)
+[2026-11-17 14:13:27] AUTOCORRECAO | heatsafe-monitor | processo travado (sem heartbeat há 277s) -> reiniciando
+[2026-11-17 14:13:30] AUTOCORRECAO | heatsafe-monitor | agora: active (PID 7180)
+[2026-11-17 14:13:30] VERIFICACAO | api=ok(HTTP 200) previsao=ok(HTTP 200) monitor=destravado | ações: 1
+[2026-11-17 14:14:04] VERIFICACAO | api=ok(HTTP 200) previsao=ok(HTTP 200) monitor=ok(heartbeat 6s) | ações: 0
+[2026-11-17 14:15:04] VERIFICACAO | api=ok(HTTP 200) previsao=ok(HTTP 200) monitor=ok(heartbeat 5s) | ações: 0
+[2026-11-17 14:16:04] VERIFICACAO | api=ok(HTTP 200) previsao=ok(HTTP 200) monitor=ok(heartbeat 5s) | ações: 0
+[2026-11-17 14:22:31] TRAVADO | heatsafe-monitor | último heartbeat há 361s (limite 45s)
+[2026-11-17 14:22:32] AUTOCORRECAO | heatsafe-monitor | processo travado (sem heartbeat há 361s) -> reiniciando
+[2026-11-17 14:22:35] AUTOCORRECAO | heatsafe-monitor | agora: active (PID 8926)
+[2026-11-17 14:22:35] VERIFICACAO | api=ok(HTTP 200) previsao=ok(HTTP 200) monitor=destravado | ações: 1
+[2026-11-17 14:23:04] VERIFICACAO | api=ok(HTTP 200) previsao=ok(HTTP 200) monitor=ok(heartbeat 16s) | ações: 0
+[2026-11-17 14:24:04] VERIFICACAO | api=ok(HTTP 200) previsao=ok(HTTP 200) monitor=ok(heartbeat 0s) | ações: 0
+[2026-11-17 14:25:04] VERIFICACAO | api=ok(HTTP 200) previsao=ok(HTTP 200) monitor=ok(heartbeat 15s) | ações: 0
+[2026-11-17 14:26:04] VERIFICACAO | api=ok(HTTP 200) previsao=ok(HTTP 200) monitor=ok(heartbeat 14s) | ações: 0
+[2026-11-17 14:27:03] VERIFICACAO | api=ok(HTTP 200) previsao=ok(HTTP 200) monitor=ok(heartbeat 13s) | ações: 0
+[2026-11-17 14:28:04] VERIFICACAO | api=ok(HTTP 200) previsao=ok(HTTP 200) monitor=ok(heartbeat 13s) | ações: 0
+[2026-11-17 14:29:04] VERIFICACAO | api=ok(HTTP 200) previsao=ok(HTTP 200) monitor=ok(heartbeat 12s) | ações: 0
+[2026-11-17 14:30:04] VERIFICACAO | api=ok(HTTP 200) previsao=ok(HTTP 200) monitor=ok(heartbeat 12s) | ações: 0
+[2026-11-17 14:31:04] VERIFICACAO | api=ok(HTTP 200) previsao=ok(HTTP 200) monitor=ok(heartbeat 11s) | ações: 0
+[2026-11-17 14:32:04] VERIFICACAO | api=ok(HTTP 200) previsao=ok(HTTP 200) monitor=ok(heartbeat 11s) | ações: 0
+[2026-11-17 14:33:04] VERIFICACAO | api=ok(HTTP 200) previsao=ok(HTTP 200) monitor=ok(heartbeat 10s) | ações: 0
+[2026-11-17 14:34:04] VERIFICACAO | api=ok(HTTP 200) previsao=ok(HTTP 200) monitor=ok(heartbeat 10s) | ações: 0
+[2026-11-17 14:35:03] VERIFICACAO | api=ok(HTTP 200) previsao=ok(HTTP 200) monitor=ok(heartbeat 8s) | ações: 0
+[2026-11-17 14:36:04] VERIFICACAO | api=ok(HTTP 200) previsao=ok(HTTP 200) monitor=ok(heartbeat 9s) | ações: 0
+[2026-11-17 14:37:04] VERIFICACAO | api=ok(HTTP 200) previsao=ok(HTTP 200) monitor=ok(heartbeat 8s) | ações: 0
+[2026-11-17 14:38:04] VERIFICACAO | api=ok(HTTP 200) previsao=ok(HTTP 200) monitor=ok(heartbeat 8s) | ações: 0
+[2026-11-17 14:39:04] VERIFICACAO | api=ok(HTTP 200) previsao=ok(HTTP 200) monitor=ok(heartbeat 7s) | ações: 0
+[2026-11-17 14:40:04] VERIFICACAO | api=ok(HTTP 200) previsao=ok(HTTP 200) monitor=ok(heartbeat 7s) | ações: 0
+[2026-11-17 14:41:04] VERIFICACAO | api=ok(HTTP 200) previsao=ok(HTTP 200) monitor=ok(heartbeat 6s) | ações: 0
+[2026-11-17 14:42:03] VERIFICACAO | api=ok(HTTP 200) previsao=ok(HTTP 200) monitor=ok(heartbeat 5s) | ações: 0
+[2026-11-17 14:43:04] VERIFICACAO | api=ok(HTTP 200) previsao=ok(HTTP 200) monitor=ok(heartbeat 5s) | ações: 0
+[2026-11-17 14:44:00] VERIFICACAO | api=ok(HTTP 200) previsao=ok(HTTP 200) monitor=ok(heartbeat 0s) | ações: 0
+[2026-11-17 14:45:00] VERIFICACAO | api=ok(HTTP 200) previsao=ok(HTTP 200) monitor=ok(heartbeat 15s) | ações: 0
+[2026-11-17 14:46:01] VERIFICACAO | api=ok(HTTP 200) previsao=ok(HTTP 200) monitor=ok(heartbeat 15s) | ações: 0
+[2026-11-17 14:47:01] VERIFICACAO | api=ok(HTTP 200) previsao=ok(HTTP 200) monitor=ok(heartbeat 0s) | ações: 0
+[2026-11-17 14:48:02] VERIFICACAO | api=ok(HTTP 200) previsao=ok(HTTP 200) monitor=ok(heartbeat 15s) | ações: 0
+[2026-11-17 14:49:02] VERIFICACAO | api=ok(HTTP 200) previsao=ok(HTTP 200) monitor=ok(heartbeat 15s) | ações: 0
+[2026-11-17 14:50:03] VERIFICACAO | api=ok(HTTP 200) previsao=ok(HTTP 200) monitor=ok(heartbeat 15s) | ações: 0
+[2026-11-17 14:51:04] VERIFICACAO | api=ok(HTTP 200) previsao=ok(HTTP 200) monitor=ok(heartbeat 0s) | ações: 0
+[2026-11-17 14:52:04] VERIFICACAO | api=ok(HTTP 200) previsao=ok(HTTP 200) monitor=ok(heartbeat 15s) | ações: 0
+[2026-11-17 14:53:04] VERIFICACAO | api=ok(HTTP 200) previsao=ok(HTTP 200) monitor=ok(heartbeat 14s) | ações: 0
+[2026-11-17 14:54:04] VERIFICACAO | api=ok(HTTP 200) previsao=ok(HTTP 200) monitor=ok(heartbeat 14s) | ações: 0
+[2026-11-17 14:55:04] VERIFICACAO | api=ok(HTTP 200) previsao=ok(HTTP 200) monitor=ok(heartbeat 13s) | ações: 0
+[2026-11-17 16:18:04] VERIFICACAO | api=ok(HTTP 200) previsao=ok(HTTP 200) monitor=ok(heartbeat 8s) | ações: 0
+[2026-11-17 16:19:04] VERIFICACAO | api=ok(HTTP 200) previsao=ok(HTTP 200) monitor=ok(heartbeat 6s) | ações: 0
+[2026-11-17 16:20:04] VERIFICACAO | api=ok(HTTP 200) previsao=ok(HTTP 200) monitor=ok(heartbeat 5s) | ações: 0
+[2026-11-17 16:21:04] VERIFICACAO | api=ok(HTTP 200) previsao=ok(HTTP 200) monitor=ok(heartbeat 5s) | ações: 0
+[2026-11-17 16:22:04] VERIFICACAO | api=ok(HTTP 200) previsao=ok(HTTP 200) monitor=ok(heartbeat 5s) | ações: 0
+[2026-11-17 16:23:00] VERIFICACAO | api=ok(HTTP 200) previsao=ok(HTTP 200) monitor=ok(heartbeat 15s) | ações: 0
+[2026-11-17 16:24:00] VERIFICACAO | api=ok(HTTP 200) previsao=ok(HTTP 200) monitor=ok(heartbeat 15s) | ações: 0
+[2026-11-17 16:25:01] VERIFICACAO | api=ok(HTTP 200) previsao=ok(HTTP 200) monitor=ok(heartbeat 15s) | ações: 0
+[2026-11-17 16:26:04] VERIFICACAO | api=ok(HTTP 200) previsao=ok(HTTP 200) monitor=ok(heartbeat 15s) | ações: 0
+[2026-11-17 16:27:04] VERIFICACAO | api=ok(HTTP 200) previsao=ok(HTTP 200) monitor=ok(heartbeat 15s) | ações: 0

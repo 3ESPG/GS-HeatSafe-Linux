@@ -1,0 +1,15 @@
+[2026-11-17 13:52:29] [CRITICO] Serviço heatsafe-api com problema: systemd=inactive, HTTP=---
+[2026-11-17 13:52:29] [CRITICO] Serviço heatsafe-previsao com problema: systemd=inactive, HTTP=---
+[2026-11-17 13:52:45] [RESOLVIDO] Serviço heatsafe-api normalizado: systemd=active, HTTP=200
+[2026-11-17 13:52:46] [RESOLVIDO] Serviço heatsafe-previsao normalizado: systemd=active, HTTP=200
+[2026-11-17 14:05:59] [RECUPERADO] systemd reiniciou heatsafe-api automaticamente após uma falha (reinícios: 0 -> 1, novo PID 5856)
+[2026-11-17 16:17:40] [CRITICO] Serviço heatsafe-api com problema: systemd=inactive, HTTP=---
+[2026-11-17 16:17:40] [CRITICO] Serviço heatsafe-previsao com problema: systemd=inactive, HTTP=---
+[2026-11-17 16:17:56] [RESOLVIDO] Serviço heatsafe-api normalizado: systemd=active, HTTP=200
+[2026-11-17 16:17:56] [RESOLVIDO] Serviço heatsafe-previsao normalizado: systemd=active, HTTP=200
+[2026-11-17 16:23:45] [CRITICO] Uso de CPU em 100% (limite 90%) | load 1.05 / 0.68 / 0.38 | maiores consumidores de cpu: stress-ng-cpu(pid 2965) 98.9%, stress-ng-cpu(pid 2964) 98.9%, java(pid 1170) 5.3%
+[2026-11-17 16:24:00] [RESOLVIDO] Uso de CPU normalizado: 6% (alerta a partir de 70%)
+[2026-11-17 16:25:01] [CRITICO] Uso de disco em / em 93% (limite 90%) | livre: 1758 MB (/dev/mapper/ubuntu--vg-ubuntu--lv)
+[2026-11-17 16:25:16] [RESOLVIDO] Uso de disco em / normalizado: 36% (alerta a partir de 80%)
+[2026-11-17 16:26:04] [CRITICO] Uso de memória em 92% (limite 90%) | 3621/3915 MB | maiores consumidores de mem: python3(pid 4162) 62.9%, mysqld(pid 996) 10.1%, java(pid 1170) 8.2%
+[2026-11-17 16:26:19] [RESOLVIDO] Uso de memória normalizado: 30% (alerta a partir de 75%)

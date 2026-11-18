@@ -1,0 +1,33 @@
+# HeatSafe · Monitor de infraestrutura (CPU, memória, disco e serviços)
+# Modelo: os valores entre arrobas são preenchidos pelo provision_monitor.sh
+[Unit]
+Description=HeatSafe - Monitor de infraestrutura (CPU, memoria, disco, servicos)
+Documentation=file:@HS_INFRA_INSTALL@/README.md
+After=network-online.target
+StartLimitIntervalSec=0
+
+[Service]
+Type=simple
+# Roda sem privilégios: só lê /proc, df e o estado dos serviços
+User=@HS_USER@
+Group=@HS_GROUP@
+ExecStart=@HS_INFRA_INSTALL@/scripts/monitor.sh
+ExecStartPost=-+@HS_INFRA_INSTALL@/scripts/hooks/evento_servico.sh %n iniciado
+ExecStopPost=-+@HS_INFRA_INSTALL@/scripts/hooks/evento_servico.sh %n parado
+
+# Tolerância a falhas (1ª camada): se o monitor cair, o systemd o reinicia em 5 s.
+# 2ª camada: heatsafe-healthcheck.timer verifica a cada 1 min se ele travou.
+Restart=always
+RestartSec=5
+SyslogIdentifier=heatsafe-monitor
+Nice=10
+
+MemoryMax=128M
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=full
+ProtectHome=true
+ReadWritePaths=@HS_DATA@ @HS_LOG@ @HS_STATUS_DIR@
+
+[Install]
+WantedBy=multi-user.target

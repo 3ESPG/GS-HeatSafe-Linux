@@ -1,0 +1,11 @@
+# HeatSafe · rotação dos logs em /var/log/heatsafe (instalado em /etc/logrotate.d/heatsafe)
+/var/log/heatsafe/*.log {
+    daily
+    rotate 14
+    compress
+    delaycompress
+    missingok
+    notifempty
+    copytruncate
+    su root heatsafe
+}

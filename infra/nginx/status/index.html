@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HeatSafe · Status do servidor</title>
+<style>
+  :root { --bg:#f6f4f1; --card:#fff; --txt:#1f1d1a; --sub:#6b665f; --linha:#e6e1da;
+          --ok:#1f8a4c; --alerta:#c27a00; --crit:#c62828; --barra:#ece7e0; }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg:#151412; --card:#1f1d1a; --txt:#f1ede7; --sub:#a39d94; --linha:#2f2c28; --barra:#2f2c28; }
+  }
+  * { box-sizing:border-box; }
+  body { margin:0; font:15px/1.45 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif; background:var(--bg); color:var(--txt); }
+  main { max-width:960px; margin:0 auto; padding:24px 16px 40px; }
+  h1 { font-size:22px; margin:0; } h1 span { color:#d9480f; }
+  .sub { color:var(--sub); font-size:13px; margin:4px 0 20px; }
+  .grid { display:grid; gap:12px; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); }
+  .card { background:var(--card); border:1px solid var(--linha); border-radius:10px; padding:14px 16px; }
+  .rot { font-size:12px; color:var(--sub); text-transform:uppercase; letter-spacing:.04em; }
+  .val { font-size:30px; font-weight:650; font-variant-numeric:tabular-nums; margin:2px 0 8px; }
+  .barra { height:8px; background:var(--barra); border-radius:4px; overflow:hidden; }
+  .barra i { display:block; height:100%; background:var(--ok); transition:width .4s; }
+  .lim { font-size:12px; color:var(--sub); margin-top:6px; }
+  h2 { font-size:15px; margin:24px 0 8px; }
+  table { width:100%; border-collapse:collapse; background:var(--card); border:1px solid var(--linha); border-radius:10px; overflow:hidden; }
+  th,td { text-align:left; padding:9px 12px; border-bottom:1px solid var(--linha); font-size:14px; }
+  th { font-size:12px; color:var(--sub); font-weight:600; }
+  .tag { display:inline-block; padding:1px 8px; border-radius:99px; font-size:12px; font-weight:600; color:#fff; }
+  .ok { background:var(--ok); } .alerta { background:var(--alerta); } .crit { background:var(--crit); }
+  ul { list-style:none; margin:0; padding:0; background:var(--card); border:1px solid var(--linha); border-radius:10px; }
+  li { padding:8px 12px; border-bottom:1px solid var(--linha); font:13px/1.4 ui-monospace,Menlo,Consolas,monospace; overflow-wrap:anywhere; }
+  li:last-child { border-bottom:0; }
+  .erro { color:var(--crit); }
+</style>
+</head>
+<body>
+<main>
+  <h1><span>HeatSafe</span> · status do servidor</h1>
+  <p class="sub" id="sub">carregando…</p>
+  <div class="grid" id="metricas"></div>
+  <h2>Serviços</h2>
+  <table><thead><tr><th>Serviço</th><th>systemd</th><th>HTTP</th><th>PID</th><th>Reinícios automáticos</th></tr></thead>
+    <tbody id="servicos"></tbody></table>
+  <h2>Últimos alertas</h2>
+  <ul id="alertas"></ul>
+</main>
+<script>
+  const cor = (v, [w, c]) => v >= c ? 'var(--crit)' : v >= w ? 'var(--alerta)' : 'var(--ok)';
+  const esc = s => String(s).replace(/[&<>"]/g, ch => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[ch]));
+  function card(rot, v, lim, extra) {
+    return `<div class="card"><div class="rot">${rot}</div><div class="val">${v}%</div>
+      <div class="barra"><i style="width:${Math.min(v,100)}%;background:${cor(v,lim)}"></i></div>
+      <div class="lim">${extra} · alerta ${lim[0]}% · crítico ${lim[1]}%</div></div>`;
+  }
+  async function atualizar() {
+    try {
+      const r = await fetch('/status.json', {cache: 'no-store'});
+      const s = await r.json();
+      const idade = Math.round((Date.now() - new Date(s.atualizado)) / 1000);
+      document.getElementById('sub').textContent =
+        `${s.host} · atualizado há ${idade}s · load ${s.load}` + (s.alertas_ativos.length ? ` · ativos: ${s.alertas_ativos.join(', ')}` : ' · sem alertas ativos');
+      let h = card('CPU', s.cpu_pct, s.limites.cpu, 'processador') +
+              card('Memória', s.mem_pct, s.limites.mem, `${s.mem_usado_mb} / ${s.mem_total_mb} MB`);
+      for (const d of s.discos) h += card(`Disco ${esc(d.montagem)}`, d.uso_pct, s.limites.disco, `${d.livre_mb} MB livres`);
+      document.getElementById('metricas').innerHTML = h;
+      document.getElementById('servicos').innerHTML = s.servicos.map(x => {
+        const cls = x.estado !== 'active' ? 'crit' : /^[1-4]\d\d$/.test(x.http) ? 'ok' : 'alerta';
+        return `<tr><td>${esc(x.servico)}</td><td><span class="tag ${cls}">${esc(x.estado)}</span></td>
+          <td>${esc(x.http)}</td><td>${esc(x.pid)}</td><td>${x.reinicios}</td></tr>`;
+      }).join('') || '<tr><td colspan="5">Nenhum serviço de aplicação instalado</td></tr>';
+      document.getElementById('alertas').innerHTML =
+        s.ultimos_alertas.map(a => `<li>${esc(a)}</li>`).join('') || '<li>Nenhum alerta registrado</li>';
+    } catch (e) {
+      document.getElementById('sub').innerHTML = '<span class="erro">Sem dados do monitor (status.json indisponível)</span>';
+    }
+  }
+  atualizar(); setInterval(atualizar, 5000);
+</script>
+</body>
+</html>

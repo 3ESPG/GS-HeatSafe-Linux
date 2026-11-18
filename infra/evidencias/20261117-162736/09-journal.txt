@@ -1,0 +1,153 @@
+### journal HeatSafe (últimas 150 linhas)
+$ journalctl --no-pager -n 150 -u heatsafe-api -u heatsafe-previsao -u heatsafe-monitor -u heatsafe-healthcheck
+Nov 17 16:17:43 heatsafe-srv heatsafe-api[1182]: info: Microsoft.EntityFrameworkCore.Migrations[20411]
+Nov 17 16:17:43 heatsafe-srv heatsafe-api[1182]:       Acquiring an exclusive lock for migration application. See https://aka.ms/efcore-docs-migrations-lock for more information if this takes too long.
+Nov 17 16:17:43 heatsafe-srv heatsafe-api[1182]: info: Microsoft.EntityFrameworkCore.Migrations[20405]
+Nov 17 16:17:43 heatsafe-srv heatsafe-api[1182]:       No migrations were applied. The database is already up to date.
+Nov 17 16:17:44 heatsafe-srv heatsafe-previsao[1170]:   .   ____          _            __ _ _
+Nov 17 16:17:44 heatsafe-srv heatsafe-previsao[1170]:  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+Nov 17 16:17:44 heatsafe-srv heatsafe-previsao[1170]: ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+Nov 17 16:17:44 heatsafe-srv heatsafe-previsao[1170]:  \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+Nov 17 16:17:44 heatsafe-srv heatsafe-previsao[1170]:   '  |____| .__|_| |_|_| |_\__, | / / / /
+Nov 17 16:17:44 heatsafe-srv heatsafe-previsao[1170]:  =========|_|==============|___/=/_/_/_/
+Nov 17 16:17:44 heatsafe-srv heatsafe-previsao[1170]:  :: Spring Boot ::                (v4.0.5)
+Nov 17 16:17:44 heatsafe-srv heatsafe-api[1182]: info: Microsoft.Hosting.Lifetime[14]
+Nov 17 16:17:44 heatsafe-srv heatsafe-api[1182]:       Now listening on: http://127.0.0.1:5000
+Nov 17 16:17:44 heatsafe-srv heatsafe-api[1182]: info: Microsoft.Hosting.Lifetime[0]
+Nov 17 16:17:44 heatsafe-srv heatsafe-api[1182]:       Application started. Press Ctrl+C to shut down.
+Nov 17 16:17:44 heatsafe-srv heatsafe-api[1182]: info: Microsoft.Hosting.Lifetime[0]
+Nov 17 16:17:44 heatsafe-srv heatsafe-api[1182]:       Hosting environment: Development
+Nov 17 16:17:44 heatsafe-srv heatsafe-api[1182]: info: Microsoft.Hosting.Lifetime[0]
+Nov 17 16:17:44 heatsafe-srv heatsafe-api[1182]:       Content root path: /opt/heatsafe/api
+Nov 17 16:17:44 heatsafe-srv heatsafe-previsao[1170]: 2026-11-17T16:17:44.553-03:00  INFO 1170 --- [HeatSafeClimaAPI] [           main] b.c.f.h.HeatSafeClimaApiApplication      : Starting HeatSafeClimaApiApplication v1.0.0 using Java 21.0.13.0.3 with PID 1170 (/opt/heatsafe/previsao/heatsafe-previsao.jar started by heatsafe in /opt/heatsafe/previsao)
+Nov 17 16:17:44 heatsafe-srv heatsafe-previsao[1170]: 2026-11-17T16:17:44.561-03:00  INFO 1170 --- [HeatSafeClimaAPI] [           main] b.c.f.h.HeatSafeClimaApiApplication      : No active profile set, falling back to 1 default profile: "default"
+Nov 17 16:17:46 heatsafe-srv heatsafe-previsao[1170]: 2026-11-17T16:17:46.585-03:00  INFO 1170 --- [HeatSafeClimaAPI] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+Nov 17 16:17:46 heatsafe-srv heatsafe-previsao[1170]: 2026-11-17T16:17:46.666-03:00  INFO 1170 --- [HeatSafeClimaAPI] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 69 ms. Found 3 JPA repository interfaces.
+Nov 17 16:17:47 heatsafe-srv heatsafe-previsao[1170]: 2026-11-17T16:17:47.367-03:00  INFO 1170 --- [HeatSafeClimaAPI] [           main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8000 (http)
+Nov 17 16:17:47 heatsafe-srv heatsafe-previsao[1170]: 2026-11-17T16:17:47.393-03:00  INFO 1170 --- [HeatSafeClimaAPI] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+Nov 17 16:17:47 heatsafe-srv heatsafe-previsao[1170]: 2026-11-17T16:17:47.394-03:00  INFO 1170 --- [HeatSafeClimaAPI] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.20]
+Nov 17 16:17:47 heatsafe-srv heatsafe-previsao[1170]: 2026-11-17T16:17:47.439-03:00  INFO 1170 --- [HeatSafeClimaAPI] [           main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 2666 ms
+Nov 17 16:17:47 heatsafe-srv heatsafe-previsao[1170]: 2026-11-17T16:17:47.807-03:00  INFO 1170 --- [HeatSafeClimaAPI] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+Nov 17 16:17:48 heatsafe-srv heatsafe-previsao[1170]: 2026-11-17T16:17:48.180-03:00  INFO 1170 --- [HeatSafeClimaAPI] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@537b3b2e
+Nov 17 16:17:48 heatsafe-srv heatsafe-previsao[1170]: 2026-11-17T16:17:48.182-03:00  INFO 1170 --- [HeatSafeClimaAPI] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+Nov 17 16:17:48 heatsafe-srv heatsafe-previsao[1170]: 2026-11-17T16:17:48.278-03:00  INFO 1170 --- [HeatSafeClimaAPI] [           main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:mysql://localhost:3306/heatsafe?allowPublicKeyRetrieval=true&useSSL=false (MySQL 8.0)
+Nov 17 16:17:48 heatsafe-srv heatsafe-previsao[1170]: 2026-11-17T16:17:48.481-03:00  INFO 1170 --- [HeatSafeClimaAPI] [           main] o.f.core.internal.command.DbValidate     : Successfully validated 4 migrations (execution time 00:00.093s)
+Nov 17 16:17:48 heatsafe-srv heatsafe-previsao[1170]: 2026-11-17T16:17:48.512-03:00  INFO 1170 --- [HeatSafeClimaAPI] [           main] o.f.core.internal.command.DbMigrate      : Current version of schema `heatsafe`: 4
+Nov 17 16:17:48 heatsafe-srv heatsafe-previsao[1170]: 2026-11-17T16:17:48.516-03:00  INFO 1170 --- [HeatSafeClimaAPI] [           main] o.f.core.internal.command.DbMigrate      : Schema `heatsafe` is up to date. No migration necessary.
+Nov 17 16:17:48 heatsafe-srv heatsafe-previsao[1170]: 2026-11-17T16:17:48.679-03:00  INFO 1170 --- [HeatSafeClimaAPI] [           main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+Nov 17 16:17:48 heatsafe-srv heatsafe-previsao[1170]: 2026-11-17T16:17:48.780-03:00  INFO 1170 --- [HeatSafeClimaAPI] [           main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.7.Final
+Nov 17 16:17:49 heatsafe-srv heatsafe-previsao[1170]: 2026-11-17T16:17:49.435-03:00  INFO 1170 --- [HeatSafeClimaAPI] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+Nov 17 16:17:49 heatsafe-srv heatsafe-previsao[1170]: 2026-11-17T16:17:49.574-03:00  INFO 1170 --- [HeatSafeClimaAPI] [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+Nov 17 16:17:49 heatsafe-srv heatsafe-previsao[1170]:         Database JDBC URL [jdbc:mysql://localhost:3306/heatsafe?allowPublicKeyRetrieval=true&useSSL=false]
+Nov 17 16:17:49 heatsafe-srv heatsafe-previsao[1170]:         Database driver: MySQL Connector/J
+Nov 17 16:17:49 heatsafe-srv heatsafe-previsao[1170]:         Database dialect: MySQLDialect
+Nov 17 16:17:49 heatsafe-srv heatsafe-previsao[1170]:         Database version: 8.0.46
+Nov 17 16:17:49 heatsafe-srv heatsafe-previsao[1170]:         Default catalog/schema: heatsafe/undefined
+Nov 17 16:17:49 heatsafe-srv heatsafe-previsao[1170]:         Autocommit mode: undefined/unknown
+Nov 17 16:17:49 heatsafe-srv heatsafe-previsao[1170]:         Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+Nov 17 16:17:49 heatsafe-srv heatsafe-previsao[1170]:         JDBC fetch size: none
+Nov 17 16:17:49 heatsafe-srv heatsafe-previsao[1170]:         Pool: DataSourceConnectionProvider
+Nov 17 16:17:49 heatsafe-srv heatsafe-previsao[1170]:         Minimum pool size: undefined/unknown
+Nov 17 16:17:49 heatsafe-srv heatsafe-previsao[1170]:         Maximum pool size: undefined/unknown
+Nov 17 16:17:50 heatsafe-srv heatsafe-previsao[1170]: 2026-11-17T16:17:50.827-03:00  INFO 1170 --- [HeatSafeClimaAPI] [           main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+Nov 17 16:17:50 heatsafe-srv heatsafe-previsao[1170]: 2026-11-17T16:17:50.833-03:00  INFO 1170 --- [HeatSafeClimaAPI] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+Nov 17 16:17:50 heatsafe-srv heatsafe-previsao[1170]: 2026-11-17T16:17:50.930-03:00  INFO 1170 --- [HeatSafeClimaAPI] [           main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+Nov 17 16:17:52 heatsafe-srv heatsafe-previsao[1170]: 2026-11-17T16:17:52.839-03:00  INFO 1170 --- [HeatSafeClimaAPI] [           main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8000 (http) with context path '/'
+Nov 17 16:17:52 heatsafe-srv heatsafe-previsao[1170]: 2026-11-17T16:17:52.870-03:00  INFO 1170 --- [HeatSafeClimaAPI] [           main] b.c.f.h.HeatSafeClimaApiApplication      : Started HeatSafeClimaApiApplication in 9.559 seconds (process running for 11.674)
+Nov 17 16:17:53 heatsafe-srv heatsafe-previsao[1170]: 2026-11-17T16:17:53.084-03:00  INFO 1170 --- [HeatSafeClimaAPI] [           main] b.c.f.h.i.config.CarregadorDadosInmet    : Estação A701 já tem observações: carga inicial do INMET ignorada.
+Nov 17 16:17:53 heatsafe-srv heatsafe-previsao[1170]: 2026-11-17T16:17:53.086-03:00  WARN 1170 --- [HeatSafeClimaAPI] [           main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+Nov 17 16:17:53 heatsafe-srv heatsafe-previsao[1170]: 2026-11-17T16:17:53.086-03:00  WARN 1170 --- [HeatSafeClimaAPI] [           main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+Nov 17 16:17:56 heatsafe-srv heatsafe-monitor[1028]: [2026-11-17 16:17:56] [RESOLVIDO] Serviço heatsafe-api normalizado: systemd=active, HTTP=200
+Nov 17 16:17:56 heatsafe-srv heatsafe-previsao[1170]: 2026-11-17T16:17:56.311-03:00  INFO 1170 --- [HeatSafeClimaAPI] [0.1-8000-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+Nov 17 16:17:56 heatsafe-srv heatsafe-previsao[1170]: 2026-11-17T16:17:56.311-03:00  INFO 1170 --- [HeatSafeClimaAPI] [0.1-8000-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+Nov 17 16:17:56 heatsafe-srv heatsafe-previsao[1170]: 2026-11-17T16:17:56.312-03:00  INFO 1170 --- [HeatSafeClimaAPI] [0.1-8000-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+Nov 17 16:17:56 heatsafe-srv heatsafe-monitor[1028]: [2026-11-17 16:17:56] [RESOLVIDO] Serviço heatsafe-previsao normalizado: systemd=active, HTTP=200
+Nov 17 16:17:56 heatsafe-srv heatsafe-monitor[1028]: [2026-11-17 16:17:56] CPU 66% | MEM 28% (1130/3915 MB) | DISCO /=36% | LOAD 3.95 1.10 0.37 | api=active/200 previsao=active/200
+Nov 17 16:18:04 heatsafe-srv systemd[1]: Starting heatsafe-healthcheck.service - HeatSafe - Healthcheck e autocorrecao dos servicos...
+Nov 17 16:18:04 heatsafe-srv heatsafe-healthcheck[1345]: [2026-11-17 16:18:04] VERIFICACAO | api=ok(HTTP 200) previsao=ok(HTTP 200) monitor=ok(heartbeat 8s) | ações: 0
+Nov 17 16:18:04 heatsafe-srv systemd[1]: heatsafe-healthcheck.service: Deactivated successfully.
+Nov 17 16:18:04 heatsafe-srv systemd[1]: Finished heatsafe-healthcheck.service - HeatSafe - Healthcheck e autocorrecao dos servicos.
+Nov 17 16:18:11 heatsafe-srv heatsafe-monitor[1028]: [2026-11-17 16:18:11] CPU 3% | MEM 28% (1114/3915 MB) | DISCO /=36% | LOAD 3.07 1.04 0.37 | api=active/200 previsao=active/200
+Nov 17 16:18:28 heatsafe-srv heatsafe-monitor[1028]: [2026-11-17 16:18:28] CPU 1% | MEM 28% (1114/3915 MB) | DISCO /=36% | LOAD 2.46 1.01 0.36 | api=active/200 previsao=active/200
+Nov 17 16:18:43 heatsafe-srv heatsafe-monitor[1028]: [2026-11-17 16:18:43] CPU 1% | MEM 28% (1115/3915 MB) | DISCO /=36% | LOAD 1.91 0.95 0.36 | api=active/200 previsao=active/200
+Nov 17 16:18:58 heatsafe-srv heatsafe-monitor[1028]: [2026-11-17 16:18:58] CPU 1% | MEM 28% (1119/3915 MB) | DISCO /=36% | LOAD 1.64 0.94 0.36 | api=active/200 previsao=active/200
+Nov 17 16:19:04 heatsafe-srv systemd[1]: Starting heatsafe-healthcheck.service - HeatSafe - Healthcheck e autocorrecao dos servicos...
+Nov 17 16:19:04 heatsafe-srv heatsafe-healthcheck[1617]: [2026-11-17 16:19:04] VERIFICACAO | api=ok(HTTP 200) previsao=ok(HTTP 200) monitor=ok(heartbeat 6s) | ações: 0
+Nov 17 16:19:04 heatsafe-srv systemd[1]: heatsafe-healthcheck.service: Deactivated successfully.
+Nov 17 16:19:04 heatsafe-srv systemd[1]: Finished heatsafe-healthcheck.service - HeatSafe - Healthcheck e autocorrecao dos servicos.
+Nov 17 16:19:13 heatsafe-srv heatsafe-monitor[1028]: [2026-11-17 16:19:13] CPU 1% | MEM 28% (1118/3915 MB) | DISCO /=36% | LOAD 1.27 0.89 0.36 | api=active/200 previsao=active/200
+Nov 17 16:19:28 heatsafe-srv heatsafe-monitor[1028]: [2026-11-17 16:19:28] CPU 3% | MEM 29% (1157/3915 MB) | DISCO /=36% | LOAD 0.99 0.85 0.35 | api=active/200 previsao=active/200
+Nov 17 16:19:43 heatsafe-srv heatsafe-monitor[1028]: [2026-11-17 16:19:43] CPU 1% | MEM 29% (1155/3915 MB) | DISCO /=36% | LOAD 0.85 0.83 0.35 | api=active/200 previsao=active/200
+Nov 17 16:19:59 heatsafe-srv heatsafe-monitor[1028]: [2026-11-17 16:19:59] CPU 2% | MEM 29% (1161/3915 MB) | DISCO /=36% | LOAD 0.66 0.78 0.35 | api=active/200 previsao=active/200
+Nov 17 16:20:04 heatsafe-srv systemd[1]: Starting heatsafe-healthcheck.service - HeatSafe - Healthcheck e autocorrecao dos servicos...
+Nov 17 16:20:04 heatsafe-srv heatsafe-healthcheck[2051]: [2026-11-17 16:20:04] VERIFICACAO | api=ok(HTTP 200) previsao=ok(HTTP 200) monitor=ok(heartbeat 5s) | ações: 0
+Nov 17 16:20:04 heatsafe-srv systemd[1]: heatsafe-healthcheck.service: Deactivated successfully.
+Nov 17 16:20:04 heatsafe-srv systemd[1]: Finished heatsafe-healthcheck.service - HeatSafe - Healthcheck e autocorrecao dos servicos.
+Nov 17 16:20:14 heatsafe-srv heatsafe-monitor[1028]: [2026-11-17 16:20:14] CPU 1% | MEM 29% (1135/3915 MB) | DISCO /=36% | LOAD 0.51 0.74 0.34 | api=active/200 previsao=active/200
+Nov 17 16:20:29 heatsafe-srv heatsafe-monitor[1028]: [2026-11-17 16:20:29] CPU 0% | MEM 28% (1132/3915 MB) | DISCO /=36% | LOAD 0.48 0.72 0.34 | api=active/200 previsao=active/200
+Nov 17 16:20:44 heatsafe-srv heatsafe-monitor[1028]: [2026-11-17 16:20:44] CPU 0% | MEM 28% (1128/3915 MB) | DISCO /=36% | LOAD 0.37 0.69 0.33 | api=active/200 previsao=active/200
+Nov 17 16:20:59 heatsafe-srv heatsafe-monitor[1028]: [2026-11-17 16:20:59] CPU 1% | MEM 28% (1130/3915 MB) | DISCO /=36% | LOAD 0.37 0.67 0.33 | api=active/200 previsao=active/200
+Nov 17 16:21:04 heatsafe-srv systemd[1]: Starting heatsafe-healthcheck.service - HeatSafe - Healthcheck e autocorrecao dos servicos...
+Nov 17 16:21:04 heatsafe-srv heatsafe-healthcheck[2326]: [2026-11-17 16:21:04] VERIFICACAO | api=ok(HTTP 200) previsao=ok(HTTP 200) monitor=ok(heartbeat 5s) | ações: 0
+Nov 17 16:21:04 heatsafe-srv systemd[1]: heatsafe-healthcheck.service: Deactivated successfully.
+Nov 17 16:21:04 heatsafe-srv systemd[1]: Finished heatsafe-healthcheck.service - HeatSafe - Healthcheck e autocorrecao dos servicos.
+Nov 17 16:21:14 heatsafe-srv heatsafe-monitor[1028]: [2026-11-17 16:21:14] CPU 1% | MEM 28% (1132/3915 MB) | DISCO /=36% | LOAD 0.29 0.64 0.33 | api=active/200 previsao=active/200
+Nov 17 16:21:29 heatsafe-srv heatsafe-monitor[1028]: [2026-11-17 16:21:29] CPU 0% | MEM 28% (1132/3915 MB) | DISCO /=36% | LOAD 0.43 0.65 0.34 | api=active/200 previsao=active/200
+Nov 17 16:21:44 heatsafe-srv heatsafe-monitor[1028]: [2026-11-17 16:21:44] CPU 0% | MEM 28% (1132/3915 MB) | DISCO /=36% | LOAD 0.33 0.62 0.33 | api=active/200 previsao=active/200
+Nov 17 16:21:59 heatsafe-srv heatsafe-monitor[1028]: [2026-11-17 16:21:59] CPU 1% | MEM 28% (1133/3915 MB) | DISCO /=36% | LOAD 0.26 0.59 0.33 | api=active/200 previsao=active/200
+Nov 17 16:22:04 heatsafe-srv systemd[1]: Starting heatsafe-healthcheck.service - HeatSafe - Healthcheck e autocorrecao dos servicos...
+Nov 17 16:22:04 heatsafe-srv heatsafe-healthcheck[2597]: [2026-11-17 16:22:04] VERIFICACAO | api=ok(HTTP 200) previsao=ok(HTTP 200) monitor=ok(heartbeat 5s) | ações: 0
+Nov 17 16:22:04 heatsafe-srv systemd[1]: heatsafe-healthcheck.service: Deactivated successfully.
+Nov 17 16:22:04 heatsafe-srv systemd[1]: Finished heatsafe-healthcheck.service - HeatSafe - Healthcheck e autocorrecao dos servicos.
+Nov 17 16:22:14 heatsafe-srv heatsafe-monitor[1028]: [2026-11-17 16:22:14] CPU 1% | MEM 28% (1134/3915 MB) | DISCO /=36% | LOAD 0.20 0.56 0.32 | api=active/200 previsao=active/200
+Nov 17 16:22:29 heatsafe-srv heatsafe-monitor[1028]: [2026-11-17 16:22:29] CPU 0% | MEM 29% (1137/3915 MB) | DISCO /=36% | LOAD 0.24 0.55 0.32 | api=active/200 previsao=active/200
+Nov 17 16:22:45 heatsafe-srv heatsafe-monitor[1028]: [2026-11-17 16:22:45] CPU 0% | MEM 28% (1135/3915 MB) | DISCO /=36% | LOAD 0.18 0.52 0.31 | api=active/200 previsao=active/200
+Nov 17 16:23:00 heatsafe-srv systemd[1]: Starting heatsafe-healthcheck.service - HeatSafe - Healthcheck e autocorrecao dos servicos...
+Nov 17 16:23:00 heatsafe-srv heatsafe-healthcheck[2832]: [2026-11-17 16:23:00] VERIFICACAO | api=ok(HTTP 200) previsao=ok(HTTP 200) monitor=ok(heartbeat 15s) | ações: 0
+Nov 17 16:23:00 heatsafe-srv systemd[1]: heatsafe-healthcheck.service: Deactivated successfully.
+Nov 17 16:23:00 heatsafe-srv systemd[1]: Finished heatsafe-healthcheck.service - HeatSafe - Healthcheck e autocorrecao dos servicos.
+Nov 17 16:23:00 heatsafe-srv heatsafe-monitor[1028]: [2026-11-17 16:23:00] CPU 1% | MEM 29% (1146/3915 MB) | DISCO /=36% | LOAD 0.14 0.49 0.31 | api=active/200 previsao=active/200
+Nov 17 16:23:15 heatsafe-srv heatsafe-monitor[1028]: [2026-11-17 16:23:15] CPU 13% | MEM 29% (1158/3915 MB) | DISCO /=36% | LOAD 0.32 0.52 0.32 | api=active/200 previsao=active/200
+Nov 17 16:23:30 heatsafe-srv heatsafe-monitor[1028]: [2026-11-17 16:23:30] CPU 100% | MEM 29% (1164/3915 MB) | DISCO /=36% | LOAD 0.77 0.61 0.35 | api=active/200 previsao=active/200
+Nov 17 16:23:45 heatsafe-srv heatsafe-monitor[1028]: [2026-11-17 16:23:45] [CRITICO] Uso de CPU em 100% (limite 90%) | load 1.05 / 0.68 / 0.38 | maiores consumidores de cpu: stress-ng-cpu(pid 2965) 98.9%, stress-ng-cpu(pid 2964) 98.9%, java(pid 1170) 5.3%
+Nov 17 16:23:45 heatsafe-srv heatsafe-monitor[3250]: [CRITICO] Uso de CPU em 100% (limite 90%) | load 1.05 / 0.68 / 0.38 | maiores consumidores de cpu: stress-ng-cpu(pid 2965) 98.9%, stress-ng-cpu(pid 2964) 98.9%, java(pid 1170) 5.3%
+Nov 17 16:23:45 heatsafe-srv heatsafe-monitor[1028]: [2026-11-17 16:23:45] CPU 100% | MEM 29% (1161/3915 MB) | DISCO /=36% | LOAD 1.05 0.68 0.38 | api=active/200 previsao=active/200
+Nov 17 16:24:00 heatsafe-srv heatsafe-monitor[1028]: [2026-11-17 16:24:00] [RESOLVIDO] Uso de CPU normalizado: 6% (alerta a partir de 70%)
+Nov 17 16:24:00 heatsafe-srv systemd[1]: Starting heatsafe-healthcheck.service - HeatSafe - Healthcheck e autocorrecao dos servicos...
+Nov 17 16:24:00 heatsafe-srv heatsafe-monitor[1028]: [2026-11-17 16:24:00] CPU 6% | MEM 29% (1161/3915 MB) | DISCO /=36% | LOAD 0.95 0.68 0.38 | api=active/200 previsao=active/200
+Nov 17 16:24:00 heatsafe-srv heatsafe-healthcheck[3409]: [2026-11-17 16:24:00] VERIFICACAO | api=ok(HTTP 200) previsao=ok(HTTP 200) monitor=ok(heartbeat 15s) | ações: 0
+Nov 17 16:24:00 heatsafe-srv systemd[1]: heatsafe-healthcheck.service: Deactivated successfully.
+Nov 17 16:24:00 heatsafe-srv systemd[1]: Finished heatsafe-healthcheck.service - HeatSafe - Healthcheck e autocorrecao dos servicos.
+Nov 17 16:24:15 heatsafe-srv heatsafe-monitor[1028]: [2026-11-17 16:24:15] CPU 1% | MEM 29% (1150/3915 MB) | DISCO /=36% | LOAD 0.88 0.68 0.39 | api=active/200 previsao=active/200
+Nov 17 16:24:30 heatsafe-srv heatsafe-monitor[1028]: [2026-11-17 16:24:30] CPU 0% | MEM 29% (1144/3915 MB) | DISCO /=36% | LOAD 0.68 0.65 0.38 | api=active/200 previsao=active/200
+Nov 17 16:24:46 heatsafe-srv heatsafe-monitor[1028]: [2026-11-17 16:24:46] CPU 1% | MEM 29% (1145/3915 MB) | DISCO /=36% | LOAD 0.53 0.61 0.38 | api=active/200 previsao=active/200
+Nov 17 16:25:01 heatsafe-srv heatsafe-monitor[1028]: [2026-11-17 16:25:01] [CRITICO] Uso de disco em / em 93% (limite 90%) | livre: 1758 MB (/dev/mapper/ubuntu--vg-ubuntu--lv)
+Nov 17 16:25:01 heatsafe-srv heatsafe-monitor[3810]: [CRITICO] Uso de disco em / em 93% (limite 90%) | livre: 1758 MB (/dev/mapper/ubuntu--vg-ubuntu--lv)
+Nov 17 16:25:01 heatsafe-srv systemd[1]: Starting heatsafe-healthcheck.service - HeatSafe - Healthcheck e autocorrecao dos servicos...
+Nov 17 16:25:01 heatsafe-srv heatsafe-monitor[1028]: [2026-11-17 16:25:01] CPU 1% | MEM 29% (1151/3915 MB) | DISCO /=93% | LOAD 0.41 0.58 0.37 | api=active/200 previsao=active/200
+Nov 17 16:25:01 heatsafe-srv heatsafe-healthcheck[3819]: [2026-11-17 16:25:01] VERIFICACAO | api=ok(HTTP 200) previsao=ok(HTTP 200) monitor=ok(heartbeat 15s) | ações: 0
+Nov 17 16:25:01 heatsafe-srv systemd[1]: heatsafe-healthcheck.service: Deactivated successfully.
+Nov 17 16:25:01 heatsafe-srv systemd[1]: Finished heatsafe-healthcheck.service - HeatSafe - Healthcheck e autocorrecao dos servicos.
+Nov 17 16:25:16 heatsafe-srv heatsafe-monitor[1028]: [2026-11-17 16:25:16] [RESOLVIDO] Uso de disco em / normalizado: 36% (alerta a partir de 80%)
+Nov 17 16:25:16 heatsafe-srv heatsafe-monitor[1028]: [2026-11-17 16:25:16] CPU 1% | MEM 29% (1154/3915 MB) | DISCO /=36% | LOAD 0.32 0.55 0.36 | api=active/200 previsao=active/200
+Nov 17 16:25:31 heatsafe-srv heatsafe-monitor[1028]: [2026-11-17 16:25:31] CPU 1% | MEM 29% (1148/3915 MB) | DISCO /=36% | LOAD 0.25 0.53 0.36 | api=active/200 previsao=active/200
+Nov 17 16:25:48 heatsafe-srv heatsafe-monitor[1028]: [2026-11-17 16:25:48] CPU 2% | MEM 45% (1790/3915 MB) | DISCO /=36% | LOAD 0.27 0.52 0.36 | api=active/200 previsao=active/200
+Nov 17 16:26:04 heatsafe-srv systemd[1]: Starting heatsafe-healthcheck.service - HeatSafe - Healthcheck e autocorrecao dos servicos...
+Nov 17 16:26:04 heatsafe-srv heatsafe-healthcheck[4328]: [2026-11-17 16:26:04] VERIFICACAO | api=ok(HTTP 200) previsao=ok(HTTP 200) monitor=ok(heartbeat 15s) | ações: 0
+Nov 17 16:26:04 heatsafe-srv systemd[1]: heatsafe-healthcheck.service: Deactivated successfully.
+Nov 17 16:26:04 heatsafe-srv systemd[1]: Finished heatsafe-healthcheck.service - HeatSafe - Healthcheck e autocorrecao dos servicos.
+Nov 17 16:26:04 heatsafe-srv heatsafe-monitor[1028]: [2026-11-17 16:26:04] [CRITICO] Uso de memória em 92% (limite 90%) | 3621/3915 MB | maiores consumidores de mem: python3(pid 4162) 62.9%, mysqld(pid 996) 10.1%, java(pid 1170) 8.2%
+Nov 17 16:26:04 heatsafe-srv heatsafe-monitor[4379]: [CRITICO] Uso de memória em 92% (limite 90%) | 3621/3915 MB | maiores consumidores de mem: python3(pid 4162) 62.9%, mysqld(pid 996) 10.1%, java(pid 1170) 8.2%
+Nov 17 16:26:04 heatsafe-srv heatsafe-monitor[1028]: [2026-11-17 16:26:04] CPU 9% | MEM 92% (3621/3915 MB) | DISCO /=36% | LOAD 0.35 0.52 0.36 | api=active/200 previsao=active/200
+Nov 17 16:26:19 heatsafe-srv heatsafe-monitor[1028]: [2026-11-17 16:26:19] [RESOLVIDO] Uso de memória normalizado: 30% (alerta a partir de 75%)
+Nov 17 16:26:19 heatsafe-srv heatsafe-monitor[1028]: [2026-11-17 16:26:19] CPU 1% | MEM 30% (1183/3915 MB) | DISCO /=36% | LOAD 0.27 0.50 0.36 | api=active/200 previsao=active/200
+Nov 17 16:26:34 heatsafe-srv heatsafe-monitor[1028]: [2026-11-17 16:26:34] CPU 0% | MEM 30% (1180/3915 MB) | DISCO /=36% | LOAD 0.21 0.47 0.35 | api=active/200 previsao=active/200
+Nov 17 16:26:49 heatsafe-srv heatsafe-monitor[1028]: [2026-11-17 16:26:49] CPU 1% | MEM 30% (1178/3915 MB) | DISCO /=36% | LOAD 0.16 0.45 0.34 | api=active/200 previsao=active/200
+Nov 17 16:27:04 heatsafe-srv systemd[1]: Starting heatsafe-healthcheck.service - HeatSafe - Healthcheck e autocorrecao dos servicos...
+Nov 17 16:27:04 heatsafe-srv heatsafe-healthcheck[4710]: [2026-11-17 16:27:04] VERIFICACAO | api=ok(HTTP 200) previsao=ok(HTTP 200) monitor=ok(heartbeat 15s) | ações: 0
+Nov 17 16:27:04 heatsafe-srv systemd[1]: heatsafe-healthcheck.service: Deactivated successfully.
+Nov 17 16:27:04 heatsafe-srv systemd[1]: Finished heatsafe-healthcheck.service - HeatSafe - Healthcheck e autocorrecao dos servicos.
+Nov 17 16:27:04 heatsafe-srv heatsafe-monitor[1028]: [2026-11-17 16:27:04] CPU 1% | MEM 30% (1178/3915 MB) | DISCO /=36% | LOAD 0.21 0.44 0.34 | api=active/200 previsao=active/200
+Nov 17 16:27:19 heatsafe-srv heatsafe-monitor[1028]: [2026-11-17 16:27:19] CPU 1% | MEM 30% (1179/3915 MB) | DISCO /=36% | LOAD 0.16 0.42 0.34 | api=active/200 previsao=active/200
+Nov 17 16:27:34 heatsafe-srv heatsafe-monitor[1028]: [2026-11-17 16:27:34] CPU 1% | MEM 30% (1179/3915 MB) | DISCO /=36% | LOAD 0.12 0.40 0.33 | api=active/200 previsao=active/200
+
