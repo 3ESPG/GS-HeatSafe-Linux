@@ -35,3 +35,7 @@ git add infra/evidencias && git commit -m "evidencias da infra" && git push
 - [ ] `teste_falha.sh travar`: healthcheck destravando o monitor
 - [ ] `tail /var/log/heatsafe/auditoria.log`
 - [ ] `sudo ausearch -k heatsafe_kill9 -i`
+
+## Observação sobre a coleta de 17/11/2026
+
+O `log-provision_monitor.log` e o `log-auditoria.log` desta coleta mostram `ERRO | linha 160: tr -d '@'`. Era um **falso positivo**: ao gerar o `heatsafe-healthcheck.timer`, que não tem nenhuma `@VARIAVEL@`, o `grep` do `render_template` (em `scripts/lib/common.sh`) não encontrava nada e saía com código 1, o que disparava o trap de erro. O arquivo foi gerado corretamente (a linha seguinte do log mostra o `OK`), mas o registro falso também impedia que um erro real posterior no mesmo script fosse registrado. Corrigido em `render_template` (`grep ... || true`); nas próximas coletas essa linha não aparece mais.

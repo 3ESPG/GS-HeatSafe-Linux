@@ -27,7 +27,7 @@ Um único comando (`sudo ./infra/provision.sh`) transforma uma VM Ubuntu "zerada
 │  auditd + scripts ─────────── quem fez o quê ─────────────────────────────► auditoria   │
 │                                                                                         │
 │  /etc/heatsafe/{api,previsao}.env (640)       /var/lib/heatsafe (SQLite da API)          │
-│  /var/log/heatsafe/*.log (todos os logs)      /opt/heatsafe (código, API, venv, scripts) │
+│  /var/log/heatsafe/*.log (todos os logs)      /opt/heatsafe (código, API, .jar, scripts) │
 └─────────────────────────────────────────────────────────────────────────────────────────┘
 ```
 
@@ -55,7 +55,7 @@ Um único comando (`sudo ./infra/provision.sh`) transforma uma VM Ubuntu "zerada
 
 **2. Dentro da VM:**
 ```bash
-git clone https://github.com/<conta>/GS-HeatSafe-Linux.git heatsafe
+git clone https://github.com/3ESPG/GS-HeatSafe-Linux.git heatsafe
 cd heatsafe
 
 # (opcional) ajustar IP, limites dos alertas, repositórios...

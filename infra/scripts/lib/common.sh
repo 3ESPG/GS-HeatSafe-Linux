@@ -157,7 +157,9 @@ backup_file() {
 render_template() {
   local src=$1 dst=$2 conteudo var
   conteudo=$(<"$src")
-  for var in $(grep -oE '@[A-Z_][A-Z0-9_]*@' "$src" | sort -u | tr -d '@'); do
+  # "|| true": modelo sem nenhuma @VARIAVEL@ (ex.: o .timer) não é erro; sem isso o grep sai com 1,
+  # o pipefail dispara o trap ERR e um "ERRO" falso vai para o log de auditoria
+  for var in $({ grep -oE '@[A-Z_][A-Z0-9_]*@' "$src" || true; } | sort -u | tr -d '@'); do
     if [[ ! -v $var ]]; then
       error "Variável $var não definida (modelo $src)"
       return 1

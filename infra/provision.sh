@@ -3,7 +3,7 @@
 # HeatSafe · provision.sh — provisiona TUDO com um comando
 #
 #   1. scripts/provision_infra.sh    rede, IP, DNS, hostname, usuário, firewall, auditoria
-#   2. scripts/provision_app.sh      .NET, Python, .env, migrações, systemd, nginx
+#   2. scripts/provision_app.sh      .NET, Java, MySQL, .env, systemd, nginx
 #   3. scripts/provision_monitor.sh  monitor como serviço + timer de autocorreção
 #   4. scripts/status.sh             painel final
 #
